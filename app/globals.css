@@ -38,6 +38,13 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+
+
+  --h1DynoTexo: clamp(1.25rem, 5vw, 2.5rem);
+  --h2DynoTexo: clamp(1rem, 4vw, 2rem);
+  --pDynoTexo: clamp(0.75rem, 2vw, 1rem);
+  --textSpacer: 15px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,92 @@
+.topMain {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: transparent;
+    position: relative;
+   
+    
+}
+
+.topMain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.title{
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: bold;
+    margin-bottom: var(--textSpacer);
+}
+
+.title, .subTitle{
+    color: #FFF;
+
+}
+
+.gradientText {
+    background: linear-gradient(to right,#2c6fd3 ,#3EDCFF );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.paragraph {
+    background: linear-gradient(to right, rgb(12, 171, 219), rgb(78, 187, 250));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    
+}
+
+.contentHolder {
+    width: 45vw;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+    object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    .topMain {
+        flex-direction: column; 
+        justify-content: flex-end;
+    }
+    .contentHolder {
+        width: 100%;
+        text-align: center;
+        
+        
+    }
+    .button {
+        margin-left: 25px;
+        display: flex;
+        justify-content: center;
+    }
+    .myContainer{
+        
+        max-width: 100% !important;
+
+    
+    
+    }
+    
+}
+
