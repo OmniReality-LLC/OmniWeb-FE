@@ -7,8 +7,8 @@ import construction from '../public/lottie/construction.json';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className = {styles.mainContainer}>
-      <Lottie animationData={construction} autoplay loop />
+      <div className={styles.mainContainer}>
+        <Lottie animationData={construction} autoplay loop />
       </div>
     </main>
   )

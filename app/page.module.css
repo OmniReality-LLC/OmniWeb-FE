@@ -1,13 +1,30 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 6rem;
   height: 100vh;
   background-color: white;
+  pointer-events: none;
+ 
 }
 
 .mainContainer{
+  top: 0;
+  margin-top: -250px;
   background-color: white;
+}
+
+@media (max-width: 767px) {
+
+ .mainContainer{
+
+  margin-top: -38vw;
+
+
+
+ }
+
+  
+  
 }

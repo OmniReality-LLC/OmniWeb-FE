@@ -1,0 +1,58 @@
+.buttonLink {
+    text-decoration: none;
+    margin: .5rem;
+}
+
+.button {
+    position: relative;
+    white-space: nowrap;
+    border-radius: .375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.decorativeElement {
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    border: 1px solid;
+    transition: 0.2s;
+    background: #353333;
+}
+
+.decorativeElement:nth-child(2) {
+    top: 0;
+    left: 85%;
+    transform: translate(-50%, -65%);
+}
+
+.decorativeElement:nth-child(3) {
+    bottom: 0;
+    right: 85%;
+    transform: translate(50%, 65%);
+}
+
+.button:hover .decorativeElement:nth-child(2) {
+    left: 50%;
+}
+
+.button:hover .decorativeElement:nth-child(3) {
+    right: 50%;
+}
+
+@media (max-width: 767px) {
+
+    .button{
+
+        margin-top: 25px;
+
+
+    }
+
+    
+    
+  }

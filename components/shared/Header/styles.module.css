@@ -1,0 +1,43 @@
+.navbar {
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(22, 22, 22, 0.90) !important;
+    backdrop-filter: blur(10px);
+  }
+  
+  .logoImg {
+      height: auto;
+      width: 75px;
+      margin-right: 10px;
+  }
+  
+  .nav-link {
+    color: #7E7E7E !important;
+    margin-left: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+      cursor: pointer;
+      color: #3EDCFF;
+      text-decoration: underline;
+  }
+  
+  .aLink {
+      color: #0077cc;
+  }
+  
+  .noUnderline {
+    text-decoration: none;
+  }
+  
+  .omniLink{
+    text-decoration: none !important;
+  }
+

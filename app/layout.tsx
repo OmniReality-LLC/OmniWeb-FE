@@ -1,4 +1,6 @@
 import './globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from '../components/shared/Header/component'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,8 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>{metadata.title}</title>
       </head>
-      <body id="mainBody"className={inter.className}>
-          {children}
+      <body id="mainBody" className={inter.className}>
+        <NavBar />
+        {children}
       </body>
     </html>
   )
