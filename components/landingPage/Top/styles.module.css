@@ -90,3 +90,30 @@
     
 }
 
+
+@media (max-height: 767px) {
+    .topMain {
+        flex-direction: column; 
+        justify-content: flex-end;
+    }
+    .contentHolder {
+        width: 100%;
+        text-align: center;
+        
+        
+    }
+    .button {
+        margin-left: 25px;
+        display: flex;
+        justify-content: center;
+    }
+    .myContainer{
+        
+        max-width: 100% !important;
+
+    
+    
+    }
+
+   
+}
