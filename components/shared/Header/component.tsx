@@ -9,11 +9,13 @@ import SlideGlowLinkBtn from '../Buttons/component'
 import MyNavLink from '../SLinks/component'
 import Lottie from "lottie-react";
 import LogoLottie from '../../../public/lottie/OmniLogoAnim.json'
+import HamburgerLottie from '../../../public/lottie/MobileHamburgerMenuOpen.json' 
 
 export default function NavBar() {
 
     const [isHovered, setIsHovered] = useState(false);
     const lottieRef = useRef<any>(null);
+    const hamburgerRef = useRef<any>(null);
     const [navbarOpen, setNavbarOpen] = useState(false);
     const navLinks =
         [
@@ -42,12 +44,22 @@ export default function NavBar() {
 
     const closeNavbar = () => {
         setNavbarOpen(false);
+
     }
+
+    const handleHamburgerClick = () => { // new click handler
+        setNavbarOpen(prevOpen => !prevOpen);
+        if (hamburgerRef.current) {
+            hamburgerRef.current.setDirection(navbarOpen ? -1 : 1);
+            hamburgerRef.current.play();
+
+        }
+    };
 
     return (
         <>
-            {navbarOpen && <div className={styles.overlay} onClick={closeNavbar}/>}
-            <Navbar collapseOnSelect expand="md" expanded={navbarOpen} onToggle={setNavbarOpen} className={styles.navbar}>
+            {navbarOpen && <div className={styles.overlay} onClick={handleHamburgerClick}/>}
+            <Navbar collapseOnSelect expand="md" expanded={navbarOpen} className={styles.navbar}>
                 <div className={`container`}>
                     <Link href='/' className={styles.noUnderline}>
                         <Navbar.Brand
@@ -70,7 +82,15 @@ export default function NavBar() {
                             </span>
                         </Navbar.Brand>
                     </Link>
-                    <Navbar.Toggle aria-controls="navbarResponsive" className={styles.customToggler}/>
+                    <Navbar.Toggle aria-controls="navbarResponsive" className={styles.customToggler} onClick={handleHamburgerClick}> 
+                        <Lottie 
+                            lottieRef={hamburgerRef}
+                            animationData={HamburgerLottie}
+                            autoplay={false}
+                            loop={false}
+                            className={styles.hamburgerMenu}
+                        />
+                    </Navbar.Toggle>
                     <Navbar.Collapse id="navbarResponsive">
                         <Nav className="ms-auto">
                             {navLinks.map((link, index) => (
