@@ -8,7 +8,7 @@ export default function LandingTopSection() {
 
     return (
         <div className={`${styles.topMain} align-items-center  `}>
-            <video autoPlay loop muted className={styles.backgroundVideo}>
+            <video autoPlay loop muted playsInline className={styles.backgroundVideo}>
                 <source src="https://res.cloudinary.com/dp1m9yaob/video/upload/v1688337459/OmniHomeLandingVideo_jbfk7x.mp4" type="video/mp4" />
 
                 Your browser does not support the video tag.
