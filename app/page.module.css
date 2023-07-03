@@ -2,13 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-
- 
+  background-color:#232323;
 }
 
 .mainContainer{
-  background-color: white;
+  background-color: transparent;
   width: 100vw;
 }
 
@@ -16,12 +14,6 @@
 
  .mainContainer{
 
-
-
-
-
  }
-
-  
   
 }

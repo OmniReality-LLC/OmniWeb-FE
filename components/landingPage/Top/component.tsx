@@ -2,9 +2,8 @@
 import SlideGlowLinkBtn from '../../shared/Buttons/component'
 import styles from './styles.module.css';
 
-
-
 export default function LandingTopSection() {
+
 
     return (
         <div className={`${styles.topMain} align-items-center  `}>
@@ -20,8 +19,10 @@ export default function LandingTopSection() {
                         <span className={styles.gradientText}>Connecting</span> the world through digital experiences
                     </h3>
                     <p className={styles.paragraph}>
-                        <span className={styles.gradientWords}>Website Design | </span> 
-                        <span className={styles.gradientWords}>Extended Reality | </span> 
+                        <span className={styles.gradientWords}>Website </span>
+                        <span className={`${styles.gradientWords} ${styles.absolutePosition} ${styles.fadeInOut}`}>Design </span>
+                        <span className={`${styles.gradientWords} ${styles.absolutePosition} ${styles.fadeInOut2}`}>Develop </span>
+                        <span className={styles.gradientWords}>| Extended Reality | </span>
                         <span className={styles.gradientWords}>Remote Desktop </span>
                     </p>
                     <div className={styles.button}>
@@ -30,12 +31,5 @@ export default function LandingTopSection() {
                 </div>
             </div>
         </div>
-
-
     )
-
-
-
-
-
 }

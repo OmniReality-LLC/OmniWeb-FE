@@ -7,7 +7,6 @@
     background: transparent;
     position: relative;
    
-    
 }
 
 .topMain::before {
@@ -39,12 +38,10 @@
     -webkit-text-fill-color: transparent;
 }
 
-.paragraph {
+.gradientWords {
     background: linear-gradient(to right, rgb(12, 171, 219), rgb(78, 187, 250));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    
 }
 
 .contentHolder {
@@ -64,6 +61,25 @@
     object-fit: cover;
 }
 
+.fadeInOut {
+    animation: fadeInOut 8s infinite;
+    position: absolute;
+}
+
+.fadeInOut2 {
+    animation: fadeInOut 8s infinite;
+    animation-delay: 4s;
+}
+
+@keyframes fadeInOut {
+    0% {opacity: 1;}
+    40% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+
+
 @media (max-width: 800px) {
     .topMain {
         flex-direction: column; 
@@ -72,7 +88,6 @@
     .contentHolder {
         width: 100%;
         text-align: center;
-        
         
     }
     .button {
@@ -83,8 +98,6 @@
     .myContainer{
         
         max-width: 100% !important;
-
-    
     
     }
     
