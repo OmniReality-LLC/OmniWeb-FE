@@ -82,15 +82,16 @@ export default function NavBar() {
                             </span>
                         </Navbar.Brand>
                     </Link>
-                    <Navbar.Toggle aria-controls="navbarResponsive" className={styles.customToggler} onClick={handleHamburgerClick}> 
+                    
                         <Lottie 
                             lottieRef={hamburgerRef}
                             animationData={HamburgerLottie}
                             autoplay={false}
                             loop={false}
                             className={styles.hamburgerMenu}
+                            onClick={handleHamburgerClick}
                         />
-                    </Navbar.Toggle>
+                 
                     <Navbar.Collapse id="navbarResponsive">
                         <Nav className="ms-auto">
                             {navLinks.map((link, index) => (
