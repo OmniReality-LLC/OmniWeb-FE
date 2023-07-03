@@ -55,3 +55,23 @@
   height: 50px;
   width: 50px;
 }
+
+
+@media (max-width: 767px) {
+
+  .omniLink{
+
+    visibility: hidden;
+  }
+
+  .logoImg{
+    justify-self: center;
+  }
+
+  .navbarBrand{
+    
+    position: absolute;
+    top: 0;
+    transform: translateX(37.5vw);
+  }
+}

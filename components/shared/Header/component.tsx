@@ -63,7 +63,7 @@ export default function NavBar() {
                 <div className={`container`}>
                     <Link href='/' className={styles.noUnderline}>
                         <Navbar.Brand
-                            className={` d-flex align-items-center `}
+                            className={` ${styles.navbarBrand} d-flex align-items-center `}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >

@@ -12,8 +12,6 @@ export default function Home() {
       <div className={styles.mainContainer}>
 
         <TopSection/>
-     
- 
       </div>
     </main>
   )
