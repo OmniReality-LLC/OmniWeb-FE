@@ -54,6 +54,7 @@
 .hamburgerMenu {
   height: 50px;
   width: 50px;
+  visibility: hidden;
 }
 
 
@@ -86,5 +87,6 @@
     top: 25px;
     right: 0;
     cursor: pointer;
+    visibility: visible;
   }
 }
