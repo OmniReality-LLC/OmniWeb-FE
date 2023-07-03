@@ -35,12 +35,14 @@
 .gradientText {
     background: linear-gradient(to right,#2c6fd3 ,#3EDCFF );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .gradientWords {
     background: linear-gradient(to right, rgb(12, 171, 219), rgb(78, 187, 250));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -64,11 +66,13 @@
 .fadeInOut {
     animation: fadeInOut 8s infinite;
     position: absolute;
+    
 }
 
 .fadeInOut2 {
     animation: fadeInOut 8s infinite;
     animation-delay: 4s;
+   
 }
 
 @keyframes fadeInOut {
@@ -78,8 +82,6 @@
     100% {opacity: 1;}
   }
   
-
-
 @media (max-width: 800px) {
     .topMain {
         flex-direction: column; 
@@ -98,11 +100,13 @@
     .myContainer{
         
         max-width: 100% !important;
-    
     }
-    
-}
+    .gradientWords{
 
+        white-space: nowrap;
+
+    }
+}
 
 @media (max-height: 767px) {
     .topMain {
@@ -111,9 +115,7 @@
     }
     .contentHolder {
         width: 100%;
-        text-align: center;
-        
-        
+        text-align: center; 
     }
     .button {
         margin-left: 25px;
@@ -121,12 +123,7 @@
         justify-content: center;
     }
     .myContainer{
-        
         max-width: 100% !important;
-
-    
-    
     }
 
-   
 }
