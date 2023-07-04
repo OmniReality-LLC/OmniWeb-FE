@@ -22,7 +22,7 @@
         "quantity": 4
       },
       "repulse": {
-        "distance": 200,
+        "distance": 100,
         "duration": 0.4
       }
     }
@@ -33,7 +33,7 @@
     },
     "links": {
       "color": "#ffffff",
-      "distance": 150,
+      "distance": 200,
       "enable": true,
       "opacity": 0.5,
       "width": 1
@@ -56,7 +56,7 @@
         "enable": true,
         "area": 1600
       },
-      "value": 30
+      "value": 45
     },
     "opacity": {
       "value": 0.5
