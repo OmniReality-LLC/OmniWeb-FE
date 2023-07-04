@@ -10,25 +10,31 @@ interface SlideGlowLinkBtnProps {
     textColor?: string;
     bgColor?: string;
     glowColor?: string;
+    borderColor?: string;
+    decoratorBorderColor?: string;
     decoratorBgColor?: string;
     marginL?: string;
     marginR?: string;
     marginT?: string;
     marginB?: string;
+    defaultStyle?: boolean;
 
 }
 export default function SlideGlowLinkBtn({
     text,
     textColor = '#D4D4D4',
     textSize = "clamp(15px, 1.5vw, 20px)",
+    borderColor = "grey",
     linkTo,
-    bgColor,
+    bgColor = "#353333",
     glowColor = '#3EDCFF',
+    decoratorBorderColor = `#3EDCFF`,
     decoratorBgColor = "#353333",
     marginL = '25px',
     marginR = '25px',
     marginT = '0px',
-    marginB = '0px'
+    marginB = '0px',
+    defaultStyle = true
 
 
 }: SlideGlowLinkBtnProps) {
@@ -38,8 +44,8 @@ export default function SlideGlowLinkBtn({
         <button
             className={styles.button}
             style={{
-                backgroundColor: bgColor,
-                borderColor: isHovered ? glowColor : 'grey',
+                backgroundColor: defaultStyle ?  bgColor :( isHovered ? glowColor : bgColor),
+                borderColor: isHovered ? glowColor : borderColor ,
                 boxShadow: isHovered ? `0 0 5px ${glowColor}` : 'none',
                 fontSize: textSize,
                 marginLeft: marginL,
@@ -54,18 +60,18 @@ export default function SlideGlowLinkBtn({
                 href={linkTo}
                 className={styles.buttonLink}
                 style={{
-                    color: isHovered ? glowColor : textColor,
+                    color: isHovered ? (defaultStyle ?  glowColor : bgColor) : textColor,
                     textShadow: isHovered ? `0 0 5px ${glowColor}` : 'none'
                 }}
             >
                 {text}
             </Link>
             <span className={styles.decorativeElement} style={{ 
-                borderColor: glowColor,
+                borderColor: decoratorBorderColor,
                 backgroundColor: decoratorBgColor,
                 }}/>
             <span className={styles.decorativeElement} style={{ 
-                borderColor: glowColor,
+                borderColor: decoratorBorderColor,
                 backgroundColor: decoratorBgColor, }}/>
         </button>
     )

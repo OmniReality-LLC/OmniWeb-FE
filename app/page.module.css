@@ -2,18 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .mainContainer{
-  background-color: transparent;
+  background-color: red;
   width: 100vw;
 }
 
 @media (max-width: 767px) {
 
- .mainContainer{
 
- }
   
 }
+

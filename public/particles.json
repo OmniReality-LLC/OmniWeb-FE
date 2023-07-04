@@ -1,7 +1,7 @@
 {
   "background": {
     "color": {
-      "value": "#0d47a1"
+      "value": "#232323"
     }
   },
   "fpsLimit": 120,
@@ -54,9 +54,9 @@
     "number": {
       "density": {
         "enable": true,
-        "area": 800
+        "area": 1600
       },
-      "value": 80
+      "value": 30
     },
     "opacity": {
       "value": 0.5

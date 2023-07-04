@@ -1,12 +1,17 @@
 .serviceMain {
     display: flex;
-    align-items: center; 
+    align-items:flex-start; 
     justify-content: center;
     background: transparent;
     height: 100vh;
     width: 100vw;
 }
 
-.lottieAnimation {
-    max-width: 720px;
+
+
+.contentContainer{
+    width: 100vw;
+    height: 87.5vh;
+    z-index: 1;
+    background: #191A1B;
 }
