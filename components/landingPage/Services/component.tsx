@@ -7,7 +7,7 @@ import MyInfoCard from '../../shared/carousels/infoCaro/Card/component'
 
 //<Lottie animationData={construction} autoplay={true}  loop={true} className={styles.lottieAnimation}/>
 
-export default function Service({ section, topShadow }: { section: Section, topShadow: boolean}) {
+export default function Service({ section, topShadow }: { section: Section, topShadow: boolean }) {
 
     const myData: Section = section;
     const shadowData = {
@@ -16,27 +16,24 @@ export default function Service({ section, topShadow }: { section: Section, topS
     }
 
     return (
-        <div className={styles.serviceMain}>
+        <div className={`${styles.serviceMain} `} style={{
+            boxShadow: topShadow ? (shadowData.topBottomShadow) : (shadowData.bottomOnly)
+        }}>
+            <div className={styles.engravedContainer}>
+                <div className={`${styles.containerTest} container`}>
+                    <div className={`${styles.rowContent} justify-content-center`}>
 
-            <div className={`${styles.contentContainer} `} style={{
-
-                boxShadow: topShadow ? (shadowData.topBottomShadow) : (shadowData.bottomOnly)
-
-
-
-            }}>
-
-                    <div className={styles.engravedContainer}>
-                        <div className={`${styles.fullHeight} row justify-content-center`}>
-                            <div className="col-lg-6 d-flex justify-content-center align-items-center">
-                                <MyInfoCard />
-                            </div>
-                            <div className="col-lg-6 d-flex justify-content-center align-items-center ">
-                                <img src="/icons/OmniHomeWebDesignImage.png" alt="description" className={`${styles.img} img-fluid `}/>
-                            </div>
+                        <div className={`${styles.infoCardHolder} d-flex justify-content-center align-items-center`}>
+                            <MyInfoCard />
                         </div>
+                        <div className={`${styles.imgContainer} d-flex justify-content-center align-items-center`}>
+                            <img src="/icons/OmniHomeWebDesignImage.png" alt="description" className={`${styles.img} img-fluid`} />
+                        </div>
+
                     </div>
+                </div>
             </div>
         </div>
     )
+
 }

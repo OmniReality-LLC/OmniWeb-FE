@@ -1,96 +1,87 @@
-
-
 .mainCardHolder {
 
-    width: 100%;
+  width: 100%;
+  background-color: #242424;
+  /* Lighter than #141516 */
+  box-shadow:
+    0 -2px 5px rgba(255, 255, 255, 0.1),
+    /* Top white shadow, you can adjust opacity to make it more/less faint */
+    0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Bottom black shadow */
+  border-radius: 1rem;
+
+}
 
 
-    background-color: #242424;  /* Lighter than #141516 */
-    box-shadow:
-      0 -2px 5px rgba(255, 255, 255, 0.1),  /* Top white shadow, you can adjust opacity to make it more/less faint */
-      0 2px 5px rgba(0, 0, 0, 0.5);  /* Bottom black shadow */
-    border-radius: 1rem;
+.imgContainer {
+  display: flex;
+  align-items: center;
 
-  }
+  padding-right: 0;
 
 
-  .imgContainer {
-    display: flex;
-    align-items: center;
 
+}
 
-  }
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
 
-  .btnContainer {
-    display: flex;
-    justify-content: center;
-  }
+.title {
+  display: flex;
+  font-size: 2.75vw;
+  background: linear-gradient(to right, #3C7FE3, #3EDCFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  .title{
-    font-size: 2.75vw;
-    background: linear-gradient(to right, #3C7FE3, #3EDCFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .title, .subTitle, .paragraph{
-
-    margin: 2.5%;
-  }
-
-
-.subTitle{
+.subTitle {
 
   font-size: clamp(1.5rem, 1.75rem, 2rem);
+  margin-bottom: 5%;
 }
 
-.paragraph{
+.paragraph {
   font-size: 1.25rem;
+  margin-bottom: 0;
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-  .title{
+  .title {
 
-    font-size: 1.85rem;
+    font-size: 1.65rem;
 
-}
+  }
 
-.subTitle{
+  .subTitle {
 
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 
-}
-.paragraph{
-  font-size: 1rem;
+  }
 
-}
+  .paragraph {
+    font-size: 1rem;
 
+  }
 
-}
+  .imgContainer {
 
-.mainCardHolder{
-
-
-  width: 85%;
-
-}
-
-
-
-.myRow{
+    max-width: 25% !important;
+    padding-right: auto;
+  }
 
 
 }
 
-.myButton{
+
+
+.myRow {}
+
+.myButton {
 
   width: 30%;
-
-
-
-
-
 
 }
