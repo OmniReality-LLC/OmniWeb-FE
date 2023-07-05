@@ -43,10 +43,11 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Particles id="tsparticles" url="/particles.json" init={particlesInit} loaded={particlesLoaded} />
+
 
       <div className={styles.mainContainer}>
         <TopSection />
+        <Particles id="tsparticles" url="/particles.json" init={particlesInit} loaded={particlesLoaded} className={styles.particles}/>
         <ServiceSection section={section} />
         <ServiceSection section={section} />
         <ServiceSection section={section} />

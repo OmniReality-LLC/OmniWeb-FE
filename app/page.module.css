@@ -12,6 +12,13 @@
 @media (max-width: 767px) {
 
 
-  
+
 }
 
+
+.particles{
+  position: absolute;
+  z-index: -1;
+
+
+}
