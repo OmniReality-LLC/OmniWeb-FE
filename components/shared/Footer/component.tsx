@@ -4,7 +4,6 @@ import SlideGlowLinkBtn from '../Buttons/component'
 import MyNavLink from '../SLinks/component'
 import styles from './styles.module.css';
 
-
 export default function Footer() {
     return (
         <div className={styles.footerMain}>
@@ -16,14 +15,8 @@ export default function Footer() {
                 </div>
                 <div className={`${styles.buttonCol} col`}>
                     <div className={`${styles.footerRow} d-flex justify-content-start`}>
-
-
                         <SlideGlowLinkBtn className={styles.myButton} text={'Schedule A Call'} linkTo={''} marginL='0' textColor='#D4D4D4' defaultStyle={false} />
-
-
-
                         <SlideGlowLinkBtn className={styles.myButton} text={'Contact Us'} linkTo={''} textColor='#D4D4D4' defaultStyle={false} />
-
                     </div>
                 </div>
             </div>

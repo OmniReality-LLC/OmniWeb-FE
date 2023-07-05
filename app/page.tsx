@@ -10,13 +10,13 @@ import { Section } from '../types/interfaces';
 import styles from './page.module.css'
 import TopSection from '../components/landingPage/Top/component'
 import ServiceSection from '../components/landingPage/Services/component'
+
+
 import pagesData from '../public/data.json'
 
 //<Lottie animationData={construction} autoplay loop />
 //import Lottie from 'lottie-react'
 //import construction from '../public/lottie/construction.json';
-
-
 
 export default function Home() {
 
@@ -50,6 +50,7 @@ export default function Home() {
         <ServiceSection section={section} />
         <ServiceSection section={section} />
         <ServiceSection section={section} />
+
       </div>
     </main>
   )

@@ -3,14 +3,10 @@
     align-items: center;
     background: transparent;
     height: calc(100vh - 6rem);
-
-    
 }
 
 .footerContainer {
     background-color: transparent;
-
-
     z-index: 0;
 }
 
@@ -25,86 +21,52 @@
     z-index: -1;
 }
 
-
 .h4 {
-
-    
     max-width: 556px;
-    
-
     margin-bottom: 50px;
 }
 
 .h6 {
-
-
     max-width: 500px;
-
     margin-bottom: 50px;
 }
 
-.h4,
-.h6 {
-
+.h4, .h6 {
     color: white;
-
 }
 
 .noMargin {
-
     width: auto !important;
-
 }
 
 @media (max-width: 768px) {
-
-    /* Adjust the pixel value to your desired mobile breakpoint */
     .footerRow {
         flex-direction: column;
         align-items: center;
-        
-    
     }
 
     .myButton {
         margin-bottom: 25px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-
         width: 75% !important;
-
     }
 
     .footerContainer {
-    
         text-align: center;
-      
     }
 
     .h1 {
-
         font-size: 52px;
-      
-       
-        
-        
-
-
     }
 
-    .h4{
+    .h4 {
         margin-top: 50px;
         font-size: 30px;
         margin-bottom: 25px;
-       
-       
     }
 
-    .buttonCol{
-
+    .buttonCol {
         margin-top: 250px;
     }
-
-  
 }
-
