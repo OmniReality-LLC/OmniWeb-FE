@@ -13,7 +13,9 @@
     padding: 5%; /* 5% padding from the top */
     z-index: 1;
     background-color: #191A1B;
+
 }
+
 
 .engravedContainer {
     display: flex;
@@ -25,8 +27,8 @@
     background: #141516;
     border-radius: 1rem;
     position: relative;
-
 }
+
 @media (max-width: 992px){
     .img{
       max-height: 50vh; /* adjust this value as needed */

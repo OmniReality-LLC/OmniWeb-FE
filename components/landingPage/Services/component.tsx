@@ -7,14 +7,24 @@ import MyInfoCard from '../../shared/carousels/infoCaro/Card/component'
 
 //<Lottie animationData={construction} autoplay={true}  loop={true} className={styles.lottieAnimation}/>
 
-export default function Service({ section }: { section: Section }) {
+export default function Service({ section, topShadow }: { section: Section, topShadow: boolean}) {
 
     const myData: Section = section;
+    const shadowData = {
+        topBottomShadow: '0 -2px 5px rgba(255, 255, 255, 0.1), 0 2px 5px rgba(0, 0, 0, 1)',
+        bottomOnly: '0 3px 6px -2px rgba(0, 0, 0, 1)'
+    }
 
     return (
         <div className={styles.serviceMain}>
 
-            <div className={`${styles.contentContainer} `}>
+            <div className={`${styles.contentContainer} `} style={{
+
+                boxShadow: topShadow ? (shadowData.topBottomShadow) : (shadowData.bottomOnly)
+
+
+
+            }}>
 
                     <div className={styles.engravedContainer}>
                         <div className={`${styles.fullHeight} row justify-content-center`}>
