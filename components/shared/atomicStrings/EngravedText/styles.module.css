@@ -1,5 +1,5 @@
 .engravedText {
-    font: bold 75px arial, sans-serif;
+    font: bold clamp(55px, 4vw, 75px) arial, sans-serif;
     background-color: #070707;
     color: transparent;
     text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.30);
