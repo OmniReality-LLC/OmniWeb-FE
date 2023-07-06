@@ -66,7 +66,7 @@
     padding-bottom: 5%;
     overflow: hidden;
     background: #191A1B;
-    margin-bottom: 5%; /* Adjust as necessary for the size of the gap you want */
+    margin-bottom: 100px; /* Adjust as necessary for the size of the gap you want */
 }
 
 .img {
