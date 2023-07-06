@@ -80,7 +80,31 @@
 
 }
 
-@media (min-width: 428px) {
+@media (max-width: 375px) {
+  .title {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+
+  .subTitle {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+
+  .paragraph {
+    font-size: 0.9rem; /* Adjust as needed */
+  }
+
+  .imgContainer {
+    max-width: 15% !important; /* Adjust as needed */
+    padding-right: auto;
+  }
+
+  .myButton {
+    margin-top: 10px !important; /* Adjust as needed */
+  }
+}
+
+
+@media (max-height: 428px) {
 
   .title {
 
@@ -114,35 +138,9 @@
 
 }
 
-@media (min-width: 375px) {
-  .title {
-    font-size: 1.2rem; /* Adjust as needed */
-  }
-
-  .subTitle {
-    font-size: 1.2rem; /* Adjust as needed */
-  }
-
-  .paragraph {
-    font-size: 0.9rem; /* Adjust as needed */
-  }
-
-  .imgContainer {
-    max-width: 15% !important; /* Adjust as needed */
-    padding-right: auto;
-  }
-
-  .myButton {
-    margin-top: 10px !important; /* Adjust as needed */
-  }
-}
-
-
-
 .myButton {
 
   width: 30%;
-  margin-top: 15px !important;
 
 }
 

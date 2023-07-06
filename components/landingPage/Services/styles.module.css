@@ -47,7 +47,7 @@
     }
 }
 
-@media (min-width: 428px){
+@media (max-height: 428px){
 
     .rowContent{
         flex-direction: row;
