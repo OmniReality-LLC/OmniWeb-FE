@@ -56,18 +56,18 @@
 
   .title {
 
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
 
   }
 
   .subTitle {
 
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
 
   }
 
   .paragraph {
-    font-size: 1.10rem;
+    font-size: 1.10rem !important;
 
   }
 
@@ -80,17 +80,54 @@
 
 }
 
-@media (max-width: 375px) {
+
+
+@media (max-height: 428px) {
+
   .title {
-    font-size: 1.2rem; /* Adjust as needed */
+
+    font-size: 1.15rem !important;
+
   }
 
   .subTitle {
-    font-size: 1.2rem; /* Adjust as needed */
+
+    font-size: 1.15rem !important;
+
   }
 
   .paragraph {
-    font-size: 0.9rem; /* Adjust as needed */
+    font-size: .85rem !important;
+
+  }
+
+  .imgContainer {
+
+    max-width: 18% !important;
+    padding-right: auto;
+  }
+
+
+  .myButton {
+
+    margin-top: 15px !important;
+    font-size: 15px !important;
+
+  }
+
+}
+
+@media (max-height: 375px) {
+  .title {
+    font-size: 1rem !important; /* Adjust as needed */
+  }
+
+  .subTitle {
+    font-size: 1rem !important; /* Adjust as needed */
+  }
+
+  .paragraph {
+    font-size: 0.80rem !important; /* Adjust as needed */
   }
 
   .imgContainer {
@@ -100,42 +137,8 @@
 
   .myButton {
     margin-top: 10px !important; /* Adjust as needed */
+    font-size: 15px !important;
   }
-}
-
-
-@media (max-height: 428px) {
-
-  .title {
-
-    font-size: 1.35rem;
-
-  }
-
-  .subTitle {
-
-    font-size: 1.35rem;
-
-  }
-
-  .paragraph {
-    font-size: 1.0rem;
-
-  }
-
-  .imgContainer {
-
-    max-width: 20% !important;
-    padding-right: auto;
-  }
-
-
-  .myButton {
-
-    margin-top: 15px !important;
-
-  }
-
 }
 
 .myButton {
