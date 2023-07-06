@@ -49,8 +49,8 @@ export default function Home() {
         <TopSection />
         <Particles id="tsparticles" url="/particles.json" init={particlesInit} loaded={particlesLoaded} className={styles.particles}/>
         <ServiceSection section={section} topShadow={false}/>
-        <ServiceSection section={section} topShadow={true}/>
-        <ServiceSection section={section} topShadow={true}/>
+        <ServiceSection section={section} topShadow={false}/>
+        <ServiceSection section={section} topShadow={false}/>
 
       </div>
     </main>

@@ -1,0 +1,65 @@
+.link {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.stringText{
+    margin: 0;
+}
+
+.underLine {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    border-bottom: 2px solid; 
+}
+
+.decorativeElement {
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    border: 1px solid;
+    transition: 0.2s;
+    background: #353333;
+    right: 85%;
+    bottom: 8px;
+    transform: translate(50%, 11px);
+    pointer-events: none;
+}
+
+.container:hover .decorativeElement {
+    right: 15%;
+}
+
+@media (max-width: 767px) {
+
+    .decorativeElement{
+        visibility: hidden;
+    }
+
+    .underLine{
+        visibility: hidden;
+    }
+    .link{
+
+        margin-bottom: 10px;
+    }
+   
+  }

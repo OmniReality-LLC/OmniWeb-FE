@@ -17,7 +17,7 @@ export default function CaroCard() {
 
                         <div className="col-9">
 
-                            <h2 className={styles.subTitle}> Web Design/Development</h2>
+                            <h2 className={styles.subTitle}> Web Design / Development</h2>
                             <p className={styles.paragraph}>Using innovative design and modern development tools, we craft compelling, user-friendly websites giving accessible online presence on all devices. </p>
                         </div>
                     </div>
