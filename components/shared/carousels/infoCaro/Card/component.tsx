@@ -23,7 +23,7 @@ export default function CaroCard() {
                     </div>
 
                     <div className={styles.btnContainer}>
-                        <SlideGlowLinkBtn text={'View'} linkTo={''} marginL='0' defaultStyle={false} className={styles.myButton} marginB='2.5%' marginT='10%' marginR='0' />
+                        <SlideGlowLinkBtn text={'View'} linkTo={''} marginL='0' defaultStyle={false} className={styles.myButton} marginB='2.5%' marginT='10%' marginR='0' textSize='16px' />
                     </div>
                 </div>
             </div>

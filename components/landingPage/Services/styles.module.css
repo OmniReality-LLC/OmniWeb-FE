@@ -47,11 +47,14 @@
     }
 }
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media (min-width: 428px){
+
     .rowContent{
-      flex-direction: column;
+        flex-direction: row;
     }
-  }
+
+}
+
 .infoCardHolder {
     padding: 20px;
     display: flex;
