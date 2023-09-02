@@ -2,7 +2,10 @@
     display: flex;
     align-items: center;
     background: transparent;
-    height: calc(100vh - 6rem);
+    height: auto;
+
+    position: relative;
+    min-height: 80vh;
 }
 
 .footerContainer {

@@ -1,10 +1,7 @@
-"use client"
 import SlideGlowLinkBtn from '../../shared/Buttons/component'
 import styles from './styles.module.css';
 
 export default function LandingTopSection() {
-
-
     return (
         <div className={`${styles.topMain} align-items-center  `}>
             <video autoPlay loop muted playsInline className={styles.backgroundVideo}>
