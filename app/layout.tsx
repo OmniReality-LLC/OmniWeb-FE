@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../components/shared/Header/component'
 import FooterSection from '../components/shared/Footer/component'
 import { Inter } from 'next/font/google'
+import ParticleBackground from '../components/shared/Particles/component'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,9 +28,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body id="mainBody" className={inter.className}>
         <NavBar />
+
         {children}
+
         <FooterSection/>
       </body>
+
     </html>
   )
 }

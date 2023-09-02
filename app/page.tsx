@@ -12,10 +12,15 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <ParticleBackground/>
+      <ParticleBackground />
+
       <div className={styles.mainContainer}>
         <TopSection />
-        <ServiceTest/>
+        <ServiceTest />
+
+
+
+
       </div>
     </main>
   )

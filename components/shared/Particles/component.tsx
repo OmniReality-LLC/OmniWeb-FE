@@ -20,7 +20,9 @@ export default function ParticleBackground() {
     }, []);
 
     return (
-        <Particles id="tsparticles" url="/particles.json" init={particlesInit} loaded={particlesLoaded} className={styles.particles} />
+
+            <Particles id="tsparticles" url="/particles.json" init={particlesInit} loaded={particlesLoaded} className={styles.particles} />
+
     );
 
 };
