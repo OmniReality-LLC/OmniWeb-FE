@@ -38,7 +38,7 @@ export default function ServicesSection() {
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
-                            <Image src='/pictures/XRImage.png' className={styles.SVG} alt={'Image of a laptop computer'} width={843} height={562}/>
+                            <Image src='/pictures/XRImage.png' className={styles.SVG} alt={'Image of a person wearing a VR headset'} width={843} height={562}/>
                         </div>
                     </div>
                 </div>
