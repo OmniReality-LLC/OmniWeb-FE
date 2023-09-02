@@ -15,8 +15,8 @@ export default function Footer() {
                 </div>
                 <div className={`${styles.buttonCol} col`}>
                     <div className={`${styles.footerRow} d-flex justify-content-start`}>
-                        <SlideGlowLinkBtn className={styles.myButton} text={'Schedule A Call'} linkTo={''} marginL='0' textColor='#D4D4D4' defaultStyle={false} />
-                        <SlideGlowLinkBtn className={styles.myButton} text={'Contact Us'} linkTo={''} textColor='#D4D4D4' defaultStyle={false} />
+                        <SlideGlowLinkBtn className={styles.myButton} text={'Coming Soon'} linkTo={''} marginL='0' textColor='#D4D4D4' defaultStyle={false} />
+                        <SlideGlowLinkBtn className={styles.myButton} text={'Coming Soon'} linkTo={''} textColor='#D4D4D4' defaultStyle={false} />
                     </div>
                 </div>
             </div>

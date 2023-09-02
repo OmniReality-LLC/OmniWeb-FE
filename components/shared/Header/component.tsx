@@ -9,7 +9,7 @@ import SlideGlowLinkBtn from '../Buttons/component'
 import MyNavLink from '../SLinks/component'
 import Lottie from "lottie-react";
 import LogoLottie from '../../../public/lottie/OmniLogoAnim.json'
-import HamburgerLottie from '../../../public/lottie/MobileHamburgerMenuOpen.json' 
+import HamburgerLottie from '../../../public/lottie/MobileHamburgerMenuOpen.json'
 
 export default function NavBar() {
 
@@ -82,8 +82,8 @@ export default function NavBar() {
                             </span>
                         </Navbar.Brand>
                     </Link>
-                    
-                        <Lottie 
+
+                        <Lottie
                             lottieRef={hamburgerRef}
                             animationData={HamburgerLottie}
                             autoplay={false}
@@ -91,7 +91,7 @@ export default function NavBar() {
                             className={styles.hamburgerMenu}
                             onClick={handleHamburgerClick}
                         />
-                 
+
                     <Navbar.Collapse id="navbarResponsive">
                         <Nav className="ms-auto">
                             {navLinks.map((link, index) => (
@@ -104,7 +104,7 @@ export default function NavBar() {
                                     activeColor={'#3EDCFF'} />
                             ))}
                             <SlideGlowLinkBtn
-                                text={'Request A Quote'}
+                                text={'Coming Soon'}
                                 textColor='#D4D4D4'
                                 linkTo={''}
                                 bgColor={'transparent'}

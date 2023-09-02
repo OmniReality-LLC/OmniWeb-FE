@@ -23,7 +23,7 @@ export default function LandingTopSection() {
                         <span className={styles.gradientWords}>Remote Desktop </span>
                     </p>
                     <div className={styles.button}>
-                        <SlideGlowLinkBtn text={'View Services'} linkTo={''} textColor='#D4D4D4' bgColor='transparent' marginL='0' marginB='25px' />
+                        <SlideGlowLinkBtn text={'Coming Soon'} linkTo={''} textColor='#D4D4D4' bgColor='transparent' marginL='0' marginB='25px' />
                     </div>
                 </div>
             </div>
