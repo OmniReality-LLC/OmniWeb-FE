@@ -26,8 +26,8 @@
 
 .neonBlueDot {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     background-color: transparent;
     border: 2px solid #ADD8E6;
     border-radius: 50%;
@@ -36,9 +36,10 @@
 }
 
 .activeNeonBlueDot {
+    width: 20px;
+    height: 20px;
     display: block;
-    width: 18px;
-    height: 18px;
+
     background-color: transparent;
     border: 2px solid #00FFFF;
     border-radius: 50%;

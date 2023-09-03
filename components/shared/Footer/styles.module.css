@@ -5,12 +5,16 @@
     height: auto;
 
     position: relative;
-    min-height: 80vh;
+    min-height: 100vh;
+    margin-top:40px;
+
+
 }
 
 .footerContainer {
     background-color: transparent;
     z-index: 0;
+
 }
 
 .h1 {
@@ -22,6 +26,7 @@
     -moz-background-clip: text;
     background-clip: text;
     z-index: -1;
+
 }
 
 .h4 {

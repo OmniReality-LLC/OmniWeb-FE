@@ -5,6 +5,7 @@ import Carousel from "nuka-carousel";
 interface CustomPagingDotsProps {
     currentSlide: number;
     slideCount: number;
+    goToSlide?: (slideIndex: number) => void
 }
 
 interface ListItem {
@@ -28,13 +29,18 @@ interface ServiceCardProps {
     carouselItems: CarouselItemProps[];
 }
 
-const CustomPagingDots = ({ currentSlide, slideCount }: CustomPagingDotsProps) => {
+const CustomPagingDots = ({ currentSlide, slideCount, goToSlide }: CustomPagingDotsProps) => {
     const dots = [];
     for (let i = 0; i < slideCount; i++) {
         const isActive = i === currentSlide;
         dots.push(
             <span
                 key={i}
+                onClick={() => {
+                    if (goToSlide) {
+                        goToSlide(i);
+                    }
+                }}
                 className={isActive ? styles.activeNeonBlueDot : styles.neonBlueDot}
             ></span>
         );
@@ -42,12 +48,16 @@ const CustomPagingDots = ({ currentSlide, slideCount }: CustomPagingDotsProps) =
     return <div className={styles.dotsContainer}>{dots}</div>;
 };
 
+
 export default function ServiceCard({ carouselItems }: ServiceCardProps) {
     return (
         <Carousel
-            renderBottomCenterControls={(props) => <CustomPagingDots {...props} />}
+            autoplay
+            autoplayInterval={10000}
+            renderBottomCenterControls={({ goToSlide, ...props }) => <CustomPagingDots goToSlide={goToSlide} {...props} />} // Modify this line
             renderCenterLeftControls={({ previousSlide }) => null}
             renderCenterRightControls={({ nextSlide }) => null}
+            wrapAround={true}
         >
             {carouselItems.map((item, index) => (
                 <div key={index} className={styles.carouselItem}>
