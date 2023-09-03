@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   background-color: transparent;
+
+
 }
 
 .mainContainer{
@@ -19,6 +21,7 @@
 .particles{
 
   z-index: -100;
+
 
 
 }

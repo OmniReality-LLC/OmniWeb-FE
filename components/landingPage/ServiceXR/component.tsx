@@ -2,6 +2,7 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import ServiceCard from '../../shared/ServiceCard/component'
 
+
 const xrServices = [
     {
         subTitle: "Enter a new reality & discover innovative solutions",
@@ -34,13 +35,14 @@ export default function ServicesSection() {
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={xrServices}/>
+                                <ServiceCard carouselItems={xrServices} linkTo=''/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
                             <Image src='/pictures/XRImage.png' className={styles.SVG} alt={'Image of a person wearing a VR headset'} width={843} height={562}/>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

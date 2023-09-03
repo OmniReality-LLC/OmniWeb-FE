@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ServiceCard from '../../shared/ServiceCard/component'
 
 
+
 const cloudComputingServices = [
     {
         subTitle: "Boost your performance with Cloud Based Computing",
@@ -34,14 +35,17 @@ export default function ServicesSection() {
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={cloudComputingServices} />
+                                <ServiceCard carouselItems={cloudComputingServices} linkTo=''/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
                             <Image src='/pictures/CloudImage.png' className={styles.SVG} alt={'Picture of the cloud'} width={843} height={562}/>
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
         </div>
     );

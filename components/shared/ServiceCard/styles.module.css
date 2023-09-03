@@ -11,6 +11,12 @@
     height: auto;
 }
 
+.mainCar{
+
+    display: flex;
+    flex-direction:column;
+}
+
 .carouselItem {
     display: flex;
     flex-direction: column;
@@ -21,30 +27,52 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    justify-items: center;
+    position: relative;
+    top: 10px;
+    width:300px;
+
+
+
+}
+.button{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    justify-content: center;
 }
 
+
+.slider-container {
+    display: flex !important;
+    width: 100% !important;
+  }
+
 .neonBlueDot {
-    display: block;
+
     width: 18px;
     height: 18px;
     background-color: transparent;
     border: 2px solid #ADD8E6;
     border-radius: 50%;
-    margin-right: 5px;
-    margin-bottom: -50px;
+    margin: 5px;
+
+
 }
 
 .activeNeonBlueDot {
     width: 20px;
     height: 20px;
-    display: block;
+
+
 
     background-color: transparent;
     border: 2px solid #00FFFF;
     border-radius: 50%;
-    margin-right: 5px;
-    margin-bottom: -50px;
+    margin: 5px;
+
+
 }
 
 .subTitle {

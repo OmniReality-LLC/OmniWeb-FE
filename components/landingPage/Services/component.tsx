@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ServiceCard from '../../shared/ServiceCard/component'
 
 
+
 const webServices = [
     {
         subTitle: "Build your digital identity, increase traffic and boost revenue.",
@@ -33,13 +34,14 @@ export default function ServicesSection() {
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={webServices} />
+                                <ServiceCard carouselItems={webServices} linkTo=''/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
                             <Image src='/pictures/WebDesign.png' className={styles.SVG} alt={'Image of a laptop computer'} width={843} height={562}/>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
