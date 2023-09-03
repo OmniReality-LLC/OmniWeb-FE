@@ -53,7 +53,7 @@ export default function ServiceCard({ carouselItems }: ServiceCardProps) {
     return (
         <Carousel
             autoplay
-            autoplayInterval={10000}
+            autoplayInterval={16000}
             renderBottomCenterControls={({ goToSlide, ...props }) => <CustomPagingDots goToSlide={goToSlide} {...props} />} // Modify this line
             renderCenterLeftControls={({ previousSlide }) => null}
             renderCenterRightControls={({ nextSlide }) => null}
