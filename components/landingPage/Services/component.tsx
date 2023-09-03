@@ -29,7 +29,7 @@ export default function ServicesSection() {
     return (
         <div className={styles.servicesMain}>
             <div className={styles.contentMain}>
-                <h1 className={`${styles.title} `}>Website Services</h1>
+            <h1 className={`${styles.title}`} data-text="Website Services">Website Services</h1>
                 <div className={styles.cardBackground}>
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>

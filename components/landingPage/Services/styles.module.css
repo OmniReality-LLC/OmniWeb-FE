@@ -29,20 +29,21 @@
 }
 
 .title {
-
-    color: #141516;
+    position: relative;
+    color: transparent;
     font: bold clamp(48px, 5vw, 96px) arial, sans-serif;
     background-color: #070707;
-    color: transparent;
-    text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.30);
+    text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.3);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     align-self: flex-start;
     margin-left: 10%;
     margin-top: 10px;
+    z-index: 10;
+  }
 
-}
+
 
 
 
@@ -253,13 +254,13 @@
         padding-bottom: 25px;
     }
 
-    .description{
+    .description {
 
         width: 100%;
     }
 
 
-    .subTitle{
+    .subTitle {
 
         margin-bottom: 25px;
     }
