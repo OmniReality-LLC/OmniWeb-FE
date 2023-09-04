@@ -6,6 +6,11 @@ import ParticleBackground from '../components/shared/Particles/component'
 import ServiceTest from '../components/landingPage/Services/component'
 import XRServices from '../components/landingPage/ServiceXR/component'
 import CloudServices from '../components/landingPage/ServiceCloud/component'
+import FeaturedSection from '../components/landingPage/FeaturedProjects/component'
+import TechnologySection from '../components/landingPage/TechnologyStack/component'
+
+
+
 
 //<Lottie animationData={construction} autoplay loop />
 //import Lottie from 'lottie-react'
@@ -22,10 +27,8 @@ export default function Home() {
         <ServiceTest />
         <XRServices/>
         <CloudServices/>
-
-
-
-
+        <FeaturedSection/>
+        <TechnologySection/>
       </div>
     </main>
   )
