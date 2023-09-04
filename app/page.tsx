@@ -12,6 +12,7 @@ import Spacer from '../components/shared/PageSpacer/component'
 
 
 
+
 //<Lottie animationData={construction} autoplay loop />
 //import Lottie from 'lottie-react'
 //import construction from '../public/lottie/construction.json';
@@ -32,7 +33,7 @@ export default function Home() {
 
 
 
-        <ParticleBackground />
+
 
         <ServiceTest />
         <Spacer height='clamp(75px, 7vw, 150px)'/>
