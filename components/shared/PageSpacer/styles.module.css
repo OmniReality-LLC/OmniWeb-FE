@@ -1,0 +1,5 @@
+.spacerMain{
+    display: flex;
+    height: var(--omniSpacerDefault);
+    width: 100%;
+}
