@@ -9,42 +9,26 @@ import FeaturedSection from '../components/landingPage/FeaturedProjects/componen
 import TechnologySection from '../components/landingPage/TechnologyStack/component'
 import Spacer from '../components/shared/PageSpacer/component'
 
-
-
-
-
 //<Lottie animationData={construction} autoplay loop />
 //import Lottie from 'lottie-react'
 //import construction from '../public/lottie/construction.json';
-
-
-
 
 export default function Home() {
 
   return (
     <main className={styles.main}>
       <ParticleBackground />
-
-
       <div className={styles.mainContainer}>
-      <TopSection />
-        <Spacer height='clamp(75px, 7vw, 150px)'/>
-
-
-
-
-
+        <TopSection />
         <ServiceTest />
-        <Spacer height='clamp(75px, 7vw, 150px)'/>
-        <XRServices/>
-        <Spacer height='clamp(75px, 7vw, 150px)'/>
-        <CloudServices/>
-        <Spacer height='clamp(75px, 7vw, 150px)'/>
-        <FeaturedSection/>
-        <Spacer height='clamp(75px, 7vw, 150px)'/>
-        <TechnologySection/>
-
+        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <XRServices />
+        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <CloudServices />
+        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <FeaturedSection />
+        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <TechnologySection />
       </div>
     </main>
   )
