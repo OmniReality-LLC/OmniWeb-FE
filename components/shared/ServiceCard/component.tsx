@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import Carousel from "nuka-carousel";
 import SlideGlowLinkBtn from '../../shared/Buttons/component'
 
+
 interface CustomPagingDotsProps {
     currentSlide: number;
     slideCount: number;

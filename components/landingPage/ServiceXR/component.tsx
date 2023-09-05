@@ -2,6 +2,8 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import ServiceCard from '../../shared/ServiceCard/component'
 
+import CloudImgHelper from '../../shared/ServiceImageCloud/component';
+
 
 const xrServices = [
     {
@@ -39,7 +41,7 @@ export default function ServicesSection() {
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
-                            <Image src='/pictures/XRImage.png' className={styles.SVG} alt={'Image of a person wearing a VR headset'} width={843} height={562}/>
+                            <CloudImgHelper quality={25} width={843} height={562} src="https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693946907/Omni%20Website/Main%20Page/Service%20Images/XRImage_oeau6n.png" alt="Image of a person wearing a VR headset" className={styles.SVG}/>
                         </div>
                     </div>
 

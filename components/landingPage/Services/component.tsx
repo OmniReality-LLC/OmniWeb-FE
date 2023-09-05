@@ -1,8 +1,7 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
 import ServiceCard from '../../shared/ServiceCard/component'
-
-
+import CloudImgHelper from '../../shared/ServiceImageCloud/component';
 
 const webServices = [
     {
@@ -38,7 +37,8 @@ export default function ServicesSection() {
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
-                            <Image src='/pictures/WebDesign.png' className={styles.SVG} alt={'Image of a laptop computer'} width={843} height={562}/>
+                        <CloudImgHelper quality={75} src={'https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693946905/Omni%20Website/Main%20Page/Service%20Images/WebDesign_fnazw4.png'} width={843} height={562} alt={'Image of a laptop computer'} className={styles.SVG}/>
+
                         </div>
                     </div>
 
