@@ -63,4 +63,9 @@
 
   }
 
+  .imageLinkContainer{
+
+    max-height: 250px;
+  }
+
 }

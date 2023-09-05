@@ -2,11 +2,13 @@
     display: flex;
     align-items: center;
     background: transparent;
-    height: auto;
+    min-height: 100vh;
 
     position: relative;
-    min-height: 100vh;
+
     margin-top:40px;
+    overflow: hidden;
+
 
 
 }
@@ -41,6 +43,11 @@
 
 .h4, .h6 {
     color: white;
+}
+
+.footerRow{
+
+    margin-bottom: 40px;
 }
 
 .noMargin {
