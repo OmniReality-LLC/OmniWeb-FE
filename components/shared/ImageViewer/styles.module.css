@@ -6,12 +6,28 @@
   height: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding-left: 20px;
-  padding-right: 20px;
-  column-gap: 20px;
-  row-gap: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  column-gap: 2.5vw;
+  row-gap: 2.5vw;
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
+
+}
+.pswp--custom-icon-colors {
+  --pswp-icon-color: #00fffc;
+  --pswp-icon-color-secondary: #13ddcc;
+
+
+}
+
+.MYSETCLASS{
+
+  background-color: #00fffc !important;
+  color: #00fffc;
+
+
+
 
 }
 

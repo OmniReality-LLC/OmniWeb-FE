@@ -4,6 +4,7 @@ import NavBar from '../components/shared/Header/component'
 import FooterSection from '../components/shared/Footer/component'
 import { Inter } from 'next/font/google'
 import ParticleBackground from '../components/shared/Particles/component'
+import styles from './page.module.css'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>{metadata.title}</title>
       </head>
-      <body id="mainBody" className={inter.className}>
+      <body id="mainBody" className={`${inter.className} ${styles.myMain}`}>
         <NavBar />
 
         {children}

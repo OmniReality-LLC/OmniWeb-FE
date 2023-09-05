@@ -9,8 +9,8 @@
   width: 100vw;
 }
 
-@media (max-width: 767px) {
+.myMain > div:last-child{
 
-
-
+  --pswp-icon-color: #00fffc;
+  --pswp-icon-color-secondary: #333;
 }

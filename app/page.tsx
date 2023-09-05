@@ -8,6 +8,7 @@ import CloudServices from '../components/landingPage/ServiceCloud/component'
 import FeaturedSection from '../components/landingPage/FeaturedProjects/component'
 import TechnologySection from '../components/landingPage/TechnologyStack/component'
 import Spacer from '../components/shared/PageSpacer/component'
+import PageConnector from '../components/shared/PageConnector/component'
 
 //<Lottie animationData={construction} autoplay loop />
 //import Lottie from 'lottie-react'
@@ -21,16 +22,17 @@ export default function Home() {
       <div className={styles.mainContainer}>
         <TopSection />
         <ServiceTest />
-        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <PageConnector/>
         <XRServices />
-        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <PageConnector/>
         <CloudServices />
-        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <PageConnector whiteConnector={true}/>
         <FeaturedSection />
-        <Spacer height='clamp(75px, 7vw, 150px)' />
+        <PageConnector/>
         <TechnologySection />
       </div>
     </main>
   )
 }
 //<ParticleBackground/>
+//<Spacer height='clamp(75px, 7vw, 150px)' />

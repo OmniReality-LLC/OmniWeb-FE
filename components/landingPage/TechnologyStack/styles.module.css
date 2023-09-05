@@ -4,7 +4,7 @@
     width: 100vw;
     height: auto;
     background: #191A1B;
-    min-height: 100vh;
+    min-height: 50vh;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -20,8 +20,9 @@
     width: 100%;
     height: 100%;
     align-items: center;
-    min-height: 80vh;
+    min-height: 50vh;
     margin-bottom: 40px;
+
 
 }
 
@@ -36,18 +37,49 @@
     background-clip: text;
     align-self: flex-start;
     margin-left: 10%;
-    margin-top: 10px;
+
     z-index: 0 ;
   }
 
 .cardBackground {
     display: flex;
-    width: 90%;
+    width: 87.5%;
     border-radius: 25px;
     background-color: #141516;
     box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.50) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.50) inset;
     flex-grow: 1;
 }
+
+.iconContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* repeat 5 columns with equal fractional widths */
+    gap: 16px;  /* set the gap between grid items */
+    align-content: space-between;
+    align-items: center;
+    justify-items: center;
+    row-gap: 40px;
+
+    margin: 20px;
+
+
+
+  }
+
+  .icon {
+    display: flex;
+    width: auto;
+    height: auto;
+    max-width: 100%;  /* make it responsive */
+    max-height: 100%;
+
+}
+
+  .cardItemsContainer {
+    width: 100%;
+    flex-grow: 1;
+}
+
+
 
 
 
@@ -65,3 +97,24 @@
     }
 
 }
+
+/* Use media queries to adjust styles for smaller screens */
+@media (max-width: 768px) {
+    .iconContainer {
+      grid-template-columns: repeat(3, 1fr); /* adjust the number of columns */
+    }
+
+    .icon {
+      max-width: 80%; /* adjust the maximum width */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .iconContainer {
+      grid-template-columns: repeat(2, 1fr); /* adjust the number of columns */
+    }
+
+    .icon {
+      max-width: 70%; /* adjust the maximum width */
+    }
+  }
