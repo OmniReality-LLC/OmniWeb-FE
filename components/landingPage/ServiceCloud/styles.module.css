@@ -91,12 +91,11 @@
     width: 50%;
 }
 
-.SVG {
-    /* Consider renaming this class */
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+.displayImg {
+    object-fit: contain; /* Keeps aspect ratio intact */
+  max-width: 100%; /* Takes up full width of the container */
+  max-height: 100%; /* Takes up full height of the container */
+
 }
 
 
@@ -266,6 +265,13 @@
 
         margin-bottom: 25px;
     }
+
+    .displayImg {
+
+        width: 100%;
+        height: 100%;
+    }
+
 
 
 

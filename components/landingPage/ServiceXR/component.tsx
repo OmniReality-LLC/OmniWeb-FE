@@ -41,7 +41,7 @@ export default function ServicesSection() {
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
-                            <CloudImgHelper quality={25} width={843} height={562} src="https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693946907/Omni%20Website/Main%20Page/Service%20Images/XRImage_oeau6n.png" alt="Image of a person wearing a VR headset" className={styles.SVG}/>
+                            <CloudImgHelper quality={25} width={843} height={562} src="https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693946907/Omni%20Website/Main%20Page/Service%20Images/XRImage_oeau6n.png" alt="Image of a person wearing a VR headset" className={styles.displayImg}/>
                         </div>
                     </div>
 

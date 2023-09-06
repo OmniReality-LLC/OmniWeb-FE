@@ -7,7 +7,6 @@ import XRServices from '../components/landingPage/ServiceXR/component'
 import CloudServices from '../components/landingPage/ServiceCloud/component'
 import FeaturedSection from '../components/landingPage/FeaturedProjects/component'
 import TechnologySection from '../components/landingPage/TechnologyStack/component'
-import Spacer from '../components/shared/PageSpacer/component'
 import PageConnector from '../components/shared/PageConnector/component'
 
 //<Lottie animationData={construction} autoplay loop />
