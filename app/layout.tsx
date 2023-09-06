@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../components/shared/Header/component'
 import FooterSection from '../components/shared/Footer/component'
 import { Inter } from 'next/font/google'
-import ParticleBackground from '../components/shared/Particles/component'
+import { Analytics } from '@vercel/analytics/react';
 import styles from './page.module.css'
 
 
@@ -29,9 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body id="mainBody" className={`${inter.className} ${styles.myMain}`}>
         <NavBar />
-
         {children}
-
+        <Analytics />
         <FooterSection/>
       </body>
 
