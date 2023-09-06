@@ -33,6 +33,7 @@ export default function TechStackSection() {
                 src={`/integrationIcons/${icon}.svg`}
                 alt={icon}
                 className={styles.icon}
+                loading='lazy'
               />
             ))}
           </div>
