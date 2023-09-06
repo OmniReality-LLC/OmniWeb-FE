@@ -74,7 +74,7 @@ export default function ServiceCard({ carouselItems, linkTo }: ServiceCardProps)
                             <div className={styles.centerSmallCardContainer}>
                                 <div className={styles.smallCardContainer}>
                                     <div className={styles.iconContainer}>
-                                        <img src={item.smallCard.iconSrc} className={styles.svgIcon} />
+                                        <img src={item.smallCard.iconSrc} className={styles.svgIcon} loading='lazy' />
                                     </div>
                                     <div className={styles.textContainer}>
                                         <h3 className={styles.subSubTitle}>{item.smallCard.subSubTitle}</h3>

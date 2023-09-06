@@ -1,10 +1,9 @@
 .servicesMain {
     display: flex;
-
     width: 100vw;
     height: auto;
     background: #191A1B;
-    min-height: 75vh;
+
     align-items: center;
     justify-content: center;
     position: relative;
@@ -20,11 +19,7 @@
     width: 100%;
     height: 100%;
     align-items: center;
-    min-height: 80vh;
-
-
-
-
+    max-height: 80%;
 
 }
 
@@ -223,6 +218,7 @@
 
     .cardItemsContainer {
         flex-direction: column;
+        height: fit-content;
 
     }
 
@@ -230,10 +226,14 @@
 
         flex-direction: column;
         width: 90%;
-        padding-left: 0%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 5%;
         order: 1;
-        margin-bottom: 2.5%;
-        padding-right: 0%;
+        height: auto;
+        padding-top: 0;
+
+
 
 
     }
@@ -255,7 +255,7 @@
 
     .smallCardContent {
         padding: 25px;
-        padding-bottom: 25px;
+
     }
 
     .description {
@@ -270,10 +270,13 @@
     }
 
     .displayImg {
-
-        width: 100%;
-        height: 100%;
+        height: fit-content;
+        max-height: 600px;
     }
+
+
+
+
 
 
 

@@ -7,7 +7,7 @@ const cloudComputingServices = [
         subTitle: "Boost your performance with Cloud Based Computing",
         smallCard: {
             iconSrc: 'icons/CloudIcon.svg',
-            subSubTitle: 'Remote Development Service',
+            subSubTitle: 'Remote Dev Service',
             description: 'Providing secure, anytime access to cloud-based development environments from any device. Save costs on hardware, and develop with your favorite software.'
         }
     },
