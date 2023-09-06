@@ -4,8 +4,8 @@ import styles from './styles.module.css';
 export default function LandingTopSection() {
     return (
         <div className={`${styles.topMain} align-items-center  `}>
-            <video autoPlay loop muted playsInline  className={styles.backgroundVideo}>
-                <source src="https://res.cloudinary.com/omnirealitycloud/video/upload/f_auto,q_auto:best/v1688337459/Omni%20Website/Videos/OmniHomeLandingVideo_jbfk7x.mp4" />
+            <video autoPlay loop muted playsInline preload="auto" className={styles.backgroundVideo}>
+                <source src="https://res.cloudinary.com/omnirealitycloud/video/upload/f_auto,q_auto/v1688337459/Omni%20Website/Videos/OmniHomeLandingVideo_jbfk7x.mp4" />
 
                 Your browser does not support the video tag.
             </video>
