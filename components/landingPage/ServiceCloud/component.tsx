@@ -1,10 +1,6 @@
 import styles from './styles.module.css';
-import Image from 'next/image';
 import ServiceCard from '../../shared/ServiceCard/component'
-
 import CloudImgHelper from '../../shared/ServiceImageCloud/component';
-
-
 
 const cloudComputingServices = [
     {
