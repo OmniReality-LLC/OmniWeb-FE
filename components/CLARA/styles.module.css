@@ -38,6 +38,7 @@
   width: 426px;
   height: 413px;
   padding: 15px;
+  max-width: 94vw;
 
 }
 
@@ -197,21 +198,6 @@
   /* "auto" or "thin" */
   scrollbar-color: #FFF #323232;
   /* thumb and track color */
-
-
-}
-
-
-
-@media (max-width: 960px){
-
-  .clara {
-
-
-
-  }
-
-
 
 
 }
