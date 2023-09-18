@@ -10,7 +10,7 @@ export default function FeaturedSection() {
 
 
     return (
-        <div className={styles.servicesMain}>
+        <div className={styles.servicesMain} id='work'>
             <div className={styles.contentMain}>
                 <h1 className={`${styles.title}`} data-text="Featured Designs">Featured Designs</h1>
                 <div className={styles.cardBackground}>

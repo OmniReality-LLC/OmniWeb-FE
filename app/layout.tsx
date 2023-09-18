@@ -1,10 +1,9 @@
 import './globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from '../components/shared/Header/component'
-import FooterSection from '../components/shared/Footer/component'
-import { Inter } from 'next/font/google'
+import NavBar from '../components/shared/Header/component';
+import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import styles from './page.module.css'
+import styles from './page.module.css';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NavBar />
         {children}
         <Analytics />
-        <FooterSection/>
+
       </body>
 
     </html>

@@ -19,6 +19,7 @@ interface SlideGlowLinkBtnProps {
     marginB?: string;
     defaultStyle?: boolean;
     className?: string;
+    onClick?: () => void;
 
 }
 export default function SlideGlowLinkBtn({
@@ -36,13 +37,15 @@ export default function SlideGlowLinkBtn({
     marginT = '0px',
     marginB = '0px',
     defaultStyle = true,
-    className
+    className,
+    onClick
 }: SlideGlowLinkBtnProps) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <button
             className={`${styles.button} ${className}`}
+            onClick={onClick}
             style={{
                 backgroundColor: defaultStyle ?  bgColor :( isHovered ? glowColor : bgColor),
                 borderColor: isHovered ? glowColor : borderColor ,
@@ -52,6 +55,7 @@ export default function SlideGlowLinkBtn({
                 marginRight: marginR,
                 marginTop: marginT,
                 marginBottom: marginB,
+
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -66,11 +70,11 @@ export default function SlideGlowLinkBtn({
             >
                 {text}
             </Link>
-            <span className={styles.decorativeElement} style={{ 
+            <span className={styles.decorativeElement} style={{
                 borderColor: glowColor,
                 backgroundColor: decoratorBgColor,
                 }}/>
-            <span className={styles.decorativeElement} style={{ 
+            <span className={styles.decorativeElement} style={{
                 borderColor: glowColor,
                 backgroundColor: decoratorBgColor, }}/>
         </button>

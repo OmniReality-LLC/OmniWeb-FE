@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/404.js", "components/shared/ImageViewer/component.jsx", "components/shared/Particles/component.jsx", "components/shared/Particles/component.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/404.js", "components/shared/ImageViewer/component.jsx", "components/shared/Particles/component.jsx", "components/shared/Particles/component.js", "app/sendEmail.js", "app/api/route.js"],
   "exclude": ["node_modules"]
 }

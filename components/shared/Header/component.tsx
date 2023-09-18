@@ -20,10 +20,10 @@ export default function NavBar() {
     const navLinks =
         [
             { path: '/#home', name: 'Home' },
-            { path: '/#services', name: 'Services' },
+            { path: '/#services', name: 'Service' },
             { path: '/#work', name: 'Our Work' },
             { path: '/#about', name: 'About' },
-            { path: '/#contact', name: 'Contact' },
+            { path: '', name: 'Contact' },
         ];
 
     const handleMouseEnter = () => {
@@ -98,7 +98,7 @@ export default function NavBar() {
                                 <MyNavLink
                                     key={index}
                                     text={link.name}
-                                    linkTo='none'
+                                    linkTo={link.path}
                                     textSize='clamp(15px, 1.5vw, 20px)'
                                     inactiveColor={'#7E7E7E'}
                                     activeColor={'#3EDCFF'} />

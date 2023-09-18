@@ -1,0 +1,31 @@
+.userResponse {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .submitMessage {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 100%;
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 15px;
+    width: 80%;
+
+
+    white-space: pre-wrap; /* CSS3 */
+  word-wrap: break-word;  /* Internet Explorer 5.5+ */
+  overflow-wrap: break-word; /* Modern Browsers */
+  }
+
+
+  .iconImg{
+    align-self: self-start;
+  }
