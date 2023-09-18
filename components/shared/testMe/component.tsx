@@ -1,6 +1,5 @@
 import { Html } from "@react-email/html";
 import { Head } from '@react-email/head';
-import { Img } from '@react-email/Img';
 import { Link } from '@react-email/link';
 import { Container } from '@react-email/container'
 import {Body} from '@react-email/body'
@@ -32,7 +31,7 @@ export default function TestingComp() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}>
-          <Img src='https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1694550173/Omni%20Website/Email%20Templates/TopBanner_1_xyidwz.png' alt="OmniReality Banner" style={{}}/>
+          <img src='https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1694550173/Omni%20Website/Email%20Templates/TopBanner_1_xyidwz.png' alt="OmniReality Banner" style={{}}/>
           <Section style={{ // If Section doesn't exist, you can use another Container or a div
             display: 'flex',
             width: '100%',
