@@ -1,6 +1,6 @@
 
 import styles from './page.module.css';
-import ContactForm from '../../components/shared/ContactForm/component'
+
 
 
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
         <div className={styles.inputAndMapContainer}>
           {/* SUB CONTAINER: Input*/}
           <div className={styles.inputContainer}>
-            <ContactForm />
+
 
 
           </div>
