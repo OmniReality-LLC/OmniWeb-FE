@@ -76,6 +76,13 @@ export default function CLARA() {
 
   }, [])
 
+  useEffect(() => {
+    if (isOpen) {
+        scrollToBottom();
+    }
+}, [isOpen]);
+
+
   async function scrollToBottom() {
     if (midContainerRef.current) {
       const element = midContainerRef.current;
