@@ -73,11 +73,11 @@ export default function CLARA() {
   }, [messages]);
 
   useEffect(() => {
-    addMessage({type: 'clara', content: 'Hey there! I’m Clara, I’m your friendly AI chatbot who knows everything about this website. Go ahead, ask me anything!'})
+    addMessage({ type: 'clara', content: 'Hey there! I’m Clara, I’m your friendly AI chatbot who knows everything about this website. Go ahead, ask me anything!' })
 
   }, [])
 
-  async function scrollToBottom(){
+  async function scrollToBottom() {
     if (midContainerRef.current) {
       const element = midContainerRef.current;
       element.scrollTop = element.scrollHeight;
@@ -142,31 +142,25 @@ export default function CLARA() {
 
       </div>
 
-      <div className={styles.bottomContainer} style={disableUserChat ? { pointerEvents: 'none' } : { pointerEvents: 'auto' }}>
-  {/* Gray overlay */}
-  {disableUserChat && (
-    <div style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(128, 128, 128, 0.5)', // semi-transparent gray
-      zIndex: 1
-    }}>
-    </div>
-  )}
+      <div className={styles.bottomContainer}>
 
-  {/* Replace input with textarea */}
-  <textarea
-    ref={inputRef as React.RefObject<HTMLTextAreaElement>}  // Casting to the correct type
-    className={styles.inputBar}
-    placeholder="Type a message..."
-    onKeyDown={handleKeyDown}
-  ></textarea>
+        {/* Replace input with textarea */}
+        <textarea
+          ref={inputRef as React.RefObject<HTMLTextAreaElement>}  // Casting to the correct type
+          className={styles.inputBar}
+          placeholder="Type a message..."
+          onKeyDown={handleKeyDown}
+        ></textarea>
 
-  <button className={styles.submitButton} onClick={handleSubmit}>Submit</button>
-</div>
+        <button
+          className={styles.submitButton}
+          onClick={handleSubmit}
+          disabled={disableUserChat}
+          style={disableUserChat ? { cursor: "not-allowed", pointerEvents: "visiblePainted" } : { cursor: "pointer", pointerEvents: "auto" }}
+        >
+          Submit
+        </button>
+      </div>
 
     </div>
   );

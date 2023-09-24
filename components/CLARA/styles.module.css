@@ -170,6 +170,15 @@
 
 }
 
+.submitButton:disabled {
+  background-color: #ddd; /* Grayed out background */
+  color: #aaa; /* Grayed out text */
+  text-decoration: line-through; /* Strike-through */
+  border-color: red; /* Red border */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+
+
 
 /* Scroll bar mods  */
 
