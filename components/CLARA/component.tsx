@@ -5,7 +5,6 @@ import ClaraLottie from '../../public/lottie/ClaraLottie.json';
 import { useLottie, useLottieInteractivity } from 'lottie-react';
 import ClaraResponse from './responseBoxes/claraResponse/component'
 import UserResponse from './responseBoxes/userResponse/component';
-//
 
 type MessageType = 'user' | 'clara';
 interface Message {
@@ -87,9 +86,10 @@ export default function CLARA() {
   }
 
   async function testing(inputQuestion: string) {
+    console.log(process.env.NEXT_PUBLIC_CLARA_API_ACCESS);
     const customerID = "YourCustomerID";  // Replace with the actual customer ID
     const question = inputQuestion;
-    const apiUrl = `https://localhost:7085/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
+    const apiUrl = `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
 
     try {
 
