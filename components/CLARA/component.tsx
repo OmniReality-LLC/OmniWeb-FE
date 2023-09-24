@@ -40,7 +40,7 @@ export default function CLARA() {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && !disableUserChat) {
       handleSubmit();
     }
   };
@@ -69,10 +69,7 @@ export default function CLARA() {
   }, [lottieProps]);
 
   useEffect(() => {
-    if (midContainerRef.current) {
-      const element = midContainerRef.current;
-      element.scrollTop = element.scrollHeight;
-    }
+    scrollToBottom();
   }, [messages]);
 
   useEffect(() => {
@@ -80,10 +77,19 @@ export default function CLARA() {
 
   }, [])
 
+  async function scrollToBottom(){
+    if (midContainerRef.current) {
+      const element = midContainerRef.current;
+      element.scrollTop = element.scrollHeight;
+    }
+
+
+  }
+
   async function testing(inputQuestion: string) {
     const customerID = "YourCustomerID";  // Replace with the actual customer ID
     const question = inputQuestion;
-    const apiUrl = `https://omnichatapi.azurewebsites.net/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
+    const apiUrl = `https://localhost:7085/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
 
     try {
 
