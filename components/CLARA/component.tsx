@@ -19,9 +19,9 @@ export default function CLARA() {
   const [disableUserChat, setDisableUserChat] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const midContainerRef = useRef<HTMLDivElement>(null);
+  //CLaRA lottie speeds
   const idle = 1;
   const thinking = 2.5;
-
 
   function addMessage(message: Message) {
     setMessages(prevMessages => [...prevMessages, message]);
@@ -69,26 +69,21 @@ export default function CLARA() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
 
-  useEffect(() => {
-    addMessage({ type: 'clara', content: 'Hey there! I’m Clara, I’m your friendly AI chatbot who knows everything about this website. Go ahead, ask me anything!' })
-
-  }, [])
-
-  useEffect(() => {
     if (isOpen) {
-        scrollToBottom();
+      scrollToBottom();
     }
-}, [isOpen]);
+  }, [messages, isOpen]);
 
+  useEffect(() => {
+    addMessage({ type: 'clara', content: 'Hey there! I’m Clara, I’m your friendly AI chatbot who knows everything about this website. Go ahead, ask me anything!' });
+  }, []);
 
   async function scrollToBottom() {
     if (midContainerRef.current) {
       const element = midContainerRef.current;
       element.scrollTop = element.scrollHeight;
     }
-
 
   }
 
@@ -150,7 +145,6 @@ export default function CLARA() {
       </div>
 
       <div className={styles.bottomContainer}>
-
         {/* Replace input with textarea */}
         <textarea
           ref={inputRef as React.RefObject<HTMLTextAreaElement>}  // Casting to the correct type

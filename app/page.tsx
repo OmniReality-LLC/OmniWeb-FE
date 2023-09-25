@@ -2,9 +2,10 @@
 import styles from './page.module.css';
 import TopSection from '../components/landingPage/Top/component';
 import ParticleBackground from '../components/shared/Particles/component'
-import ServiceTest from '../components/landingPage/Services/component'
-import XRServices from '../components/landingPage/ServiceXR/component'
-import CloudServices from '../components/landingPage/ServiceCloud/component'
+import WebsiteService from '../components/landingPage/services/Website/component'
+import EcommerceService from '../components/landingPage/services/Ecommerce/component'
+import AIAddonsService from '../components/landingPage/services/AiAddons/component'
+import CLARAService from '../components/landingPage/services/CLARA/component'
 import FeaturedSection from '../components/landingPage/FeaturedProjects/component'
 import TechnologySection from '../components/landingPage/TechnologyStack/component'
 import PageConnector from '../components/shared/PageConnector/component'
@@ -24,23 +25,20 @@ export default function Home() {
 
 
       <div className={styles.mainContainer}>
-      <CLARA/>
-      <TopSection />
-        <ServiceTest />
-        <PageConnector/>
-        <XRServices />
-        <PageConnector/>
-        <CloudServices />
-        <PageConnector whiteConnector={true}/>
+        <CLARA />
+        <TopSection />
+        <WebsiteService />
+        <PageConnector />
+        <EcommerceService />
+        <PageConnector />
+        <AIAddonsService />
+        <PageConnector />
+        <CLARAService />
+        <PageConnector whiteConnector={true} />
         <FeaturedSection />
-        <PageConnector/>
+        <PageConnector />
         <TechnologySection />
-        <FooterSection/>
-
-
-
-
-
+        <FooterSection />
       </div>
     </main>
   )

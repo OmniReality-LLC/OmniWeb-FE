@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
-import ServiceCard from '../../shared/ServiceCard/component'
-import CloudImgHelper from '../../shared/ServiceImageCloud/component';
+import ServiceCard from '../../../shared/ServiceCard/component'
+import CloudImgHelper from '../../../shared/ServiceImageCloud/component';
 
 const webServices = [
     {
@@ -22,7 +22,7 @@ const webServices = [
         ]
     }
 ];
-export default function ServicesSection() {
+export default function WebsiteService() {
 
     return (
         <div className={styles.servicesMain} id='services'>
@@ -36,7 +36,7 @@ export default function ServicesSection() {
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
-                        <CloudImgHelper quality={75} src={'https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693946905/Omni%20Website/Main%20Page/Service%20Images/WebDesign_fnazw4.png'} width={843} height={562} alt={'Image of a laptop computer'} className={styles.displayImg}/>
+                        <CloudImgHelper quality={75} src={'https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693946905/Omni%20Website/Main%20Page/Service%20Images/WebDesign_fnazw4.png'} width={628} height={646} alt={'Image of a laptop computer'} className={styles.displayImg}/>
                         </div>
                     </div>
 

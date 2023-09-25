@@ -2,21 +2,19 @@ import styles from './styles.module.css';
 
 export default function TechStackSection() {
   const icons = [
-    '3DSmaxIcon',
-    'AdobeIcon',
-    'AzureIcon',
-    'BlenderIcon',
-    'CloudinaryIcon',
-    'FigmaIcon',
     'GoogleAnalyticsIcon',
-    'SanityIcon',
+    'CloudflareIcon',
+    'AWSIcon',
+    'AzureIcon',
+    'FigmaIcon',
+    'AdobeIcon',
+    'VercelIcon',
+    'CloudinaryIcon',
     'ShopifyIcon',
     'StripeIcon',
-    'TinaCMSIcon',
     'UnrealEngineIcon',
-    'VercelIcon',
-    'mailchimpLogo',
-    'sendgridLogo',
+    'BlenderIcon',
+    '3DsmaxIcon'
   ];
 
   return (
