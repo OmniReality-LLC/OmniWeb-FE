@@ -14,7 +14,7 @@ export default function TechStackSection() {
     'StripeIcon',
     'UnrealEngineIcon',
     'BlenderIcon',
-    '3DsmaxIcon'
+    '3DSmaxIcon'
   ];
 
   return (
