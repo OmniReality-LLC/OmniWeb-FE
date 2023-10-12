@@ -164,7 +164,7 @@
 @media (max-height: 767px) {
     .topMain {
         flex-direction: column;
-        justify-content: flex-end;
+
     }
 
     .contentHolder {
