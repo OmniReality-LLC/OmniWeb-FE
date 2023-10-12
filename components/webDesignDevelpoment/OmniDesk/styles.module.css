@@ -107,7 +107,7 @@
     grid-template-columns: repeat(2, 1fr);
     /* This creates two columns, each taking up half (1 fraction) of the available space */
     grid-template-rows: repeat(2, auto);
-    height: 100%;
+    height: fit-content;
     column-gap: 25px;
     align-items: center;
 
