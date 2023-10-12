@@ -21,7 +21,7 @@ const advertBanner = [
 const webPlans = [
     {
         title: "Starter",
-        subTitle: "",
+        subTitle: "Blogs, Portfolios and More",
         price: "$7,500",
         mostPopular: false,
         priceHeaderText: 'Starting At',
@@ -55,7 +55,7 @@ const webPlans = [
     },
     {
         title: "Enterprise",
-        subTitle: "E-commerce capable",
+        subTitle: "SaaS Capable",
         price: "Custom",
         mostPopular: false,
         priceHeaderText: 'Contact',
