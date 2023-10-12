@@ -40,9 +40,9 @@
 
     color: #FFF;
     text-align: center;
-    font-size: 32px;
+
     font-style: normal;
-    font-weight: 700;
+
     line-height: normal;
 
 
@@ -60,6 +60,11 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.myContainer{
+
+    height: fit-content;
 }
 
 .contentHolder {
