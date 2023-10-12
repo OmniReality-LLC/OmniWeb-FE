@@ -10,7 +10,6 @@ import FeaturedSection from '../components/landingPage/FeaturedProjects/componen
 import TechnologySection from '../components/landingPage/TechnologyStack/component'
 import PageConnector from '../components/shared/PageConnector/component'
 import FooterSection from '../components/shared/Footer/component'
-import CLARA from '@/components/CLARA/component';
 
 
 //<Lottie animationData={construction} autoplay loop />
@@ -22,10 +21,7 @@ export default function Home() {
   return (
     <main className={styles.main} id='home'>
       <ParticleBackground />
-
-
       <div className={styles.mainContainer}>
-        <CLARA />
         <TopSection />
         <WebsiteService />
         <PageConnector />

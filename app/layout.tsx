@@ -4,6 +4,7 @@ import NavBar from '../components/shared/Header/component';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import styles from './page.module.css';
+import CLARA from '@/components/CLARA/component';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,9 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <title>{metadata.title}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body id="mainBody" className={`${inter.className} ${styles.myMain}`}>
         <NavBar />
+        <CLARA />
         {children}
         <Analytics />
 

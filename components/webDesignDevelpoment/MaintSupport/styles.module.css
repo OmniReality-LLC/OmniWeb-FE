@@ -1,0 +1,652 @@
+.servicesMain {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  background: #191A1B;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+}
+
+.contentMain {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  max-height: 80%;
+
+}
+
+.title {
+
+  color: #141516;
+  font: bold clamp(48px, 5vw, 96px) arial, sans-serif;
+  background-color: #070707;
+  color: transparent;
+  text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.30);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  align-self: flex-start;
+  margin-left: 10%;
+
+}
+
+.blockBackground {
+  display: flex;
+  flex-direction: column;
+  width: 87.5%;
+  border-radius: 25px;
+  background-color: #141516;
+  box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.50) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.50) inset;
+  margin-bottom: 25px;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+
+.comparePlansText {
+
+  align-self: flex-start;
+  margin-left: 5%;
+  margin-bottom: 0;
+  margin-top: 50px;
+  color: #FFF;
+}
+
+.buttonMobile {
+
+  width: 90%;
+  height: 45px;
+}
+
+.plansContainerMain {
+
+
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin-top: 65px;
+  margin-bottom: 25px;
+  flex-direction: column;
+  background-color: #1B1D1E;
+  border-radius: 25px;
+  border: #3EDCFF 2px solid;
+  box-shadow: 0px 0px 10px 0px rgba(62, 220, 255, 0.50), 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.planContainerShadow {
+
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 25px;
+  flex-direction: column;
+  background-color: #1B1D1E;
+  border-radius: 25px;
+  position: relative;
+
+}
+
+.planContainerShadow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  box-shadow:
+    2px 2px 3px 0px rgba(32, 35, 37, 1),
+    3px 3px 3px 0px rgba(62, 220, 255, .1);
+  z-index: 0;
+  pointer-events: none;
+
+
+
+}
+
+
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.priceContainer {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.tableContainer {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tableRow {
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  justify-content: space-between;
+
+
+
+}
+
+
+.myButton {
+
+  width: 175px;
+}
+
+@media (max-width: 960px) {
+  .title {
+    width: 100%;
+    text-align: center;
+
+    margin-left: 0;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+/* Most populat tag */
+
+.mostPopTagContainer {
+
+  flex-shrink: 0;
+  position: absolute;
+  transform: translateY(-95%);
+}
+
+
+
+.firstInnerBox {
+  border: 2px solid #3EDCFF;
+  border-radius: 15px;
+  z-index: 0;
+  box-shadow: 0px 0px 10px 0px rgba(62, 220, 255, 0.50), 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  background: #202325;
+  width: auto;
+  height: auto;
+}
+
+
+.secondInnerBox {
+  background: #202325;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: clamp(160px, 15vw, 215px);
+  height: 87px;
+  position: relative;
+  z-index: 0;
+
+
+}
+
+.secondInnerBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  box-shadow:
+    2px 2px 3px 0px rgba(32, 35, 37, 1),
+    3px 3px 3px 0px rgba(62, 220, 255, .1);
+  z-index: -1;
+  /* Position below the content but above the container's background */
+}
+
+.secondInnerBox::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  /* Cover half the width of the box from the right */
+  height: 50%;
+  /* Cover half the height of the box from the bottom */
+  background: radial-gradient(circle at bottom right, rgba(32, 35, 37, 01), transparent);
+  border-radius: inherit;
+  z-index: -1;
+  /* Same as the ::before pseudo-element */
+}
+
+.box {
+  width: 75%;
+  height: 62px;
+  background-color: #191A1B;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow:
+    inset 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px -4px 4px rgba(58, 58, 58, 0.5);
+}
+
+.innerBox {
+  width: 91%;
+  height: 85%;
+  background-color: #141516;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* This centers the content vertically */
+  position: relative;
+  box-shadow:
+    inset 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px -4px 4px rgba(58, 58, 58, 0.5);
+}
+
+
+.tagTitle {
+  color: white;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 2.5px;
+
+
+}
+
+
+/* Plans Title */
+
+.plansTitleContainer {
+  width: 100%;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  /* for horizontal centering */
+  align-items: center;
+  /* for vertical centering */
+}
+
+.plansTitlefirstInnerBox {
+
+  width: 90%;
+  height: clamp(52px, 4vw, 73px);
+  border-radius: 10px;
+  background: #191A1B;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(58, 58, 58, 0.50) inset;
+  display: flex;
+  /* added to enable centering of its children */
+  justify-content: center;
+  /* for horizontal centering */
+  align-items: center;
+  /* for vertical centering */
+}
+
+.plansTitlesecondInnerBox {
+  width: 91%;
+  height: 85%;
+  border-radius: 10px;
+  background: #141516;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(58, 58, 58, 0.50) inset;
+  display: flex;
+  /* added to enable centering of its children */
+  justify-content: center;
+  /* for horizontal centering */
+  align-items: center;
+  /* for vertical centering */
+}
+
+.plansTitleboxTitle {
+  color: #FFF;
+  text-align: center;
+  font-size: clamp(20px, 1.5vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  /* This is to ensure that the default margins of the h1 tag aren't affecting your layout */
+}
+
+
+
+
+
+
+
+/* Table Tier Cell */
+
+.tableTierCell {
+  display: flex;
+  width: 100%;
+  height: 72px;
+  border-left: 2px solid rgba(62, 220, 255, 0.50);
+  border-right: none;
+}
+
+
+.tableTierCellContent {
+  display: flex;
+  align-items: center;
+  /* Vertically centers the content */
+  justify-content: center;
+  /* Horizontally centers the content */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.tableTierCellContentPop {
+
+  display: flex;
+  align-items: center;
+  /* Vertically centers the content */
+  justify-content: center;
+  /* Horizontally centers the content */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #202325;
+
+
+}
+
+
+
+.tableTierCellText {
+
+  background: linear-gradient(180deg, #1B1D1E 0%, #3EDCFF 48.44%, #3EDCFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: clamp(15px, 1.75vw, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 5%;
+
+
+}
+
+.tableTierCellTextBenefitsColumn {
+
+
+
+  color: #FFF;
+  font-size: clamp(15px, 1.65vw, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  width: fit-content;
+  margin-bottom: 0;
+  margin-left: 12.5%;
+  margin-right: 5px;
+
+
+
+
+}
+
+
+.checkMarkSVG {
+  height: auto;
+  /* Allow it to resize proportionally */
+  max-height: 100%;
+  /* But don't exceed the container's height */
+  width: auto;
+}
+
+
+.spacer {
+  display: flex;
+  width: 100%;
+  height: 2px;
+  border-radius: 100px;
+  background: linear-gradient(270deg, rgba(44, 118, 134, 0.00) 0%, #2B7586 49.76%, rgba(43, 117, 133, 0.00) 100%);
+
+}
+
+.darkSpacer {
+
+
+
+  width: 100%;
+  height: 2px;
+  border-radius: 100px;
+  background: linear-gradient(270deg, rgba(62, 220, 255, 0.00) 0%, #3EDCFF 49.76%, rgba(62, 220, 255, 0.00) 100%);
+
+
+}
+
+
+
+
+.infoIcon {
+
+
+  margin-left: 5px;
+  height: 15px;
+  width: auto;
+  margin-right: 10px;
+
+
+
+
+}
+
+.infoIcon:hover {
+
+  cursor: help;
+
+}
+
+
+
+
+/* Sticky mobile  */
+
+
+.diamondButtonMain {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  /* Adjust as per your layout */
+}
+
+.diamondButton {
+
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+
+
+
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.arrowUp,
+.arrowDown {
+  position: absolute;
+  font-size: 24px;
+  /* Adjust size as per your need */
+  right: 0px;
+  transform: translateX(-50%);
+}
+
+.arrowUp {
+  top: 0px;
+  /* Adjust as per your need */
+}
+
+.arrowDown {
+  bottom: 0px;
+  /* Adjust as per your need */
+  transform: translateX(-50%) rotate(180deg);
+}
+
+
+
+/* Maint and Support Nav Menu */
+
+.bottomNavMenu {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  border-radius: 5px;
+  background: #1B1D1E;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.bottomNavMenu.closed {
+  transform: translateY(100%);
+  opacity: 0;
+
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
+  z-index: 1;
+  /* Ensure it's above other content */
+}
+
+.tierButton {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  color: #FFF;
+  margin-top: 15px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  margin-left: 5%;
+  padding-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5%;
+  /* provide some spacing on the right side */
+}
+
+.tierButton:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  /* Adjust as per requirement */
+  left: 0;
+  height: 2px;
+  /* Adjust as per requirement */
+  width: 100%;
+  background: linear-gradient(270deg, rgba(118, 118, 118, 0.00) 0%, #767676 52.64%, rgba(118, 118, 118, 0.00) 100%);
+
+
+
+
+}
+
+.tierButton:last-child {
+  border-bottom: none;
+  /* Remove the bottom border from the last button */
+}
+
+
+.checkmarkIcon {
+  /* Adjust this to get the desired position and size */
+  height: 16px;
+  /* height of SVG */
+  width: 22px;
+  /* width of SVG */
+  fill: #3EDCFF;
+  /* this is an optional fill color, you can remove it if you want */
+}
+
+
+
+
+@media (max-width: 850px) {
+  .mostPopTagContainer {
+    flex-shrink: 0;
+    position: absolute;
+    transform: translate(-50%, -95%);
+    left: 50%;
+  }
+
+  .comparePlansText {
+    margin-top: 5%;
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .tableTierCellContentPop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      linear-gradient(90deg,
+        rgba(32, 35, 37, 0.00) 0%,
+        rgba(32, 35, 37, 0.00) 83.33%,
+        #1B1D1E 100%);
+    z-index: 1;
+    /* Ensure it overlays any other content */
+  }
+}

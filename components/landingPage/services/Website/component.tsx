@@ -32,7 +32,7 @@ export default function WebsiteService() {
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={webServices} linkTo=''/>
+                                <ServiceCard carouselItems={webServices} linkTo='/WebsiteService' buttonText='View Service'/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>

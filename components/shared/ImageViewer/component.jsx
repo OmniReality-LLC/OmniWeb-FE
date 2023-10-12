@@ -9,7 +9,6 @@ const leftArrowSVGString = '<svg aria-hidden="true" class="pswp__icn" viewBox="0
 
 export default function SimpleGallery(props) {
 
-
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
       gallery: '#' + props.galleryID,
@@ -30,7 +29,7 @@ export default function SimpleGallery(props) {
   }, []);
 
   return (
-    <div className={`${styles.imageViewerMain} pswp-gallery`} id={props.galleryID}>
+    <div className={`${styles.imageViewerMain} pswp-gallery`} id={props.galleryID} style={props.padding ? {paddingLeft: props.padding, paddingRight: props.padding} : {}}>
       {props.images.map((image, index) => (
         <a
           href={image.largeURL}

@@ -1,0 +1,296 @@
+.servicesMain {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    background: #191A1B;
+    min-height: 75vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+}
+
+.contentMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.title {
+    position: relative;
+    color: transparent;
+    font: bold clamp(48px, 5vw, 96px) arial, sans-serif;
+    background-color: #070707;
+    text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.3);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    align-self: flex-start;
+    margin-left: 10%;
+    z-index: 1;
+}
+
+.cardBackground {
+    display: flex;
+    width: 87.5%;
+    border-radius: 25px;
+    background-color: #141516;
+    box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.50) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    flex-grow: 1;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.cardItemsContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    padding: 5%;
+}
+
+.leftContainer {
+    width: 50%;
+    height: auto;
+}
+
+.QAItemsContainer {
+
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+
+}
+
+.rightContainer {
+    width: 50%;
+    height: auto;
+    display: flex;
+
+    justify-content: center;
+}
+
+.questionImage img {
+    width: 100%;
+    height: auto;
+    margin-left: 5%;
+    /* This ensures the image maintains its aspect ratio */
+}
+
+/* QA */
+.qaMain {}
+
+.shadowContainer {
+    cursor: pointer;
+    display: flex;
+    height: auto;
+    width: auto;
+    border: 1px solid transparent;
+    background: linear-gradient(180deg, #202325 0%, #191A1B 100%), #202325;
+}
+
+.shadowContainer:hover {
+    border-radius: inherit;
+    border: 1px solid #3EDCFF;
+    background: linear-gradient(180deg, #454A4E 0%, #202325 100%);
+
+}
+
+.shadowContainerActive{
+    border-radius: inherit;
+    border: 1px solid #3EDCFF;
+    background: linear-gradient(180deg, #454A4E 0%, #202325 100%);
+}
+
+.backgroundContainer {
+    border-radius: inherit;
+    height: auto;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.backgroundContainer:hover{
+    box-shadow: 0px 0px 10px 0px rgba(62, 220, 255, 0.50), 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.backgroundContainerActive{
+    box-shadow: 0px 0px 10px 0px rgba(62, 220, 255, 0.50), 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.line{
+
+    position: absolute;
+    width: calc(40% - 10px);
+    height: 2px;
+    border-radius: 100px;
+    background: linear-gradient(270deg, rgba(62, 220, 255, 0.00) 1.36%, #3EDCFF 49.76%, rgba(62, 220, 255, 0.00) 98.15%);
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /* Initial closed state */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+
+
+.topContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    margin: 2%;
+    margin-left: 5%;
+
+
+}
+
+.question {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+}
+
+.questionText {
+    color: #FFF;
+    font-size: clamp(15px, 1.5vw, 30px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.arrow {
+    display: inline-flex;
+    margin-right: 1.25%;
+    margin-left: 1.25;
+
+
+
+
+
+
+}
+
+.arrowRotate {
+    transform: rotate(90deg);
+}
+
+
+.bottomContainer {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    /* Hide overflow content */
+    padding-right: 10%;
+}
+
+
+
+.description {
+    width: 100%;
+    max-height: 0;
+
+
+}
+
+.descriptionText{
+    color: #D1D1D1;
+    font-size: clamp(15px, 1.25vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 5%;
+
+}
+
+.descriptionActive {
+    width: 100%;
+    max-height: 500px;
+    /* Some sufficiently large value for the opened state */
+}
+
+
+
+
+
+/* Media */
+@media (max-width: 960px) {
+
+    .cardItemsContainer {
+        flex-direction: column;
+    }
+
+    .title {
+
+        width: 100%;
+        text-align: center;
+
+        margin-left: 0;
+    }
+
+
+}
+
+
+@media (max-width: 1100px) {
+
+    .cardItemsContainer {
+
+        flex-direction: column;
+    }
+
+
+    .leftContainer {
+        width: 100%;
+        order: 1;
+        z-index: 0;
+
+
+
+
+    }
+
+    .rightContainer {
+        width: 100%;
+        order: 0;
+        z-index: 0;
+
+
+    }
+    .questionImage{
+
+
+
+
+    }
+
+    .questionImage img {
+
+        margin-left: 0%;
+
+
+
+        /* This ensures the image maintains its aspect ratio */
+    }
+
+
+
+    .line{
+        width: 80%;
+
+
+
+    }
+
+
+}

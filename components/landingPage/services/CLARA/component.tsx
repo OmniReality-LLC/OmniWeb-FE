@@ -33,7 +33,7 @@ export default function CLARASection() {
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={xrServices} linkTo=''/>
+                                <ServiceCard carouselItems={xrServices} linkTo='' buttonText='Coming Soon'/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>

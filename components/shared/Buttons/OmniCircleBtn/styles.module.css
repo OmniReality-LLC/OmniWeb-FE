@@ -1,0 +1,25 @@
+
+.circleButtonGroup {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto auto; /* Two rows, adjusting automatically to their content */
+    gap: 16px; /* Space between grid items */
+    height: auto;
+    width: auto;
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+    margin-right: 5%;
+    transform: translateX(50%);
+
+}
+
+@media (max-width: 1100px){
+
+    .circleButtonGroup{
+        margin-top: 5%;
+        top: clamp(30%, 53vw, 35%);
+        bottom: auto;
+    }
+
+}

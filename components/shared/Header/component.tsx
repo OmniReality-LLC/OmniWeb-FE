@@ -19,11 +19,11 @@ export default function NavBar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const navLinks =
         [
-            { path: '/#home', name: 'Home' },
-            { path: '/#services', name: 'Service' },
-            { path: '/#work', name: 'Our Work' },
-            { path: '/#about', name: 'About' },
-            { path: '', name: 'Contact' },
+            { path: '/#home', name: 'Home', activeColor: '#3EDCFF' },
+            { path: '/#services', name: 'Service', activeColor: '#3EDCFF' },
+            { path: '', name: 'Our Work', activeColor: '#F35151' },
+            { path: '', name: 'About', activeColor: '#F35151' },
+            { path: '', name: 'Contact', activeColor: '#F35151' },
         ];
 
     const handleMouseEnter = () => {
@@ -101,7 +101,7 @@ export default function NavBar() {
                                     linkTo={link.path}
                                     textSize='clamp(15px, 1.5vw, 20px)'
                                     inactiveColor={'#7E7E7E'}
-                                    activeColor={'#3EDCFF'} />
+                                    activeColor={link.activeColor} />
                             ))}
                             <SlideGlowLinkBtn
                                 text={'Coming Soon'}

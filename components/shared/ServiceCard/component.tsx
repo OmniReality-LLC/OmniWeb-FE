@@ -32,6 +32,7 @@ interface CarouselItemProps {
 interface ServiceCardProps {
     carouselItems: CarouselItemProps[];
     linkTo: string;
+    buttonText: string;
 }
 
 const CustomPagingDots = ({ currentSlide, slideCount, goToSlide }: CustomPagingDotsProps) => {
@@ -54,7 +55,7 @@ const CustomPagingDots = ({ currentSlide, slideCount, goToSlide }: CustomPagingD
 };
 
 
-export default function ServiceCard({ carouselItems, linkTo }: ServiceCardProps) {
+export default function ServiceCard({ carouselItems, linkTo, buttonText }: ServiceCardProps) {
     return (
         <>
             <Carousel
@@ -100,7 +101,7 @@ export default function ServiceCard({ carouselItems, linkTo }: ServiceCardProps)
 
             </Carousel>
             <div className={styles.button}>
-                <SlideGlowLinkBtn text={'Coming Soon'} linkTo={linkTo || ''} textColor='#D4D4D4' bgColor='transparent' marginL='0' marginB='0px' marginR='0px' marginT='20px'/>
+                <SlideGlowLinkBtn text={buttonText} linkTo={linkTo || ''} textColor='#D4D4D4' bgColor='transparent' marginL='0' marginB='0px' marginR='0px' marginT='20px'/>
             </div>
         </>
     );

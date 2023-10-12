@@ -32,7 +32,7 @@ export default function Ecommerce() {
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={xrServices} linkTo=''/>
+                                <ServiceCard carouselItems={xrServices} linkTo='/WebsiteService' buttonText='View Service'/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>

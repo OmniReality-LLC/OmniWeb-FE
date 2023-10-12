@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Email } from '../../../util/email'
 import { NextResponse } from "next/server";
 
+
 // Initialize the Amazon SES client
 const sesClient = new SESClient({ region: "us-east-1" });
 

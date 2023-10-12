@@ -32,7 +32,7 @@ export default function AIAddonSection() {
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={cloudComputingServices} linkTo=''/>
+                                <ServiceCard carouselItems={cloudComputingServices} linkTo='/WebsiteService' buttonText='View Service'/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>

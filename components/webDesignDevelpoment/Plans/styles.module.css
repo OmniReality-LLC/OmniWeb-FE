@@ -1,0 +1,473 @@
+.servicesMain {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    background: #191A1B;
+    min-height: 75vh;
+    min-width: 100px !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+
+}
+
+
+
+.contentMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    min-width: inherit;
+}
+
+.title {
+    position: relative;
+    color: transparent;
+    font: bold clamp(48px, 5vw, 96px) arial, sans-serif;
+    background-color: #070707;
+    text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.3);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    align-self: flex-start;
+    margin-left: 10%;
+    z-index: 1;
+}
+
+.blockBackground {
+    display: flex;
+    flex-direction: column;
+    width: 87.5%;
+    border-radius: 25px;
+    background-color: #141516;
+    box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.50) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.myButton {
+    width: 175px;
+}
+
+
+
+
+/* Most populat tag */
+
+.mostPopTagContainer {
+
+    flex-shrink: 0;
+    position: absolute;
+    transform: translate(-50%, -75%);
+    left: 50%;
+}
+
+
+
+.firstInnerBox {
+    border: 2px solid #3EDCFF;
+    border-radius: 15px;
+    z-index: 0;
+    box-shadow: 0px 0px 10px 0px rgba(62, 220, 255, 0.50), 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    background: #202325;
+    width: auto;
+    height: auto;
+}
+
+
+.secondInnerBox {
+    background: #202325;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: clamp(160px, 12vw, 215px);
+    height: 87px;
+    position: relative;
+    z-index: 0;
+
+
+}
+
+.secondInnerBox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    box-shadow:
+        2px 2px 3px 0px rgba(32, 35, 37, 1),
+        3px 3px 3px 0px rgba(62, 220, 255, .1);
+    z-index: -1;
+    /* Position below the content but above the container's background */
+}
+
+.secondInnerBox::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    /* Cover half the width of the box from the right */
+    height: 50%;
+    /* Cover half the height of the box from the bottom */
+    background: radial-gradient(circle at bottom right, rgba(32, 35, 37, 01), transparent);
+    border-radius: inherit;
+    z-index: -1;
+    /* Same as the ::before pseudo-element */
+}
+
+.box {
+    width: 75%;
+    height: 62px;
+    background-color: #191A1B;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow:
+        inset 0px 4px 4px rgba(0, 0, 0, 0.25),
+        inset 0px -4px 4px rgba(58, 58, 58, 0.5);
+}
+
+.innerBox {
+    width: 91%;
+    height: 85%;
+    background-color: #141516;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* This centers the content vertically */
+    position: relative;
+    box-shadow:
+        inset 0px 4px 4px rgba(0, 0, 0, 0.25),
+        inset 0px -4px 4px rgba(58, 58, 58, 0.5);
+}
+
+
+.tagTitle {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 2.5px;
+
+
+}
+
+
+
+.mostPopTagContainerOff {
+    display: none;
+}
+
+/* Plans Banner */
+.plansBanner {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5%;
+}
+
+.plansBannerList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    list-style-type: none;
+    /* Removes bullet points */
+}
+
+.plansBannerItem {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.plansBannerItemContent {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.plansBannerItemContentImg {
+    width: 40px;
+    height: 40px;
+}
+
+.plansBannerItemContentText {
+    background: var(--BlueGradientBtn, linear-gradient(90deg, #3C7FE3 0%, #3EDCFF 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 0;
+    text-align: center;
+    align-self: center;
+    margin-left: 10%;
+}
+
+/* Plans Container */
+.plansContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5%;
+    margin-top: calc(2% + 90px);
+    width: 95%;
+
+
+}
+
+
+
+
+
+.planCardContainer {
+    display: flex;
+    position: relative;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.planCardMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    box-shadow:
+        2px 2px 3px 0px rgba(32, 35, 37, 1),
+        3px 3px 3px 0px rgba(62, 220, 255, .1);
+    z-index: 1;
+    transition: transform 0.3s ease;
+    border-radius: inherit;
+    /* Controls the animation speed and type */
+}
+
+.planCardContainer:hover {
+    transform: scale(1.01);
+    /* Scales the container to 105% of its original size on hover */
+}
+
+.startAtText {
+    color: #3EDCFF;
+    text-align: right;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-right: 10px;
+    margin: 5px;
+
+}
+
+.titleAndPrice {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    align-items: flex-start;
+    vertical-align: bottom;
+    margin-left: 15px;
+
+}
+
+.planCardTitle {
+    color: #FFF;
+    font-size: clamp(24px, 2vw, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+}
+
+.planCardSubTitle {
+
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    min-height: 1.25em;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: flex-end;
+    /* This pushes the SVG (and its container) to the right */
+    align-items: flex-start;
+    /* Vertically center-aligns the children (i.e., the SVG) */
+    width: 50%;
+    height: auto;
+    position: relative;
+    /* Needed to position the price on top of the SVG */
+}
+
+.svgContainer {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background-color: #191A1B;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 0 10px;
+    /* Adds some horizontal padding to ensure text doesn't touch the edges */
+}
+
+.priceSVG {
+    width: 100% !important;
+    /* Make the SVG fill the entire width of the container */
+    height: 39px;
+    position: absolute;
+    /* Position SVG behind the text */
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.price {
+    white-space: nowrap;
+    z-index: 2;
+    font-weight: 700;
+    color: #3EDCFF;
+    margin: 5px;
+
+    /* Add some padding so the text doesn't touch the SVG edges */
+}
+
+.lineSeperator {
+
+    opacity: 1;
+    position: relative;
+    border: none;
+    height: 2px;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 1em;
+    display: block;
+    margin-top: 2.5px;
+    background: linear-gradient(90deg, rgba(62, 220, 255, 0) 0%, rgba(62, 220, 255, 1) 45%, rgba(62, 220, 255, 1) 55%, rgba(62, 220, 255, 0) 100%);
+}
+
+.pointsContainer {
+
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    width: 90%;
+    margin-left: 15px;
+}
+
+.pointsList {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.pointItem {
+
+    margin-bottom: 15px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (max-width: 960px) {
+    .title {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 1100px) {
+
+    .plansContainer {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 0;
+        margin-right: 0;
+        width: 90%;
+        grid-gap: 0;
+        gap: 40px;
+    }
+
+    .plansContainer .planCardContainer:nth-child(1) {
+        order: 2;
+        /* Originally first, now second */
+    }
+
+    .plansContainer .planCardContainer:nth-child(2) {
+        order: 1;
+        /* Originally second, now first */
+    }
+
+    .plansContainer .planCardContainer:nth-child(3) {
+        order: 3;
+        /* This stays the same, but is still good to specify for clarity */
+    }
+
+    .pointsList {
+        margin-top: 0;
+    }
+
+    .planCardContainer {
+
+        margin-top: 0 !important;
+        margin-bottom: 20px;
+    }
+
+    .myButton {
+
+        margin-top: 20px !important;
+        margin-bottom: 5% !important;
+    }
+
+    .plansBannerList {
+
+        flex-direction: column;
+
+
+    }
+
+    .plansBannerItem {
+
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .plansBanner {
+        margin-top: 5%;
+
+        width: 90%;
+    }
+}
