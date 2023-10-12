@@ -12,6 +12,8 @@
     width: auto;
     height: auto;
     z-index: 10;
+    max-height: 56px;
+    max-width: 56px;
 }
 
 .circleTest::before {
