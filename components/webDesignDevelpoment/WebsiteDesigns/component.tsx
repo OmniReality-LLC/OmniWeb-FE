@@ -156,20 +156,22 @@ function CarouselTest() {
                     <Dot
                         key={index}
                         isActive={index === activeIndex}
-                        onClick={() => setMoveTo(index)}
+
                     />
                 ))}
             </div>
 
             {/* Controls */}
-            <div className={styles.carButtContainer}>
-                <CircleButton onClick={() => changeIndex(true)} leftArrow={true} />
-                <Spacer width='10%' />
-                <CircleButton onClick={() => changeIndex()} />
-            </div>
+
         </div>
     );
 }
+
+/* <div className={styles.carButtContainer}>
+                <CircleButton onClick={() => changeIndex(true)} leftArrow={true} />
+                <Spacer width='10%' />
+                <CircleButton onClick={() => changeIndex()} />
+            </div> */
 
 interface CaroDotoInterface {
 
@@ -183,7 +185,7 @@ interface CaroDotoInterface {
 
 interface DotProps {
     isActive: boolean;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 function Dot(props: DotProps) {
