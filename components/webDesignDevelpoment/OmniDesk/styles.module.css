@@ -4,7 +4,7 @@
     height: auto;
 
     background: #191A1B;
-    min-height: 75vh;
+
     min-width: 100px !important;
     align-items: center;
     justify-content: center;
@@ -45,6 +45,7 @@
     margin-bottom: 25px;
     align-items: center;
     position: relative;
+    height: fit-content;
 
 }
 
