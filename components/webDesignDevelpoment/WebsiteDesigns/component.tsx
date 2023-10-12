@@ -106,6 +106,38 @@ function CarouselTest() {
 
 
     }
+    const handleScroll = () => {
+        if (!scrollerRef.current) {
+            return;
+        }
+
+        const { offsetWidth } = scrollerRef.current;
+        const { scrollLeft } = scrollerRef.current;
+        const newIndex = Math.round(scrollLeft / offsetWidth);
+
+        // Check if the index has changed
+        if (newIndex !== activeIndex) {
+            setActiveIndex(newIndex);
+        }
+    };
+
+    useEffect(() => {
+        const scroller : any = scrollerRef.current;
+
+        // If scroller is available, add the event listener.
+        if (scroller) {
+            scroller.addEventListener('scroll', handleScroll);
+        }
+
+        // Clean up - remove the event listener
+        return () => {
+            if (scroller) {
+                scroller.removeEventListener('scroll', handleScroll);
+            }
+        };
+    }, [activeIndex]);
+
+
 
     // Provides the endless carousel functionality.
     const changeIndex = (left?: boolean) => {
