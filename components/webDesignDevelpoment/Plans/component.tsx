@@ -1,5 +1,5 @@
 // Custom 'service' tier offering.
-// You can only use 3 tiers unless you modify the css to take more or less.
+// You can only use 3 tiers unless you modify the css to take more dor less.
 import styles from './styles.module.css';
 import Button from '../../shared/Buttons/component'
 
@@ -38,7 +38,7 @@ const webPlans = [
     },
     {
         title: "Pro",
-        subTitle: "E-commerce capable",
+        subTitle: "E-commerce Capable",
         price: "$12,500",
         mostPopular: true,
         priceHeaderText: 'Starting At',
