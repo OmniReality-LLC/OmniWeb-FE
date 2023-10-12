@@ -15,37 +15,37 @@ const data: AdditionsData[] = [
         name: "CLARA",
         price: 'FREE *',
         description: 'Add a custom chatbot to your site that can answer FAQs, guide visitors through your site, or even handle basic support tickets, 24/7.',
-        picture: "icons/BrainIcon.svg",
+        picture: "icons/AIChatbotIcon.svg",
     },
     {
         name: "Support",
         price: '$55/Hr',
         description: 'Already built a site with us without support? As an Alumni, get discounted maintenance & support services to ensure smooth operations.',
-        picture: "icons/BrainIcon.svg",
+        picture: "icons/AlumniSupport.svg",
     },
     {
         name: "AI Copywriter",
         price: 'FREE *',
         description: "Get top-tier content without the writer's fee. Perfect for creating engaging blogs and detailed product descriptions in line with SEO standards.",
-        picture: "icons/BrainIcon.svg",
+        picture: "icons/AiCopywriterIcon.svg",
     },
     {
         name: "SEO Refresh",
         price: '$175/M',
         description: "Monthly in-depth SEO review followed by strategic tweaks to meta tags, content, backlink strategy, and more, based on performance analytics.",
-        picture: "icons/BrainIcon.svg",
+        picture: "icons/SEORefreshIcon.svg",
     },
     {
         name: "AI PhotoMaster",
         price: 'FREE *',
         description: "Optimize visuals with our AI Image Editor, easily enhancing photos and applying themes to products—ideal for dynamic eCommerce and blogs.",
-        picture: "icons/BrainIcon.svg",
+        picture: "icons/AIImageIcon.svg",
     },
     {
         name: "Omni Mail Guard",
         price: '$35/M',
         description: "HIPAA-compliant contact form with end-to-end encryption and customizable templates for secure and seamless business-customer interactions.",
-        picture: "icons/BrainIcon.svg",
+        picture: "icons/MailGaurdIcon.svg",
     }
 ];
 
