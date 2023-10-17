@@ -2,9 +2,8 @@ import styles from './page.module.css';
 import InputContainer from '@/components/contactPage/ContactInputs/component';
 import BackgroundVideoFullScreen from '@/components/shared/BgVideoFullScreen/component';
 import TitleAndSubTitleColumn from '@/components/shared/TitleAndSubtitleColumn/component';
-import Spacer from '@/components/shared/PageSpacer/component';
 
-export default function ContactPage() {
+export default function Contact() {
   return (
     <main className={styles.main}>
       <BackgroundVideoFullScreen src={'/videos/ContactBackground.mp4'} type={'video/mp4'} />
