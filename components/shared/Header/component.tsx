@@ -22,7 +22,7 @@ export default function NavBar() {
             { path: '/#services', name: 'Service', activeColor: '#3EDCFF' },
             { path: '', name: 'Our Work', activeColor: '#F35151' },
             { path: '', name: 'About', activeColor: '#F35151' },
-            { path: '/Contact', name: 'Contact', activeColor: '#3EDCFF' },
+            { path: '/contact', name: 'Contact', activeColor: '#3EDCFF' },
         ];
 
     const handleMouseEnter = () => {
@@ -105,7 +105,7 @@ export default function NavBar() {
                             <SlideGlowLinkBtn
                                 text={'Request A Quote'}
                                 textColor='#D4D4D4'
-                                linkTo={'/Contact'}
+                                linkTo={'/contact'}
                                 bgColor={'transparent'}
                                 glowColor={'#3EDCFF'}
                                 marginL='25px'
