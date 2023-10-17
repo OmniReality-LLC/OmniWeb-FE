@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 interface SlideGlowLinkBtnProps {
     text: string;
-    linkTo: string;
+    linkTo?: string;
     textSize?: string;
     textColor?: string;
     bgColor?: string;
@@ -19,15 +19,19 @@ interface SlideGlowLinkBtnProps {
     marginB?: string;
     defaultStyle?: boolean;
     className?: string;
-    onClick?: () => void;
+    onClick?: (e?: any) => void;
+    type?: "button" | "submit" | "reset" | undefined;
+    target?: '_blank' | '_self' | '_parent' | '_top';
+    rel?: 'noopener noreferrer' | 'noreferrer' | 'noopener' | string;
 
 }
 export default function SlideGlowLinkBtn({
+    // Default Values
     text,
     textColor = '#D4D4D4',
     textSize = "clamp(15px, 1.5vw, 20px)",
     borderColor = "grey",
-    linkTo,
+    linkTo = '',
     bgColor = "#353333",
     glowColor = '#3EDCFF',
     decoratorBorderColor = `#3EDCFF`,
@@ -38,7 +42,10 @@ export default function SlideGlowLinkBtn({
     marginB = '0px',
     defaultStyle = true,
     className,
-    onClick
+    onClick,
+    type = "button",
+    target,
+    rel
 }: SlideGlowLinkBtnProps) {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -47,8 +54,8 @@ export default function SlideGlowLinkBtn({
             className={`${styles.button} ${className}`}
             onClick={onClick}
             style={{
-                backgroundColor: defaultStyle ?  bgColor :( isHovered ? glowColor : bgColor),
-                borderColor: isHovered ? glowColor : borderColor ,
+                backgroundColor: defaultStyle ? bgColor : (isHovered ? glowColor : bgColor),
+                borderColor: isHovered ? glowColor : borderColor,
                 boxShadow: isHovered ? `0 0 5px ${glowColor}` : 'none',
                 fontSize: textSize,
                 marginLeft: marginL,
@@ -59,13 +66,17 @@ export default function SlideGlowLinkBtn({
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            type={type}
         >
             <Link
+                target={target}
+                rel={rel}
                 href={linkTo}
                 className={styles.buttonLink}
                 style={{
                     color: isHovered ? (defaultStyle ?  glowColor : bgColor) : textColor,
-                    textShadow: isHovered ? `0 0 5px ${glowColor}` : 'none'
+                    textShadow: isHovered ? `0 0 5px ${glowColor}` : 'none',
+                    pointerEvents: linkTo === '' ? 'none' : 'all',
                 }}
             >
                 {text}
@@ -73,10 +84,11 @@ export default function SlideGlowLinkBtn({
             <span className={styles.decorativeElement} style={{
                 borderColor: glowColor,
                 backgroundColor: decoratorBgColor,
-                }}/>
+            }} />
             <span className={styles.decorativeElement} style={{
                 borderColor: glowColor,
-                backgroundColor: decoratorBgColor, }}/>
+                backgroundColor: decoratorBgColor,
+            }} />
         </button>
     )
 };

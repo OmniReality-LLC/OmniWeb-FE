@@ -1,0 +1,54 @@
+.contactTopContainer {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+}
+
+.title {
+  color: #FFF;
+  font-size: clamp(40px, 2vw, 64px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 0;
+}
+
+.subTitle {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 4px;
+}
+
+.subTitle span {
+  background: linear-gradient(90deg, #3C7FE3 38.75%, #3EDCFF 74.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (max-width: 993px) {
+
+
+  .title{
+    text-align: center;
+  }
+
+  .subTitle{
+
+    text-align: center;
+  }
+
+
+
+
+
+
+}

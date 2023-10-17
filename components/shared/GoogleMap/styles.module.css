@@ -1,5 +1,15 @@
 .googleMapContainer {
     width: 100%;
-    height: auto;
-    min-height: clamp(215px, 2.5vw, 290px);
+    height: 100%;
+
+
+
+  }
+
+
+  .googleMapContainer iframe {
+
+
+  border-radius: .375rem;
+
   }

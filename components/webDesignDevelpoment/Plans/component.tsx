@@ -2,6 +2,7 @@
 // You can only use 3 tiers unless you modify the css to take more dor less.
 import styles from './styles.module.css';
 import Button from '../../shared/Buttons/component'
+import TopBanner from './TopBanner/component';
 
 interface webPlansInterface {
     title: string;
@@ -46,7 +47,7 @@ const webPlans = [
             'Everything in Starter +',
             'Up to 10 custom-designed pages',
             'E-commerce Integration',
-            '3D Model Integration (Additional costs may incur)',
+            '3D Model Integration',
             'Augmented Reality Integration',
             'Social media page optimization',
             'Speed loading and time optimization',
@@ -72,12 +73,13 @@ const webPlans = [
 
 
 export default function WebsiteService() {
+
     return (
         <div className={styles.servicesMain} id='services'>
             <div className={styles.contentMain}>
                 <h1 className={`${styles.title}`} data-text="Website Services">Website Services</h1>
                 <div className={styles.blockBackground}>
-                    <TopBanner/>
+                    <TopBanner elements={advertBanner}/>
                     <div className={`${styles.plansContainer} `}>
                         {webPlans.map((plan, index) => (
                             <PlanCard
@@ -168,24 +170,4 @@ function MostPopularTag({ mostPop }: PopProps) {
             </div>
         </div>
     );
-}
-
-
-function TopBanner() {
-
-    return (
-
-        <div className={styles.plansBanner}>
-            <ul className={styles.plansBannerList}>
-                {advertBanner.map((myData) =>
-                    <li className={styles.plansBannerItem} key={myData.phrase}>
-                        <div className={styles.plansBannerItemContent}>
-                            <img className={styles.plansBannerItemContentImg} src={myData.icon} alt='Icon resembling service' />
-                            <h1 className={styles.plansBannerItemContentText}>{myData.phrase}</h1>
-                        </div>
-                    </li>
-                )}
-            </ul>
-        </div>
-    )
 }

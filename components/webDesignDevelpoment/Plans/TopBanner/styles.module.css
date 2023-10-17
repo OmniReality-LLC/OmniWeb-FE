@@ -1,0 +1,89 @@
+
+/* Plans Banner */
+.plansBanner {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5%;
+}
+
+.plansBannerList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    list-style-type: none;
+    /* Removes bullet points */
+}
+
+.plansBannerItem {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.plansBannerItemContent {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.plansBannerItemContentImg {
+    width: 40px;
+    height: 40px;
+}
+
+.plansBannerItemContentText {
+    background: var(--BlueGradientBtn, linear-gradient(90deg, #3C7FE3 0%, #3EDCFF 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(20px, 2vw, 24px);
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 0;
+    text-align: center;
+    align-self: center;
+    margin-left: 10%;
+}
+
+.lineSeperator {
+
+    opacity: 1;
+    position: relative;
+    border: none;
+    height: 2px;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 1em;
+    display: block;
+    margin-top: 2.5px;
+    background: linear-gradient(90deg, rgba(62, 220, 255, 0) 0%, rgba(62, 220, 255, 1) 45%, rgba(62, 220, 255, 1) 55%, rgba(62, 220, 255, 0) 100%);
+}
+
+
+@media (max-width: 1100px) {
+
+    .plansBannerList {
+
+        flex-direction: column;
+
+
+    }
+
+    .plansBannerItem {
+
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .plansBanner {
+        margin-top: 5%;
+
+        width: 90%;
+    }
+}

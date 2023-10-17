@@ -1,6 +1,34 @@
 .main {
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(138, 101, 101);
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+
+
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 65%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #1A1B1C 100%);
+  z-index: 1;
+}
+
+.mainContent {
+  /* Margin top 98px is taken from the bootstrap navbar that we need to replace */
+
+  z-index: 1;
+ height: 100%;
+  width: 87.5%;
+ padding-top: 150px;
+ max-width: 1300px;
+
 }

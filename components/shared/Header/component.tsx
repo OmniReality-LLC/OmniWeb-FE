@@ -1,5 +1,4 @@
 "use client"
-
 import { useRef, useState } from 'react';
 import styles from './styles.module.css';
 import Navbar from 'react-bootstrap/Navbar';
@@ -23,7 +22,7 @@ export default function NavBar() {
             { path: '/#services', name: 'Service', activeColor: '#3EDCFF' },
             { path: '', name: 'Our Work', activeColor: '#F35151' },
             { path: '', name: 'About', activeColor: '#F35151' },
-            { path: '', name: 'Contact', activeColor: '#F35151' },
+            { path: '/Contact', name: 'Contact', activeColor: '#3EDCFF' },
         ];
 
     const handleMouseEnter = () => {
@@ -60,7 +59,7 @@ export default function NavBar() {
         <>
             {navbarOpen && <div className={styles.overlay} onClick={handleHamburgerClick}/>}
             <Navbar collapseOnSelect expand="md" expanded={navbarOpen} className={styles.navbar}>
-                <div className={`container`}>
+                <div className={styles.widthForNavBar}>
                     <Link href='/' className={styles.noUnderline}>
                         <Navbar.Brand
                             className={` ${styles.navbarBrand} d-flex align-items-center `}
@@ -104,11 +103,16 @@ export default function NavBar() {
                                     activeColor={link.activeColor} />
                             ))}
                             <SlideGlowLinkBtn
-                                text={'Coming Soon'}
+                                text={'Request A Quote'}
                                 textColor='#D4D4D4'
-                                linkTo={''}
+                                linkTo={'/Contact'}
                                 bgColor={'transparent'}
-                                glowColor={'#3EDCFF'} />
+                                glowColor={'#3EDCFF'}
+                                marginL='25px'
+                                marginR='0px'
+                                className={styles.glowButton}
+                                />
+
                         </Nav>
                     </Navbar.Collapse>
                 </div>

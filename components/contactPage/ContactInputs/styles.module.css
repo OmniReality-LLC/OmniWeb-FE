@@ -1,0 +1,481 @@
+
+
+
+
+
+
+/* Input Form */
+
+
+
+.inputFormMain {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+}
+
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+
+}
+
+
+
+
+
+.formContent {
+
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+
+
+}
+
+.inputForm button {
+
+  width: 15%;
+  min-width: 150px;
+}
+
+.inputTopContainer {
+
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.subContainer {
+
+
+  width: 50%;
+  height: auto;
+
+
+}
+
+
+
+
+
+.input label,
+.inputDescription label {
+
+  color: #3EDCFF;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+
+
+}
+
+.input input {
+
+  padding-left: 10px;
+}
+
+.input input,
+.input div {
+  width: 100%;
+  border: none;
+  height: 47px;
+  border-radius: .375rem;
+  background: #18191A;
+  box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  transition: box-shadow .25s ease-in-out;
+}
+
+.input input:hover,
+.input div:hover,
+.input input:focus,
+.input div:focus,
+.input input:active,
+.input div:active {
+
+  outline: none;
+
+  border-radius: .375rem;
+
+  background: #18191A;
+  box-shadow:
+    0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 0px 13px 0px rgba(62, 220, 255, 0.50);
+}
+
+.input input:focus,
+.input div:focus,
+.input input:active,
+.input div:active {
+  /* Enhanced glow effect */
+  box-shadow:
+    0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 0px 15px 4px rgba(62, 220, 255, 0.75);
+}
+
+.inputBottomContainer {
+  height: 50%;
+}
+
+.inputDescription textarea {
+  border-radius: .375rem;
+  width: 100%;
+  border: none;
+  height: 100px;
+  background-color: #18191A;
+  box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+  color: #FFF;
+  overflow-y: auto;
+  resize: none;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  padding: 10px;
+  transition: box-shadow .25s ease-in-out;
+}
+
+.inputDescription textarea:hover {
+  outline: none;
+  border-radius: .375rem;
+  background: #18191A;
+  box-shadow:
+    0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 0px 13px 0px rgba(62, 220, 255, 0.50);
+}
+
+.inputDescription textarea:focus,
+.inputDescription textarea:active {
+  outline: none;
+  box-shadow:
+    0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 0px 15px 4px rgba(62, 220, 255, 0.75);
+}
+
+
+
+
+
+
+.mapContainer {
+
+  width: 50%;
+}
+/* Overlay */
+.overlay {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background: radial-gradient(circle at center, #1A1B1C, transparent);
+  backdrop-filter: blur(35px);
+}
+
+/* Loader animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Pulse Animation */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px #3EDCFF; }
+  50% { box-shadow: 0 0 20px #3EDCFF, 0 0 30px #3EDCFF; }
+  100% { box-shadow: 0 0 5px #3EDCFF; }
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3EDCFF; /* The spinner's color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  transition: opacity 0.5s, transform 0.5s; /* added transform to the transition */
+  opacity: 1;
+}
+
+.overlayText {
+  position: absolute;
+  top: 55%;
+  color: #3EDCFF;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  animation: pulseGlow 1s infinite;
+  border: none;  /* remove the previous loader border */
+  background-color: #3EDCFF; /* set the circle color to indicate success */
+  transform: scale(1.2);  /* make the circle slightly bigger */
+  opacity: 1;  /* ensure full opacity */
+}
+
+
+
+
+/* Drop Down */
+
+.dropDownMainContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: relative;
+  min-height: 47px;
+}
+
+.inputDropDown label {
+
+  color: #3EDCFF;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+}
+
+
+.dropDown {
+  background: #18191A;
+  box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+
+}
+
+.dropDownMain {
+  min-height: 47px !important;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: .375rem;
+  position: absolute;
+  width: 100% !important;
+  background: #18191A;
+  box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  z-index: 1;
+
+  transition: box-shadow .25s ease-in-out;
+
+}
+
+
+.dropDownMain:hover {
+  outline: none;
+  border-radius: .375rem;
+  background: #18191A;
+  box-shadow:
+    0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 0px 13px 0px rgba(62, 220, 255, 0.50);
+
+}
+
+.dropDownMainClicked {
+  outline: none;
+  box-shadow:
+    0px -4px 4px 0px rgba(58, 58, 58, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 0px 15px 4px rgba(62, 220, 255, 0.75) !important;
+
+
+}
+
+
+
+.dropDownTopContainer {
+  min-height: 47px !important;
+
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.selectedText {
+
+  width: 100%;
+  margin-bottom: 0;
+  color: #D9D9D9;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+
+}
+
+.dropDownBottomContainer {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: max-height .5s ease-in-out;
+}
+
+.dropDownExpand {
+  max-height: 200px;
+  /* or an appropriate max value that works for your content */
+  transition: max-height .5s ease-in-out;
+}
+
+.arrowSVG {
+  transition: transform 0.5s ease-in-out;
+
+
+}
+
+.flipArrow {
+  transform: rotate(180deg);
+
+}
+
+.dropDownItems {
+
+  padding-left: 0;
+
+
+
+}
+
+.dropDownItem {
+
+  color: #777878;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 10px;
+  list-style-type: none;
+  padding-left: 25px;
+
+}
+
+.dropDownItem:hover {
+
+
+  color: #3EDCFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(180deg, #181919 0%, #2C2C2C 50.52%, #181919 100%);
+}
+
+.slectedDropDownItem {
+  color: #3EDCFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(180deg, #181919 0%, #2C2C2C 50.52%, #181919 100%);
+
+
+}
+
+.interMono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Button Cursor */
+
+
+
+.buttonCursorInactive {
+  pointer-events: none;       /* Prevents all click events */
+      /* Changes the cursor to indicate the button is not clickable */
+}
+
+
+
+
+/* Astrix */
+
+.astrixMain {
+  color: red !important;
+  margin: 0;
+  /* Optional: adds a little space between text and asterisk */
+  font-size: 22px;
+  /* Adjusts size. Ensure it is noticeable */
+  vertical-align: middle;
+  /* Aligns with adjacent text */
+  max-height: 100%;
+}
+
+
+/* Warning Label */
+
+.warningLabel{
+  position: absolute;
+  font-size: 15px;
+  color: rgb(204, 25, 25);
+}
+
+
+@media (max-width: 992px) {
+
+  .inputFormMain {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formContent {
+
+    width: 100%;
+    order: 1;
+  }
+
+  .mapContainer {
+
+    width: 100%;
+
+  }
+
+
+
+
+  .inputTopContainer {
+
+    flex-direction: column;
+
+  }
+
+  .subContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .mapContainer {
+
+    order: 0;
+  }
+
+
+
+}

@@ -11,12 +11,16 @@ class OmniScrambleText {
     private chars: string = '01';
     private queue: QueueItem[] = [];
     private frame: number = 0;
-    private frameIncrement: number = 0.5;  // Adjust to control the speed
+    private frameIncrement: number;
+    private defaultScrambleSpeed: number = 0.5; // Adjust to control the speed
     private frameRequest?: number;
+    private revealDelay: number = 40;
     private resolve?: (value?: void | PromiseLike<void>) => void;
 
-    constructor(el: HTMLElement) {
+    constructor(el: HTMLElement, scrambleSpeed?: number, revealDelay?: number) {
         this.el = el;
+        this.frameIncrement = scrambleSpeed ? scrambleSpeed : this.defaultScrambleSpeed;
+        this.revealDelay = revealDelay ? revealDelay : this.revealDelay;
         this.update = this.update.bind(this);
     }
 
@@ -26,13 +30,20 @@ class OmniScrambleText {
         for (let i = 0; i < newText.length; i++) {
             const to = newText[i];
             const start = i * 10;
-            const end = start + 40; // Adjust these numbers to control reveal delay and speed
+            const end = start + this.revealDelay;
             this.queue.push({ to, start, end, revealed: false });
         }
         cancelAnimationFrame(this.frameRequest!);
         this.frame = 0;
         this.update();
         return promise;
+    }
+
+    public cancelCurrentAnimation(): void {
+        if (this.frameRequest) {
+            cancelAnimationFrame(this.frameRequest);
+            this.frameRequest = undefined;
+        }
     }
 
     private update(): void {
