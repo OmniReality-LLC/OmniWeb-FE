@@ -1,3 +1,4 @@
+'use client'
 import styles from './page.module.css';
 import InputContainer from '@/components/contactPage/ContactInputs/component';
 import BackgroundVideoFullScreen from '@/components/shared/BgVideoFullScreen/component';
