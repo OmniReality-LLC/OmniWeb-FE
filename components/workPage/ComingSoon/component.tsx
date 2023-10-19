@@ -9,16 +9,13 @@ export default function ComingSoon() {
             <div className={styles.contentMain}>
                 <h1 className={`${styles.title}`} >Coming Soon</h1>
                 <div className={styles.blockBackground}>
-
+                    <div className={styles.overlayText}>Under Development</div>
                     <video autoPlay loop muted playsInline preload="auto" className={styles.comingSoonVideo}>
                         <source src="https://res.cloudinary.com/omnirealitycloud/video/upload/f_auto,o_25,q_auto/v1696618928/Omni%20Website/Videos/Under%20Development%20Video.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-
-
-
-
                 </div>
+
             </div>
         </div>
     );
