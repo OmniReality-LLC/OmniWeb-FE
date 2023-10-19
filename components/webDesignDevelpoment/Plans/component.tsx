@@ -93,7 +93,7 @@ export default function WebsiteService() {
                             />
                         ))}
                     </div>
-                    <Button text={'Contact'} linkTo={'/Contact'} className={styles.myButton} marginB='2.5%' />
+                    <Button text={'Contact'} linkTo={'/contact'} className={styles.myButton} marginB='2.5%' />
                 </div>
             </div>
         </div>
