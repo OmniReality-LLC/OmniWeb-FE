@@ -40,7 +40,7 @@ const benefitsData = {
     tiers: [
         {
             name: "Tier 1",
-            price: "$149",
+            price: "$199",
             mostPop: false,
             benefits: [
                 { name: "Backups", included: true, content: 'Weekly' },
