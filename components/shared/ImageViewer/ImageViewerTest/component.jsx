@@ -64,7 +64,6 @@ export default function SimpleGallery(props) {
     setCurrentSlide(currentSlide + changeDirectionNumber);
 }
 
-
   return (
 
     <div className={`${styles.carTestMain} pswp-gallery`} id={props.galleryID} >
