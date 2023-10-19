@@ -1,4 +1,8 @@
 
+.carTestMain{
+  margin-bottom: 1.25%;
+}
+
 .imageViewerMain{
 
   display: grid;
@@ -10,10 +14,11 @@
   padding-right: 5%;
   column-gap: 2.5vw;
   row-gap: 2.5vw;
-  padding-bottom: 2.5%;
+  padding-bottom: calc(1.25% + 17px);
   padding-top: 2.5%;
-
 }
+
+
 .pswp--custom-icon-colors {
   --pswp-icon-color: #00fffc;
   --pswp-icon-color-secondary: #13ddcc;
@@ -50,36 +55,21 @@
 
 }
 
-/* Carousel */
-
-
-
-.gallery {
+.carTestItem {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  /* make sure items don't shrink */
+  margin: 10px;
   position: relative;
-
+  /* Set a default width, you can adjust as needed */
+  width: calc(100% - 20px);
 }
 
-.carousel_indicators {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 5px;
-}
 
-.carousel_indicators span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ddd;
-  /* inactive color */
-  display: inline-block;
-}
 
-.carousel_indicators span.active {
-  background-color: #555;
-  /* active color */
-}
+
+
+
 
 .gallery_scroller {
   scroll-snap-type: x mandatory;
@@ -103,77 +93,7 @@
   /* For Chrome, Safari and newer versions of Opera */
 }
 
-.carTestItem {
-  scroll-snap-align: center;
-  flex: 0 0 auto;
-  /* make sure items don't shrink */
-  margin: 10px;
-  position: relative;
-  /* Set a default width, you can adjust as needed */
-  width: calc(100% - 20px);
-}
 
-.carButtContainer {
-
-  position: absolute;
-  display: flex;
-  width: 100%;
-  overflow: visible;
-  margin-top: 8px;
-  align-content: center;
-  justify-content: center;
-}
-.gallery_scroller {
-  cursor: grab;
-}
-
-.gallery_scroller:active {
-  cursor: grabbing;
-}
-
-
-
-
-.btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 30px;
-  width: 30px;
-  border-radius: 2px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  z-index: 1;
-  cursor: pointer;
-  text-align: center;
-  line-height: 30px;
-  /* vertically center the arrow inside the button */
-  font-size: 24px;
-  /* adjust arrow size */
-  color: #fff;
-  /* arrow color */
-}
-
-.btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  /* darker overlay on hover */
-}
-
-.btn:active {
-  background-color: rgba(0, 0, 0, 0.9);
-  /* even darker overlay on press */
-}
-
-.btn:nth-child(3) {
-  left: 10px;
-  /* the prev button */
-}
-
-.btn:nth-child(4) {
-  right: 10px;
-  /* the next button */
-}
 
 /* Dots */
 
@@ -181,11 +101,10 @@
 
   display: flex;
   width: 100%;
+  height: fit-content;
   justify-content: center;
-  margin-top: -1.25%;
-  padding-bottom: 2%;
-  z-index: 1;
-  position: inherit;
+
+
 
 
 
@@ -193,7 +112,6 @@
 
 .dot {
   display: inline-block;
-
   width: 17px;
   height: 17px;
   margin-right: 8px;
@@ -210,6 +128,24 @@
 
   background-color: #3EDCFF;
   box-shadow: 0px 0px 4px 0px rgba(62, 220, 255, 0.50), 0px 0px 5px 0px #000 inset;
+}
+
+/* Carousel Buttons */
+
+.controls{
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.carButtContainer {
+
+  position: absolute;
+  display: flex;
+  width: 100%;
+  overflow: visible;
+  margin-top: calc(1.5% + 8px);
+  align-content: center;
+  justify-content: center;
 }
 
 
@@ -233,12 +169,8 @@
   }
 
 
-  .dotsContainer {
 
-
-    padding-bottom: 5%;
-
-
+.carTestMain{
+  margin-bottom:2.5%;
 }
-
 }

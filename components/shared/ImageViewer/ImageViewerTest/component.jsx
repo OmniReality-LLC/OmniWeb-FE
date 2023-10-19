@@ -4,20 +4,25 @@ import React, { useEffect, useState, useRef } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import { CldImage } from 'next-cloudinary';
+import Carousel from "nuka-carousel"
+import CircleButton from '@/components/shared/Buttons/OmniCircleBtn/Button/component';
+import Spacer from '@/components/shared/PageSpacer/component';
 
 const leftArrowSVGString = '<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 100 125" width="100" height="125"><path d="M5,50L50,5l3,3L11,50l42,42l-3,3L5,50z M92,95l3-3L53,50L95,8l-3-3L47,50L92,95z"/></svg>';
 
 export default function SimpleGallery(props) {
 
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [initialPosition, setInitialPosition] = useState(0);
-  const [distanceDragged, setDistanceDragged] = useState(0); // Declare here
-  const scrollerRef = useRef(null);
-  const [handleScroll, setHandleScroll] = useState(null);
+  const maxItemsPerPage = 6;
+  const [currentSlide, setCurrentSlide] = useState(0); // Track the current slide
+  const currentSlideRef = useRef(currentSlide);
+  const pageDataAll = props.images;
 
   useEffect(() => {
-    // Initialize lightbox
+    // Update the ref whenever currentSlide changes
+    currentSlideRef.current = currentSlide;
+  }, [currentSlide]);
+
+  useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
       gallery: '#' + props.galleryID,
       children: 'a',
@@ -28,162 +33,99 @@ export default function SimpleGallery(props) {
     });
     lightbox.init();
 
-    // Attach scroll event listener
-    if (scrollerRef.current) {
-      scrollerRef.current.addEventListener('scroll', handleScroll);
-    }
+    lightbox.on('change', () => {
+      const pswp = lightbox.pswp;
+      const currIndex = pswp.currIndex;
+      console.log('Curernt Lightbox Instanse: ' + currIndex);
 
-    // Cleanup
+      const pageNeeded = currIndex === 0 ? 0 : Math.trunc(currIndex / maxItemsPerPage);
+      console.log('Page Needed: ' + pageNeeded);
+      console.log('Current Page: ' + currentSlide);
+
+      if (currentSlideRef.current !== pageNeeded) {
+        setCurrentSlide(pageNeeded);
+      }
+    });
+
     return () => {
-      // Destroy lightbox
       lightbox.destroy();
       lightbox = null;
-
-      // Remove scroll event listener
-      if (scrollerRef.current) {
-        scrollerRef.current.removeEventListener('scroll', handleScroll);
-      }
     };
   }, []);
 
-  useEffect(() => {
-    const scrollHandler = () => {
-      if (!scrollerRef.current) return;
-      const elementWidth = scrollerRef.current.offsetWidth;
-      const scrollPosition = scrollerRef.current.scrollLeft;
-      const currentPage = Math.round(scrollPosition / elementWidth);
 
-      if (currentPage !== activeIndex) {
-        setActiveIndex(currentPage);
-      }
+  function changeIndex(left){
+    let changeDirectionNumber = 0;
+    if(left){
+        changeDirectionNumber = currentSlide === 0 ? 1 : -1;
+    } else {
+        changeDirectionNumber = currentSlide === 1 ? -1 : 1;
     };
-
-    setHandleScroll(() => scrollHandler);
-
-  }, [activeIndex]);
-
-  // Second useEffect to attach the listener
-  useEffect(() => {
-    if (scrollerRef.current && handleScroll) {
-      scrollerRef.current.addEventListener('scroll', handleScroll);
-    }
-
-    return () => {
-      if (scrollerRef.current && handleScroll) {
-        scrollerRef.current.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, [handleScroll]);
-
-
-  function switchActiveIndex(index) {
-    movePage(index);
-  }
-
-  function movePage(index) {
-    const scroller = scrollerRef.current;
-    if (scroller) {
-      const spotsToMove = index - activeIndex;
-      let pixelsToMove = scroller.offsetWidth * spotsToMove;
-      scroller.scrollBy({ left: pixelsToMove, behavior: 'smooth' });
-
-    }
-
-  }
-
-
-  function handleMouseDown(e) {
-    setIsDragging(true);
-    setInitialPosition(e.clientX); // Store the initial x position when starting to drag.
-  }
-
-
-  function handleMouseUp() {
-    setIsDragging(false);
-
-    const scroller = scrollerRef.current;
-    if (scroller) {
-      const elementWidth = scroller.offsetWidth;
-      const currentPage = Math.round((scroller.scrollLeft + distanceDragged) / elementWidth);
-
-      const pixelsToMove = currentPage * elementWidth - scroller.scrollLeft;
-      scroller.scrollBy({ left: pixelsToMove, behavior: 'smooth' });
-    }
-
-    setDistanceDragged(0); // Reset the distance dragged for the next drag.
-  }
-
-  function handleMouseMove(e) {
-    if (!isDragging) return;
-
-    const currentPosition = e.clientX;
-    const dx = initialPosition - currentPosition; // Difference between initial and current x position.
-
-    const scroller = scrollerRef.current;
-    if (scroller) {
-      scroller.scrollLeft += dx; // Scroll by the difference.
-    }
-    setDistanceDragged(prevDistance => prevDistance + dx);
-    setInitialPosition(currentPosition); // Update the initial position for the next movement.
-  }
-
-  return (
-
-    <div className={styles.gallery}>
-      <div
-        className={styles.gallery_scroller}
-        ref={scrollerRef}
-        id={props.galleryID}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-      >
-        {props.images.map((myObject, index) =>
-          <div className={styles.carTestItem} key={'webDesignCarousel' + 'ID:' + index}>
-            <div className={`${styles.imageViewerMain} pswp-gallery`} style={props.padding ? { paddingLeft: props.padding, paddingRight: props.padding } : {}}>
-              {myObject.map((image, index) => (
-                <a
-                  href={image.largeURL}
-                  data-pswp-width={image.width}
-                  data-pswp-height={image.height}
-                  key={props.galleryID + '-' + index}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.imageLinkContainer}
-                >
-                  <CldImage width={image.width} height={image.height} src={image.thumbnailURL} alt="Image of a featured item" className={styles.myImg} />
-
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Dots */}
-
-      <div className={styles.dotsContainer}>
-        {props.images.map((_, index) => (
-          <Dot
-            key={index}
-            isActive={index === activeIndex}
-            onClick={switchActiveIndex}
-            index={index}
-
-          />
-        ))}
-      </div>
-
-      {/* Controls */}
-
-    </div>
-
-  );
+    setCurrentSlide(currentSlide + changeDirectionNumber);
 }
 
 
+  return (
+
+    <div className={`${styles.carTestMain} pswp-gallery`} id={props.galleryID} >
+      {/* Image viwer page holds a 2x3 section of images.  We can feed this into a carousel and set each page equal to the carousels container and use slide features to view */}
+      <Carousel
+        slideIndex={currentSlide}
+        afterSlide={slideIndex => setCurrentSlide(slideIndex)}
+        renderCenterLeftControls={({ previousSlide }) => null}
+        renderCenterRightControls={({ nextSlide }) => null}
+        renderBottomCenterControls={({ goToSlide, ...props }) =>
+        (
+          <div className={styles.dotsContainer}>
+            {pageDataAll.map((_, index) => (
+              <Dot
+                goToSlide={goToSlide}
+                key={index}
+                currentSlide={currentSlide}
+                index={index}
+                {...props}
+              />
+            ))}
+          </div>
+        )}
+      >
+        {props.images.map((page, pageIndex) => (
+          <div className={styles.imageViewerMain} key={'page: ' + pageIndex}>
+            {page.map((image, imageIndex) => (
+              <a
+                href={image.largeURL}
+                data-pswp-width={image.width}
+                data-pswp-height={image.height}
+                key={props.galleryID + '-' + imageIndex}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.imageLinkContainer}
+                draggable="false"  // Add this line
+                onDragStart={e => e.preventDefault()}
+              >
+                <CldImage width={image.width} height={image.height} src={image.thumbnailURL} alt="Image of a featured item" className={styles.myImg} />
+              </a>
+            ))}
+          </div>
+        ))}
+      </Carousel>
+      <div className={styles.controls}>
+      <div className={styles.carButtContainer}>
+      <CircleButton onClick={() => changeIndex(true)} leftArrow={true} />
+                <Spacer width='10%' />
+                <CircleButton onClick={() => changeIndex(false)} />
+            </div>
+            </div>
+    </div>
+  );
+}
+
 function Dot(props) {
-  const { isActive, onClick, index } = props;
-  const activeClass = isActive ? styles.activeDot : '';
-  return <span onClick={() => onClick(index)} className={`${styles.dot} ${activeClass}`} />;
+  const { currentSlide, onClick, index, goToSlide } = props;
+  const activeClass = currentSlide === index ? styles.activeDot : '';
+  return <span onClick={() => {
+    if (goToSlide) {
+      goToSlide(index);
+    }
+  }} className={`${styles.dot} ${activeClass}`} />;
 }
