@@ -151,7 +151,6 @@ export default function InputContainer() {
             <Spacer height='25px' />
           </div>
           <Spacer width='25px' height='0' />
-
           <div className={styles.mapContainer}>
             <GoogleMap googleAddress={'Modesto CA'} />
             <Spacer height='25px' />

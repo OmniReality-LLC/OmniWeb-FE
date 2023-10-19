@@ -1,0 +1,244 @@
+
+.imageViewerMain{
+
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-left: 5%;
+  padding-right: 5%;
+  column-gap: 2.5vw;
+  row-gap: 2.5vw;
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
+
+}
+.pswp--custom-icon-colors {
+  --pswp-icon-color: #00fffc;
+  --pswp-icon-color-secondary: #13ddcc;
+
+
+}
+
+.MYSETCLASS{
+
+  background-color: #00fffc !important;
+  color: #00fffc;
+
+
+
+
+}
+
+.imageLinkContainer{
+  width: auto;
+  height: 30vh;
+  overflow: hidden;
+  border-radius: 15px;
+
+}
+
+.imageLinkContainer:hover {
+  border: 2px solid #3EDCFF;
+  filter: brightness(50%); /* Darken */
+}
+
+.myImg{
+  width: 100%;
+  height: auto;
+
+}
+
+/* Carousel */
+
+
+
+.gallery {
+  position: relative;
+
+}
+
+.carousel_indicators {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.carousel_indicators span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  /* inactive color */
+  display: inline-block;
+}
+
+.carousel_indicators span.active {
+  background-color: #555;
+  /* active color */
+}
+
+.gallery_scroller {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  /* Enable Safari touch scrolling physics */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* For Firefox */
+
+
+}
+
+.gallery_scroller::-webkit-scrollbar {
+  display: none;
+  /* For Chrome, Safari and newer versions of Opera */
+}
+
+.carTestItem {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  /* make sure items don't shrink */
+  margin: 10px;
+  position: relative;
+  /* Set a default width, you can adjust as needed */
+  width: calc(100% - 20px);
+}
+
+.carButtContainer {
+
+  position: absolute;
+  display: flex;
+  width: 100%;
+  overflow: visible;
+  margin-top: 8px;
+  align-content: center;
+  justify-content: center;
+}
+.gallery_scroller {
+  cursor: grab;
+}
+
+.gallery_scroller:active {
+  cursor: grabbing;
+}
+
+
+
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 30px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  /* vertically center the arrow inside the button */
+  font-size: 24px;
+  /* adjust arrow size */
+  color: #fff;
+  /* arrow color */
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* darker overlay on hover */
+}
+
+.btn:active {
+  background-color: rgba(0, 0, 0, 0.9);
+  /* even darker overlay on press */
+}
+
+.btn:nth-child(3) {
+  left: 10px;
+  /* the prev button */
+}
+
+.btn:nth-child(4) {
+  right: 10px;
+  /* the next button */
+}
+
+/* Dots */
+
+.dotsContainer {
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: -1.25%;
+  padding-bottom: 2%;
+  z-index: 1;
+  position: inherit;
+
+
+
+}
+
+.dot {
+  display: inline-block;
+
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #4C4C4C;
+  box-shadow: 0px -2px 4px 0px #41A2B8 inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.50) inset;
+  transition: background-color 0.3s;
+  z-index: 10;
+
+}
+
+.activeDot {
+
+  background-color: #3EDCFF;
+  box-shadow: 0px 0px 4px 0px rgba(62, 220, 255, 0.50), 0px 0px 5px 0px #000 inset;
+}
+
+
+
+@media (max-width: 960px){
+
+  .imageViewerMain{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+
+  }
+
+  .imageLinkContainer{
+
+    max-height: 250px;
+  }
+
+
+  .dotsContainer {
+
+
+    padding-bottom: 5%;
+
+
+}
+
+}

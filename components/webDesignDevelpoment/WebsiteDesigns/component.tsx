@@ -4,6 +4,7 @@ import MyImageViewer from '../../shared/ImageViewer/component';
 import React, { useEffect, useRef, useState } from 'react';
 import CircleButton from '@/components/shared/Buttons/OmniCircleBtn/Button/component';
 import Spacer from '@/components/shared/PageSpacer/component';
+import MyImageViewerTest from '../../shared/ImageViewer/ImageViewerTest/component';
 
 const data = [
     [{
@@ -81,7 +82,7 @@ export default function WebsiteDesigns() {
                 <h1 className={`${styles.title}`} data-text="Featured Designs">Featured Designs</h1>
                 <div className={styles.cardBackground}>
                     <div className={`${styles.cardItemsContainer} `}>
-                        <CarouselTest />
+                        <MyImageViewerTest images={data} galleryID='webDesignCarousel' padding='calc(5% - 10px)'/>
                     </div>
                 </div>
             </div>
@@ -123,12 +124,10 @@ function CarouselTest() {
 
     useEffect(() => {
         const scroller : any = scrollerRef.current;
-
         // If scroller is available, add the event listener.
         if (scroller) {
             scroller.addEventListener('scroll', handleScroll);
         }
-
         // Clean up - remove the event listener
         return () => {
             if (scroller) {
@@ -176,7 +175,7 @@ function CarouselTest() {
             <div className={styles.gallery_scroller} ref={scrollerRef}>
                 {data.map((myObject, index) =>
                     <div className={styles.carTestItem} key={'webDesignCarousel' + 'ID:' + index}>
-                        <MyImageViewer images={myObject} galleryID='webDesignCarousel' padding='calc(5% - 10px)' />
+                        <MyImageViewerTest images={myObject} galleryID='webDesignCarousel' padding='calc(5% - 10px)' />
                     </div>
                 )}
             </div>
