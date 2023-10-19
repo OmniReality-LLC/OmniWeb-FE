@@ -12,8 +12,8 @@ export default function Footer() {
             navigationLinks: [
                 { href: '/', text: 'Home' },
                 { href: '/#services', text: 'Services' },
-                { href: '', text: 'Our Work' },
-                { href: '', text: 'About' },
+                { href: '/work', text: 'Our Work' },
+                { href: '/about', text: 'About' },
 
             ],
             getInTouchItems: [

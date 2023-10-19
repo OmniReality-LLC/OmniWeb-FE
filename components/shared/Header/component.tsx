@@ -20,8 +20,8 @@ export default function NavBar() {
         [
             { path: '/#home', name: 'Home', activeColor: '#3EDCFF' },
             { path: '/#services', name: 'Service', activeColor: '#3EDCFF' },
-            { path: '', name: 'Our Work', activeColor: '#F35151' },
-            { path: '', name: 'About', activeColor: '#F35151' },
+            { path: '/work', name: 'Our Work', activeColor: '#3EDCFF' },
+            { path: '/about', name: 'About', activeColor: '#3EDCFF' },
             { path: '/contact', name: 'Contact', activeColor: '#3EDCFF' },
         ];
 
