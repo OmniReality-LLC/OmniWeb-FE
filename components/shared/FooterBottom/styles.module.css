@@ -1,72 +1,302 @@
-.footerMain {
+.bannerContainer {
     display: flex;
+    height: 100%;
+    width: 100vw;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.50) inset;
+    backdrop-filter: blur(10px);
+    padding-bottom: 5px;
+
+}
+
+.phoneNumLink {
+    color: var(--footer-text-color);
+        text-decoration: underline;
+    margin-left: 5px;
+}
+
+
+
+
+
+.emailLink {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    transition: .3s;
+    margin-left: 5px;
+}
+
+
+.items {
+    display: flex;
+    flex-direction: row;
+    /* Changed from inline-flex to flex */
+    justify-content: space-between;
+    width: 100%;
+    /* Ensures that items take up full width of container */
+}
+
+.navContainer {
+    margin-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 33%;
+
+
+}
+
+.navTitle {
+    font-size: clamp(20px, 2vw, 24px);
+}
+
+.navItem {
+
+    text-decoration: none;
+    color: var(--footer-text-color);
+    font-size: 16px;
+
+    width: fit-content;
+}
+
+.navItem:hover, .emailLink:hover {
+    color: white !important;
+    transition: .3s !important;
+  }
+
+
+
+
+.copyrightContainer {
+
+    color: #FFF;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    width: 33%;
+
+}
+
+.copyrightTitleContainer {
+    display: flex;
+    flex-direction: column;
+
     align-items: center;
-    background: transparent;
-    height: calc(100vh - 6rem);
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+
+
 }
 
-.footerContainer {
-    background-color: transparent;
-    z-index: 0;
+.testing {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
 }
 
-.h1 {
-    font: bold 75px arial, sans-serif;
-    background-color: #070707;
-    color: transparent;
-    text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.50);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    z-index: -1;
+.bottomLogo {
+
+
+   width: 174px;
+    height: 121px;
+    /* Adjust as needed */
+
 }
 
-.h4 {
-    max-width: 556px;
-    margin-bottom: 50px;
+
+
+.copyrightText {
+
+    text-align: center;
+    font-size: clamp(12px, 1.5vw, 14px);
+    white-space: nowrap;
+    color: var(--footer-text-color);
+
+
 }
 
-.h6 {
-    max-width: 500px;
-    margin-bottom: 50px;
+.copyrightTextSmall {
+
+    text-align: center;
+    font-size: clamp(12px, 1.5vw, 14px);
+    white-space: nowrap;
+    color: #FFF;
+
+
 }
 
-.h4, .h6 {
-    color: white;
+.copyrightTitle {
+
+    text-align: center;
+    font-size: clamp(24px, 2vw, 32px);
+
+
+
 }
 
-.noMargin {
-    width: auto !important;
+.contactDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Add this line */
+    color: #FFF;
+
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 33%;
+
 }
 
-@media (max-width: 768px) {
-    .footerRow {
+.contactDetailsContent {
+    display: inline;
+    text-align: left;
+    width: fit-content;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Add this line */
+    height: 100%;
+
+
+}
+
+.contactTitle {
+    font-size: clamp(20px, 2vw, 24px);
+    color: var(--footer-text-color);
+
+
+}
+
+.contactItem {
+    margin: 0;
+    width: auto;
+  color: var(--footer-text-color);
+}
+
+.contactItemString {
+    margin: 0;
+    margin-left: 5px;
+    width: auto;
+    font-size: 14px !important;
+
+
+  }
+
+
+.mobileLine::before,
+.mobileLine::after {
+    content: '';
+    display: none;
+    height: 1px;
+    background: var(--footer-text-color);
+    /* Set color of the line */
+}
+
+.sloganMove {
+
+    text-align: center;
+
+}
+
+@media (max-width: 1050px) {
+
+    .slogan {
+
+        display: none;
+    }
+
+    .items {
+
         flex-direction: column;
-        align-items: center;
     }
 
-    .myButton {
-        margin-bottom: 25px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 75% !important;
-    }
+    .navContainer {
 
-    .footerContainer {
+        width: 100%;
         text-align: center;
+        margin-left: 0;
+
     }
 
-    .h1 {
-        font-size: 52px;
+    .navItem {
+        text-align: center;
+        align-self: center;
+
     }
 
-    .h4 {
-        margin-top: 50px;
-        font-size: 30px;
-        margin-bottom: 25px;
+    .copyrightContainer {
+        width: 100%;
+        order: 2;
+
     }
 
-    .buttonCol {
-        margin-top: 250px;
+    .contactDetailsContainer {
+        width: 100%;
+        align-items: center;
+        align-content: center;
+        margin-top: 0;
+        margin-bottom: 0;
     }
+
+    .contactDetailsContent {
+        align-self: center;
+        text-align: center;
+
+
+    }
+
+    .contactTitle {}
+
+    .navTitle {
+        display: none;
+    }
+
+    .mobileLine::before,
+    .mobileLine::after {
+        display: block;
+    }
+
+    .mobileLine::before {
+        margin-bottom: 15px;
+        /* Space between line and text */
+    }
+
+    .mobileLine::after {
+        margin-top: 15px;
+        /* Space between text and line */
+    }
+
+    .copyrightTitleContainer {
+
+        width: 100%;
+        height: 150px;
+        margin-top: 0;
+    }
+
+    .contactItemString {
+        margin: 0;
+        font-size: 16px;
+      }
+
+
+
+
+}
+
+@media (min-width: 1050px) {
+
+    .sloganMove {
+        display: none;
+    }
+
 }

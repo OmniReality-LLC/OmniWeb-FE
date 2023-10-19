@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import styles from './page.module.css';
 import CLARA from '@/components/CLARA/component';
+import Footer from '@/components/shared/FooterBottom/component';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CLARA />
         {children}
         <Analytics />
+        <Footer/>
 
       </body>
 
