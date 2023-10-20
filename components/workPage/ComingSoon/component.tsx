@@ -11,7 +11,7 @@ export default function ComingSoon() {
                 <div className={styles.blockBackground}>
                     <div className={styles.overlayText}>Under Development</div>
                     <video autoPlay loop muted playsInline preload="auto" className={styles.comingSoonVideo}>
-                        <source src="https://omnireality.us/Coming Soon Video.webm" type="video/webm" />
+                        <source src="https://cdn.omnireality.us/Coming Soon Video.webm" type="video/webm" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
