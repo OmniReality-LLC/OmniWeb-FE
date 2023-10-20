@@ -16,7 +16,6 @@ export default function ContactBanner(props: ContactBannerInterface) {
         <img className={styles.infoIcon} src='/icons/ScheduleIcon.svg' alt="Schedule Icon" />
         {/* Add button here */}
         <Spacer className={styles.buttomSpacer} width='0' height='0'/>
-
         <div className={styles.contactInfoText}>
         <Button
           text={'Schedule A Call'}
@@ -29,9 +28,7 @@ export default function ContactBanner(props: ContactBannerInterface) {
           target="_blank"
           rel="noopener noreferrer"
         />
-
         </div>
-
       </div>
       {/* ITEM: Email */}
       <div className={`${styles.infoItemBlockEmail} ${props.bannerClassName || ''}`}>

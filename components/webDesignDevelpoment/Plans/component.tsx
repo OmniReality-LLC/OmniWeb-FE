@@ -61,12 +61,12 @@ const webPlans = [
         mostPopular: false,
         priceHeaderText: 'Contact',
         includedPoints: [
-            'Everything in Pro +',
-            'More than 10 custom-designed pages',
-            'Custom integrations (CRM, ERP, third-party APIs)',
-            'Unlimited add-ons and custom features',
-            'Custom maintenance and support plan',
-            '3 months of FREE T1 hosting & maintenance (after that, maintenance packages are available)'
+            "Everything in Pro +",
+            "More than 10 custom-designed pages",
+            "Integration with external systems (e.g., CRM, ERP, and third-party APIs)",
+            "Option for unlimited additional features and integrations",
+            "Tailored maintenance and support package to fit your needs",
+            "3 months of custom-tailored support for free. Subsequent maintenance packages are available upon request."
         ]
     }
 ];
