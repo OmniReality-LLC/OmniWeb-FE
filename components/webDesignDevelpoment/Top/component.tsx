@@ -9,7 +9,7 @@ export default function WebsiteTopSection() {
     return (
         <div className={`${styles.topMain} align-items-center  `}>
             <video autoPlay loop muted playsInline preload="auto" className={styles.backgroundVideo}>
-                <source src="/videos/WebServiceMain.mp4" type="video/mp4" />
+                <source src="https://cdn.omnireality.us/WebServiceMain.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className={` ${styles.myContainer} container`}>

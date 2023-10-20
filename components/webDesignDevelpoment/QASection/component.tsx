@@ -36,7 +36,7 @@ export default function QASection() {
                         </div>
                         <div className={styles.rightContainer}>
                             <div className={styles.questionImage}>
-                                <img src='/testFolder/QuestionMark2.png' alt=''/>
+                                <img src='https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1697838647/Omni%20Website/Website%20Service%20Page/QuestionMark2.png' alt=''/>
                             </div>
                         </div>
                     </div>

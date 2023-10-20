@@ -21,7 +21,7 @@ type PageData = {
 const data: PageData[] = [
     {
         name: "Dashboard",
-        pagePicture: "testFolder/AdminPanelDashboard.png",
+        pagePicture: "https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1697838571/Omni%20Website/Website%20Service%20Page/AdminPanelDashboard_gv5wkx.png",
         data: [
             { subTitle: "Live Website Analytics:", dataPoints: ["Website metrics at a glance.", "Monitor real-time growth."] },
             { subTitle: "Graphical Representations:", dataPoints: ["Metrics simplified visually.", "Transition from numbers to visuals."] }
@@ -29,7 +29,7 @@ const data: PageData[] = [
     },
     {
         name: "Account",
-        pagePicture: "testFolder/AdminPanelAccount.png",
+        pagePicture: "https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1697838570/Omni%20Website/Website%20Service%20Page/AdminPanelAccount_gvl7gj.png",
         data: [
             { subTitle: "Personal Details:", dataPoints: ["Edit account information.", "View plans and renewals."] },
             { subTitle: "Purchases & Payments:", dataPoints: ["Track your past purchases.", "Edit payment details and view plans."] }
@@ -37,7 +37,7 @@ const data: PageData[] = [
     },
     {
         name: "Messages",
-        pagePicture: "testFolder/AdminPanelMessages.png",
+        pagePicture: "https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1697838571/Omni%20Website/Website%20Service%20Page/AdminPanelMessages_keydp6.png",
         data: [
             { subTitle: "Message Management:", dataPoints: ["Never miss important notifications.", "Organized messages in one place."] },
             { subTitle: "Features & Functionalities:", dataPoints: ["Download and store attachments.", "Stay updated, avoid clutter."] }
@@ -45,7 +45,7 @@ const data: PageData[] = [
     },
     {
         name: "Add-ons",
-        pagePicture: "testFolder/AdminPanelAddons.png",
+        pagePicture: "https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1697838571/Omni%20Website/Website%20Service%20Page/AdminPanelAddons_uhhwfp.png",
         data: [
             { subTitle: "Add-on Management:", dataPoints: ["Manage your active add-ons.", "Request cancellations easily."] },
             { subTitle: "Acquire New Add-ons:", dataPoints: ["Discover new feature additions.", "Upgrade your site easily."] }

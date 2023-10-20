@@ -1,14 +1,11 @@
+import BackgroundVideoFullScreen from '@/components/shared/BgVideoFullScreen/component';
 import SlideGlowLinkBtn from '../../shared/Buttons/component'
 import styles from './styles.module.css';
 
 export default function LandingTopSection() {
     return (
         <div className={`${styles.topMain} align-items-center  `}>
-            <video autoPlay loop muted playsInline preload="auto" className={styles.backgroundVideo}>
-            <source src="/videos/BackgroundLanding.mp4" type="video/mp4"/>
-
-                Your browser does not support the video tag.
-            </video>
+            <BackgroundVideoFullScreen src={'https://cdn.omnireality.us/BackgroundLanding.mp4'} type={'video/mp4'}/>
             <div className={` ${styles.myContainer} container`}>
                 <div className={styles.contentHolder}>
                     <h1 className={styles.title}>We Turn Dreams Into Reality</h1>

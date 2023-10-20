@@ -6,7 +6,7 @@ export default function Footer() {
         const data = {
             textColor: '#7E7E7E', // replace with your desired value
             textHoverColor: 'red', // replace with your desired value
-            backgroundColor: '#161616;', // replace with your desired value
+            backgroundColor: '#161616', // replace with your desired value
             logoSrc: '/icons/OmniLogoFooter.svg', // replace with your logo path
             enableOpacity: false,
             navigationLinks: [

@@ -2,7 +2,7 @@
 import styles from './page.module.css';
 import Footer from '@/components/shared/Footer/component';
 import ParticleBackground from '@/components/shared/Particles/component';
-import ComingSoon from '@/components/workPage/ComingSoon/component';
+import ComingSoon from '@/components/shared/ComingSoon/component';
 
 export default function WebsiteService() {
   return (
