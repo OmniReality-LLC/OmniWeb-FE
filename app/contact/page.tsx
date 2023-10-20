@@ -7,7 +7,7 @@ import TitleAndSubTitleColumn from '@/components/shared/TitleAndSubtitleColumn/c
 export default function Contact() {
   return (
     <main className={styles.main}>
-      <BackgroundVideoFullScreen src={'/videos/ContactBackground.mp4'} type={'video/mp4'} />
+      <BackgroundVideoFullScreen src={'/videos/ContactBackground.webm'} type={'video/webm'} />
       <div className={`${styles.mainContent}`}>
         <TitleAndSubTitleColumn title={'Get Connected'} subNoneGradient={'Let Us Know How '} subGradient={'We Can Help You'} />
         <InputContainer />

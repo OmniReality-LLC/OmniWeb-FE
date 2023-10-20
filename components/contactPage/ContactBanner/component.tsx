@@ -13,7 +13,7 @@ export default function ContactBanner(props: ContactBannerInterface) {
     <div className={`${styles.infoContainer} ${props.className || ''}`}>
       {/* ITEM: Schedule */}
       <div className={styles.infoItemBlock}>
-        <img className={styles.infoIcon} src='/icons/BrainIcon.svg' alt="Brain Icon" />
+        <img className={styles.infoIcon} src='/icons/ScheduleIcon.svg' alt="Schedule Icon" />
         {/* Add button here */}
         <Spacer className={styles.buttomSpacer} width='0' height='0'/>
 
@@ -35,7 +35,7 @@ export default function ContactBanner(props: ContactBannerInterface) {
       </div>
       {/* ITEM: Email */}
       <div className={`${styles.infoItemBlockEmail} ${props.bannerClassName || ''}`}>
-        <img className={styles.infoIcon} src='/icons/BrainIcon.svg' alt="Brain Icon" />
+        <img className={styles.infoIcon} src='/icons/EmailIcon.svg' alt="Email Icon" />
         <div className={styles.contactInfoText}>
           <h1 className={styles.infoTitleFancy}>E-Mail</h1>
           <p className={styles.blockText}>
@@ -47,7 +47,7 @@ export default function ContactBanner(props: ContactBannerInterface) {
       </div>
       {/* ITEM: Hours */}
       <div className={styles.infoItemBlock}>
-        <img className={styles.infoIcon} src='/icons/BrainIcon.svg' alt="Brain Icon" />
+        <img className={styles.infoIcon} src='/icons/HoursIcon.svg' alt="Hours Icon" />
         <div className={styles.contactInfoText}>
           <h1 className={styles.infoTitleFancy}>Hours</h1>
           <p className={styles.blockText}>Mon-Fri 9AM-5PM PST</p>
