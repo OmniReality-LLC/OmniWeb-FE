@@ -1,4 +1,4 @@
-
+/* Work Page */
 import styles from './page.module.css';
 import Footer from '@/components/shared/Footer/component';
 import ParticleBackground from '@/components/shared/Particles/component';

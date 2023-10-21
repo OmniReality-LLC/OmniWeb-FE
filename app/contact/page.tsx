@@ -7,7 +7,10 @@ import TitleAndSubTitleColumn from '@/components/shared/TitleAndSubtitleColumn/c
 export default function Contact() {
   return (
     <main className={styles.main}>
-      <BackgroundVideoFullScreen src={'https://cdn.omnireality.us/ContactBackground.webm'} type={'video/webm'} />
+      <BackgroundVideoFullScreen
+                src={'https://customer-y3xf1gql15dhgu26.cloudflarestream.com/f851728d5ca64075becf16b0fe37b2c9/manifest/video.m3u8'}
+                placeholderSrc={'/loadingImages/Contact.webp'}
+            />
       <div className={`${styles.mainContent}`}>
         <TitleAndSubTitleColumn title={'Get Connected'} subNoneGradient={'Let Us Know How '} subGradient={'We Can Help You'} />
         <InputContainer />

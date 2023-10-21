@@ -5,7 +5,8 @@ import styles from './styles.module.css';
 export default function LandingTopSection() {
     return (
         <div className={`${styles.topMain} align-items-center  `}>
-            <BackgroundVideoFullScreen src={'https://cdn.omnireality.us/BackgroundLanding.mp4'} type={'video/mp4'}/>
+            <BackgroundVideoFullScreen src={'https://customer-y3xf1gql15dhgu26.cloudflarestream.com/c82b1cc185f1557b368fb2c1fec977b2/manifest/video.m3u8'}
+            placeholderSrc={'/loadingImages/Main.webp'} />
             <div className={` ${styles.myContainer} container`}>
                 <div className={styles.contentHolder}>
                     <h1 className={styles.title}>We Turn Dreams Into Reality</h1>
