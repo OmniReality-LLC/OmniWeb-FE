@@ -8,8 +8,8 @@ import MyImageViewerTest from '../../shared/ImageViewer/ImageViewerTest/componen
 
 const data = [
     [{
-        largeURL: 'https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693940719/Omni%20Website/Main%20Page/Featured%20Websites/CherryPickedSPeechTherapy_qiq8vv.png',
-        thumbnailURL: 'https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1693940719/Omni%20Website/Main%20Page/Featured%20Websites/CherryPickedSPeechTherapy_qiq8vv.png',
+        largeURL: 'https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1697931217/Omni%20Website/Main%20Page/Featured%20Websites/CherryPickedSpeechTherapy_blmjdd.png',
+        thumbnailURL: 'https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto/v1697931217/Omni%20Website/Main%20Page/Featured%20Websites/CherryPickedSpeechTherapy_blmjdd.png',
         width: 1920,  // Replace with actual width in pixels
         height: 6693,  // Replace with actual height in pixels
     },
