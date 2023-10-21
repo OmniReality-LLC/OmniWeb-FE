@@ -8,16 +8,49 @@ type QA = {
 };
 
 const data: QA[] = [
-    { question: 'Do you offer custom website and admin panel solutions?', answer: "Yes, we do! At OmniReality, we understand that every business has unique needs. Our team of experts specializes in crafting custom websites and admin panels tailored to your specific requirements. Whether it's a unique user interface, specialized functionality, or a one-of-a-kind admin dashboard, we have you covered. Our goal is to ensure your platform not only stands out but also offers a seamless user experience." },
-    { question: 'How does payment work?', answer: 'Payments are processed through our secure online platform. We accept a variety of payment methods including credit cards, bank transfers, and PayPal. We also offer flexible payment plans to meet your budgetary needs.' },
-    { question: 'Will my website be mobile-responsive?', answer: 'Of course! When OmniReality creates website designs, we start with a mobile-first approach ensuring our clients get the best experience no matter what device you are using.' },
-    { question: 'Do you offer any design services?', answer: 'Absolutely! OmniReality offers a wide range of design services, from branding and graphics design to user interface and experience design. Our team of professionals is equipped to transform your ideas into reality.' },
-    { question: 'Do you handle website hosting?', answer: 'OmniReality LLC provides everything you need from design to hosting so you can focus on the important part of your business, making money.' },
-    { question: 'Are Third-party integrations possible?', answer: 'Yes, we can integrate a wide range of third-party services and APIs into your website, ensuring you get the functionality and features you require.' },
-    { question: 'How do I track website performance?', answer: 'We provide you with analytical tools and regular performance reports. You can monitor website traffic, user engagement, and other key metrics to ensure optimal performance.' },
-    { question: 'Can I upgrade my maintenance tier?', answer: "Definitely! You can upgrade your maintenance tier at any time. Just reach out to our support team, and they'll guide you through the process." },
-    { question: 'How long do I have my domain for?', answer: "When you register a domain with OmniReality, it's typically valid for one year. However, you have the option to renew it annually or opt for long-term registration based on your preference." },
+    {
+        question: 'Do you offer custom website and admin panel solutions?',
+        answer: "Yes, we do! At OmniReality, we understand that every business has unique needs. Our team specializes in crafting custom websites and admin panels tailored to your specific requirements. Whether you need a unique user interface, specialized functionality, or a distinctive admin dashboard, we've got you covered. Our goal is to ensure your platform stands out and provides a seamless user experience."
+    },
+    {
+        question: 'How does payment work?',
+        answer: 'We facilitate payments through an email invoice system. Upon finalizing the terms of our services, you will receive an invoice via email with a payment link that directs you to our trusted payment gateway. Simply click on the link and follow the instructions to complete the payment.'
+    },
+    {
+        question: 'Will my website be mobile-responsive?',
+        answer: 'Absolutely! At OmniReality, we adopt a mobile-first design approach. This ensures that our clients receive an optimal experience regardless of the device they use.'
+    },
+    {
+        question: 'Do you provide design services?',
+        answer: 'Certainly! OmniReality provides an array of design services. From branding and graphic design to user interface and experience design, our team is well-equipped to bring your vision to life.'
+    },
+    {
+        question: 'Do you handle website hosting?',
+        answer: 'Yes, OmniReality LLC offers end-to-end solutions, from design to hosting. This allows you to concentrate on the most crucial aspect of your business: generating revenue.'
+    },
+    {
+        question: 'Is there a requirement for purchasing maintenance plans?',
+        answer: 'Yes, to ensure consistent support and optimal performance for your website, all maintenance plans are billed annually and must be purchased upfront. This approach allows us to allocate resources effectively and provide you with uninterrupted service throughout the year.'
+    },
+    {
+        question: 'Can I change or cancel my maintenance plan?',
+        answer: "Certainly! While the maintenance plans are billed annually, we understand that businesses evolve. If you need to upgrade, downgrade, or cancel, just reach out to our team. We're here to help and will guide you through the process."
+    },
+    {
+        question: 'How can I monitor website performance?',
+        answer: 'We equip you with analytical tools and provide regular performance updates. This enables you to track website traffic, gauge user engagement, and monitor other essential metrics for optimal performance.'
+    },
+    {
+        question: 'How long is my domain valid?',
+        answer: "Upon registering a domain with OmniReality, it remains valid for a year. However, you can either renew it annually or choose longer-term registration based on your needs."
+    },
+    {
+        question: 'Are third-party integrations feasible?',
+        answer: 'Absolutely. We can incorporate a variety of third-party services and APIs into your website, ensuring it possesses the desired functionalities and features.'
+    },
 ];
+
+
 
 const dataCount: number = data.length;
 export default function QASection() {
