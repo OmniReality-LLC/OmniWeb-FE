@@ -1,9 +1,6 @@
 'use client'
 import styles from './styles.module.css';
-import MyImageViewer from '../../shared/ImageViewer/component';
 import React, { useEffect, useRef, useState } from 'react';
-import CircleButton from '@/components/shared/Buttons/OmniCircleBtn/Button/component';
-import Spacer from '@/components/shared/PageSpacer/component';
 import MyImageViewerTest from '../../shared/ImageViewer/ImageViewerTest/component';
 
 const data = [
