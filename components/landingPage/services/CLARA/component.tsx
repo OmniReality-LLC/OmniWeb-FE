@@ -4,22 +4,23 @@ import CloudImgHelper from '../../../shared/ServiceImageCloud/component';
 
 const xrServices = [
     {
-        subTitle: "Elevate user interactions with intelligent conversations.",
+        subTitle: "Empower Digital Experiences with C.L.A.R.A.",
         smallCard: {
             iconSrc: 'icons/BrainIcon.svg',
-            subSubTitle: 'C.L.A.R.A. AI Chatbot',
-            description: 'Introducing C.L.A.R.A. – a cutting-edge AI chatbot designed to offer real-time, personalized interactions, making your digital presence feel more human and accessible.'
+            subSubTitle: 'Conversational Language and Response Algorithm',
+            description: 'Meet C.L.A.R.A. – an advanced AI-powered platform that transcends traditional chatbot interactions. Elevate your user experiences with dynamic conversations, AI content creation tools, and generative image manipulations.'
         }
     },
     {
-        subTitle: "What C.L.A.R.A. Offers",
+        subTitle: "Features & Capabilities",
         listItems: [
-            { mainText: "Dynamic Conversations:", specialText: "Feels natural and intuitive." },
-            { mainText: "Seamless Integration: ", specialText: "Fits any platform or site." },
-            { mainText: "Custom Responses:", specialText: "Tailor-made for your brand." },
-            { mainText: " 24/7 Support: ", specialText: " Ensures uninterrupted service." },
-            { mainText: "Performance Insights: ", specialText: "Track bot interactions and performance." },
+            { mainText: "Natural Conversations & Content Creation:", specialText: "Dynamic interactions paired with AI-driven copywriting tools." },
+            { mainText: "Generative Image Manipulation:", specialText: "AI-powered capabilities to replace, edit, and innovate visuals." },
+            { mainText: "24/7 Availability:", specialText: "Ensuring continuous engagement and uninterrupted support." },
+            { mainText: "Embed Integration:", specialText: "Slot C.L.A.R.A. into any website or platform effortlessly." },
+            { mainText: "Performance & Customization:", specialText: "Analytics insights and adaptability to reflect your brand." },
         ]
+
     }
 ];
 

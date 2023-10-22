@@ -3,6 +3,12 @@
 import styles from './styles.module.css';
 import Button from '../../shared/Buttons/component'
 import TopBanner from './TopBanner/component';
+import Hosting from './Hosting/component';
+
+interface ListItem {
+    mainText: string;
+    specialText: string;
+}
 
 interface webPlansInterface {
     title: string;
@@ -10,7 +16,7 @@ interface webPlansInterface {
     price: string;
     mostPopular: boolean;
     priceHeaderText: string;
-    includedPoints: string[];
+    includedPoints: ListItem[];
 }
 
 const advertBanner = [
@@ -19,22 +25,22 @@ const advertBanner = [
     { icon: '/icons/CustomDesignIcon.svg', phrase: 'Custom Design' },
 ]
 
-const webPlans = [
+const webPlans: webPlansInterface[] = [
     {
         title: "Starter",
-        subTitle: "Blogs, Portfolios and More",
+        subTitle: "Blogs, Portfolios, and Informative Sites",
         price: "$7,500",
         mostPopular: false,
-        priceHeaderText: 'Starting At',
+        priceHeaderText: 'Starting Price',
         includedPoints: [
-            'Up to 5 custom-designed pages',
-            'Responsive design on mobile and desktop',
-            'Encrypted contact form',
-            'Interactive Elements (Boost engagement with custom animations, and dynamic content)',
-            'Social media integration (icons, posts)',
-            'Basic SEO',
-            'SSL Certification (Secured HTTPS)',
-            '1-month of FREE T1 hosting & maintenance (after that, maintenance packages are available)'
+            { mainText: 'Bespoke page designs:', specialText: 'Up to 5' },
+            { mainText: 'Device optimization:', specialText: 'Mobile and desktop' },
+            { mainText: 'Contact form:', specialText: 'Secure and encrypted' },
+            { mainText: 'Enhance user engagement with', specialText: 'Interactive elements' },
+            { mainText: 'Social media:', specialText: 'Integrated icons and live posts' },
+            { mainText: 'SEO:', specialText: 'Foundational setup' },
+            { mainText: 'Browsing experience:', specialText: 'SSL certified (HTTPS)' },
+            { mainText: 'Maintenance & support:', specialText: '1-month off when purchased' }
         ]
     },
     {
@@ -42,31 +48,31 @@ const webPlans = [
         subTitle: "E-commerce Capable",
         price: "$12,500",
         mostPopular: true,
-        priceHeaderText: 'Starting At',
+        priceHeaderText: 'Starting Price',
         includedPoints: [
-            'Everything in Starter +',
-            'Up to 10 custom-designed pages',
-            'E-commerce Integration',
-            '3D Model Integration',
-            'Augmented Reality Integration',
-            'Social media page optimization',
-            'Speed loading and time optimization',
-            '2 months of FREE T1 hosting & maintenance (after that, maintenance packages are available)'
+            { mainText: 'Includes everything from', specialText: 'Starter plan' },
+            { mainText: 'Bespoke page designs:', specialText: 'Up to 10' },
+            { mainText: 'Platform:', specialText: 'Full E-commerce integration' },
+            { mainText: 'Visuals:', specialText: 'Incorporate 3D Models' },
+            { mainText: 'User experience:', specialText: 'Augmented Reality features' },
+            { mainText: 'Social media pages:', specialText: 'Optimized for brand consistency' },
+            { mainText: 'Website:', specialText: 'Speed optimized for faster loads' },
+            { mainText: 'Maintenance & support:', specialText: '2 months off when purchased' }
         ]
     },
     {
         title: "Enterprise",
         subTitle: "SaaS Capable",
-        price: "Custom",
+        price: "Custom Quote",
         mostPopular: false,
-        priceHeaderText: 'Contact',
+        priceHeaderText: 'Please Inquire',
         includedPoints: [
-            "Everything in Pro +",
-            "More than 10 custom-designed pages",
-            "Integration with external systems (e.g., CRM, ERP, and third-party APIs)",
-            "Option for unlimited additional features and integrations",
-            "Tailored maintenance and support package to fit your needs",
-            "3 months of custom-tailored support for free. Subsequent maintenance packages are available upon request."
+            { mainText: 'Includes everything from', specialText: 'Pro plan' },
+            { mainText: 'Bespoke page designs:', specialText: '10+' },
+            { mainText: 'Integration:', specialText: 'CRM, ERP, and more' },
+            { mainText: 'Additional features and integrations:', specialText: 'Unlimited' },
+            { mainText: 'Maintenance & support:', specialText: 'Customized to your needs' },
+            { mainText: 'Commitment offer:', specialText: '3 months off maintenance & support' }
         ]
     }
 ];
@@ -79,7 +85,7 @@ export default function WebsiteService() {
             <div className={styles.contentMain}>
                 <h1 className={`${styles.title}`} data-text="Website Services">Website Services</h1>
                 <div className={styles.blockBackground}>
-                    <TopBanner elements={advertBanner}/>
+                    <TopBanner elements={advertBanner} />
                     <div className={`${styles.plansContainer} `}>
                         {webPlans.map((plan, index) => (
                             <PlanCard
@@ -93,6 +99,7 @@ export default function WebsiteService() {
                             />
                         ))}
                     </div>
+                    <Hosting/>
                     <Button text={'Contact'} linkTo={'/contact'} className={styles.myButton} marginB='2.5%' />
                 </div>
             </div>
@@ -139,9 +146,11 @@ function PlanCard(props: webPlansInterface) {
                 <div className={styles.pointsContainer}>
                     <ul className={styles.pointsList}>
                         {/* Points */}
-                        {props.includedPoints.map((value, index) =>
-                            <li key={index} className={styles.pointItem}>{value}</li>
-                        )}
+                        {props.includedPoints.map((listItem, liIndex) => (
+                            <li key={liIndex} className={styles.pointItem}>
+                                {listItem.mainText} <span className={styles.specialText}>{listItem.specialText}</span>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

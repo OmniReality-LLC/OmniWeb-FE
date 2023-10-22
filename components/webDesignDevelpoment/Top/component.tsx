@@ -3,9 +3,6 @@ import SlideGlowLinkBtn from '../../shared/Buttons/component'
 import styles from './styles.module.css';
 import BackgroundVideoFullScreen from '@/components/shared/BgVideoFullScreen/component';
 
-
-
-
 export default function WebsiteTopSection() {
     return (
         <div className={`${styles.topMain} align-items-center  `}>

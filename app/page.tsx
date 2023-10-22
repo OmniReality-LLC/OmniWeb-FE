@@ -5,7 +5,6 @@ import ParticleBackground from '../components/shared/Particles/component'
 import WebsiteService from '../components/landingPage/services/Website/component'
 import EcommerceService from '../components/landingPage/services/Ecommerce/component'
 import AIAddonsService from '../components/landingPage/services/AiAddons/component'
-import CLARAService from '../components/landingPage/services/CLARA/component'
 import FeaturedSection from '../components/landingPage/FeaturedProjects/component'
 import TechnologySection from '../components/landingPage/TechnologyStack/component'
 import PageConnector from '../components/shared/PageConnector/component'
@@ -28,8 +27,6 @@ export default function Home() {
         <EcommerceService />
         <PageConnector />
         <AIAddonsService />
-        <PageConnector />
-        <CLARAService />
         <PageConnector whiteConnector={true} />
         <FeaturedSection />
         <PageConnector />

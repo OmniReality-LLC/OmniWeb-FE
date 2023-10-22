@@ -2,37 +2,40 @@ import styles from './styles.module.css';
 import ServiceCard from '../../../shared/ServiceCard/component'
 import CloudImgHelper from '../../../shared/ServiceImageCloud/component';
 
-const cloudComputingServices = [
+const offeringTitle = 'AI Enhancements'
+
+const aiAddons = [
     {
-        subTitle: "Boost your experience with the power of AI.",
+        subTitle: "Unleash C.L.A.R.A.'s Full Potential",
         smallCard: {
             iconSrc: 'icons/BrainIcon.svg',
-            subSubTitle: 'AI Content Creation',
-            description: 'From a 24/7 AI Chatbot and compelling AI Copywriter to a smart AI Image Editor, we automate content creation giving you and your customers the best experience.'
+            subSubTitle: 'Conversational Language and Response Algorithm',
+            description: "Discover C.L.A.R.A. – not just a chatbot, but your AI-driven powerhouse. From engaging conversations to content creation and innovative image manipulations, redefine what's possible."
         }
     },
     {
-        subTitle: "What We Offer",
+        subTitle: "Key Capabilities",
         listItems: [
-            { mainText: "Smart Chat: ", specialText: "24/7 AI Chatbot for instant customer support and engagement." },
-            { mainText: "Auto Copywrite: ", specialText: "AI Copywriter that generates compelling and relevant content on-demand." },
-            { mainText: "Image AI: ", specialText: "Smart AI Image Editor for seamless photo adjustments and enhancements. Add products to any photo with ease." },
-
+            { mainText: "Natural Conversations & Content Creation:", specialText: "Deliver human-like interactions and automate content creation." },
+            { mainText: "Generative Image Manipulation:", specialText: "Replace, edit, and create visuals with AI precision." },
+            { mainText: "24/7 Availability:", specialText: "Always on, always engaging." },
+            { mainText: "Easy Embed Integration:", specialText: "Seamlessly introduce C.L.A.R.A. to any digital space." },
+            { mainText: "Performance & Customization:", specialText: "Get insights and mold C.L.A.R.A. to your brand's voice." },
         ]
+
     }
 ];
-
 export default function AIAddonSection() {
 
     return (
         <div className={styles.servicesMain}>
             <div className={styles.contentMain}>
-                <h1 className={`${styles.title} `}>AI Add-ons</h1>
+                <h1 className={`${styles.title} `}>{offeringTitle}</h1>
                 <div className={styles.cardBackground}>
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>
                             <div className={styles.smallCardContent}>
-                                <ServiceCard carouselItems={cloudComputingServices} linkTo='/websolutions' buttonText='View Service'/>
+                                <ServiceCard carouselItems={aiAddons} linkTo='/websolutions' buttonText='View Service'/>
                             </div>
                         </div>
                         <div className={styles.secondContainer}>

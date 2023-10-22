@@ -391,14 +391,18 @@
     margin-top: 15px;
 }
 
-.pointItem {
-
+.pointItem,
+.specialText {
     margin-bottom: 15px;
     color: #FFF;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.specialText {
+    color: #3EDCFF;
 }
 
 @media (max-width: 960px) {
