@@ -25,6 +25,7 @@ const aiAddons = [
 
     }
 ];
+
 export default function AIAddonSection() {
 
     return (
@@ -39,15 +40,10 @@ export default function AIAddonSection() {
                             </div>
                         </div>
                         <div className={styles.secondContainer}>
-                        <CloudImgHelper quality={75} width={628} height={646} src="https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1695673540/Omni%20Website/Main%20Page/Service%20Images/AIBotImage_mkxngz.png" alt="Image of a laptop computer" className={styles.displayImg}/>
-
-
+                        <CloudImgHelper quality={75} width={628} height={646} src="https://res.cloudinary.com/omnirealitycloud/image/upload/f_auto,q_auto:best/v1695673541/Omni%20Website/Main%20Page/Service%20Images/ChatbotImage_bphx6n.png" alt="Image of CLARA, an AI-Driven Powerhouse" className={styles.displayImg}/>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         </div>
     );
