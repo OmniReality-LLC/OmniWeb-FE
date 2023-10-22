@@ -33,33 +33,50 @@ export default function Hosting() {
 
     return (
 
-        <div className={styles.hostDataContainer}>
-            {advertBanner.map((data, index) => (
-                <div key={'host: ' + index} className={styles.hostBorder} style={data.mostPop ?
-                    {
-                        border: mostPopBoxBorder,
-                        boxShadow: boxShadow,
-                        background: "#202325",
+        <div className={styles.hostMain}>
 
-                    } : {
-                        border: normBoxBorder,
-                        background: "#1B1D1E"
-                    }}>
-                    <div className={styles.hostBackground}>
-                        <div className={styles.hostData}>
-                            <h1 className={styles.title}> {data.title}</h1>
-                            <h2 className={styles.subTitle}> {data.subTitle}</h2>
-                            <hr className={styles.lineSeperator} />
-                            <p className={styles.description}>{data.description}</p>
+            <div className={styles.titleContainer}>
+
+                <div className={styles.titleContent}>
+
+
+
+                    <h1 className={styles.hostingTitle}>Hosting</h1>
+                </div>
+            </div>
+
+
+            <div className={styles.hostDataContainer}>
+
+
+                {advertBanner.map((data, index) => (
+                    <div key={'host: ' + index} className={styles.hostBorder} style={data.mostPop ?
+                        {
+                            border: mostPopBoxBorder,
+                            boxShadow: boxShadow,
+                            background: "#202325",
+
+                        } : {
+                            border: normBoxBorder,
+                            background: "#1B1D1E"
+                        }}>
+                        <div className={styles.hostBackground}>
+                            <div className={styles.hostData}>
+                                <h1 className={styles.title}> {data.title}</h1>
+                                <h2 className={styles.subTitle}> {data.subTitle}</h2>
+                                <hr className={styles.lineSeperator} />
+                                <p className={styles.description}>{data.description}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
 
 
 
 
 
+
+            </div>
 
         </div>
 

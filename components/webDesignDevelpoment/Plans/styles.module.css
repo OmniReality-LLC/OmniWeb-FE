@@ -240,8 +240,6 @@
     border-radius: 25px;
     width: 100%;
     height: 100%;
-    transform: translateY(-5%);
-
 }
 
 .planCardMain {
@@ -379,7 +377,7 @@
 
     display: flex;
     flex-grow: 1;
-    width: 100%;
+
     width: 90%;
     margin-left: 15px;
 }
@@ -422,7 +420,10 @@
     .planCardContainer{
 
         max-width: 100%;
+        transform: none !important;
     }
+
+
 
     .plansContainer {
         grid-template-columns: repeat(1, 1fr);
@@ -432,6 +433,7 @@
         grid-gap: 0;
         gap: 40px;
     }
+
 
     .plansContainer .planCardContainer:nth-child(1) {
         order: 2;

@@ -99,6 +99,7 @@ export default function WebsiteService() {
                             />
                         ))}
                     </div>
+
                     <Hosting/>
                     <Button text={'Contact'} linkTo={'/contact'} className={styles.myButton} marginB='2.5%' />
                 </div>
