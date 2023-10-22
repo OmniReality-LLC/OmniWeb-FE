@@ -6,21 +6,21 @@ const offeringTitle = 'AI Enhancements'
 
 const aiAddons = [
     {
-        subTitle: "Unleash C.L.A.R.A.'s Full Potential",
+        subTitle: "What Clara Offers",
         smallCard: {
             iconSrc: 'icons/BrainIcon.svg',
-            subSubTitle: 'Conversational Language and Response Algorithm',
+            subSubTitle: 'AI-Driven Conversational Powerhouse',
             description: "Discover C.L.A.R.A. – not just a chatbot, but your AI-driven powerhouse. From engaging conversations to content creation and innovative image manipulations, redefine what's possible."
         }
     },
     {
         subTitle: "Key Capabilities",
         listItems: [
-            { mainText: "Natural Conversations & Content Creation:", specialText: "Deliver human-like interactions and automate content creation." },
-            { mainText: "Generative Image Manipulation:", specialText: "Replace, edit, and create visuals with AI precision." },
-            { mainText: "24/7 Availability:", specialText: "Always on, always engaging." },
-            { mainText: "Easy Embed Integration:", specialText: "Seamlessly introduce C.L.A.R.A. to any digital space." },
-            { mainText: "Performance & Customization:", specialText: "Get insights and mold C.L.A.R.A. to your brand's voice." },
+            { mainText: "Conversations & Content:", specialText: "Human-like and automated." },
+            { mainText: "Image Manipulation:", specialText: "Replace and create with AI." },
+            { mainText: "24/7 Availability:", specialText: "Always on." },
+            { mainText: "Embed Integration:", specialText: "Embed C.L.A.R.A. into any space." },
+            { mainText: "Performance & Customization:", specialText: "Adapt to your brand's voice." },
         ]
 
     }
