@@ -28,7 +28,7 @@ const advertBanner = [
 const webPlans: webPlansInterface[] = [
     {
         title: "Starter",
-        subTitle: "Blogs, Portfolios, and Informative Sites",
+        subTitle: "Blogs, Portfolios, and More",
         price: "$7,500",
         mostPopular: false,
         priceHeaderText: 'Starting Price',
@@ -117,7 +117,8 @@ function PlanCard(props: webPlansInterface) {
                 border: mostPopBoxBorder,
                 boxShadow: boxShadow,
                 background: "#202325",
-                marginTop: '-5%'
+                transform: 'translateY(-5%)'
+
             } : {
                 border: normBoxBorder,
                 background: "#1B1D1E"

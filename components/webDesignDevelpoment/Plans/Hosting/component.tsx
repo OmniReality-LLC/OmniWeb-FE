@@ -11,17 +11,18 @@ interface hostData {
 
 const advertBanner: hostData[] = [
     {
-        title: 'Self-Hosting',
-        subTitle: 'Absolute Control, Independence & Licensure',
-        description: 'Maintain full control, ownership, and direct access to your data with the added benefit of a licensed codebase. Respond instantly to updates, ensuring timely adjustments tailored to your needs. With self-hosting, you dictate the pace, the rules, and have the option for licensed ownership of the codebase, ensuring clear rights and defined terms.',
-        mostPop: false
-    },
-    {
         title: 'Managed Hosting',
-        subTitle: 'Yearly Commitment, Hassle-Free Experience',
+        subTitle: 'Yearly Commitment, Hassle-Free',
         description: 'Benefit from our pre-purchased annual server rates on both AWS and Azure. With managed hosting, you receive consistent backups, security monitoring, and premium support. Maintenance and other technical needs are all catered for by us.',
         mostPop: true
     },
+    {
+        title: 'Self-Hosting',
+        subTitle: 'Ownership, Control & Licensure',
+        description: 'Maintain full control, ownership, and direct access to your data with the added benefit of a licensed codebase. Respond instantly to updates, ensuring timely adjustments tailored to your needs. With self-hosting, you dictate the pace, the rules, and have the option for licensed ownership of the codebase, ensuring clear rights and defined terms.',
+        mostPop: false
+    }
+
 ]
 
 export default function Hosting() {

@@ -8,7 +8,6 @@
     width: 95%;
 }
 
-
 .hostBorder {
     display: flex;
     position: relative;
@@ -62,6 +61,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 0px;
 }
 
 .description {
@@ -85,4 +85,33 @@
     display: block;
     margin-top: 2.5px;
     background: linear-gradient(90deg, rgba(62, 220, 255, 0) 0%, rgba(62, 220, 255, 1) 45%, rgba(62, 220, 255, 1) 55%, rgba(62, 220, 255, 0) 100%);
+}
+
+
+@media (max-width: 1100px) {
+
+
+    .hostDataContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-items: stretch;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        width: 90%;
+    }
+
+
+
+
+}
+
+@media (max-width: 1350px) {
+
+    .hostDataContainer {
+
+        width: 90%;
+    }
+
+
 }

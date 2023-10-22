@@ -240,6 +240,7 @@
     border-radius: 25px;
     width: 100%;
     height: 100%;
+    transform: translateY(-5%);
 
 }
 
@@ -393,6 +394,7 @@
 
 .pointItem,
 .specialText {
+
     margin-bottom: 15px;
     color: #FFF;
     font-size: 16px;
@@ -403,6 +405,7 @@
 
 .specialText {
     color: #3EDCFF;
+
 }
 
 @media (max-width: 960px) {
@@ -414,13 +417,18 @@
 }
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1350px) {
+
+    .planCardContainer{
+
+        max-width: 100%;
+    }
 
     .plansContainer {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0;
         margin-right: 0;
-        width: 90%;
+        width: 90% ;
         grid-gap: 0;
         gap: 40px;
     }
