@@ -1,8 +1,8 @@
 "use client"
-import Link from 'next/link';
 import SlideGlowLinkBtn from '../Buttons/component'
-import MyNavLink from '../SLinks/component'
 import styles from './styles.module.css';
+
+
 
 export default function Footer() {
     return (
@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className={styles.wordContent}>
                     <h1 className={styles.h1}>Digitize Your Business</h1>
                     <h2 className={styles.h4}>Take the next step in transforming your business</h2>
-                    <h6 className={styles.h6}>Schedule a call today for a complimentary quote. Our team is ready to help set the stage for your success!</h6>
+                    <h6 className={styles.h6}>Connect and Elevate with <span className={styles.specialText}>Cloud Solutions.</span> Schedule a call today for a complimentary quote.</h6>
                 </div>
                 <div className={`${styles.buttonCol} col`}>
                     <div className={`${styles.footerRow} d-flex justify-content-start`}>

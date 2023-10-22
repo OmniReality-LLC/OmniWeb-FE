@@ -54,6 +54,14 @@
     width: auto !important;
 }
 
+
+
+
+.specialText {
+    color: #3EDCFF;
+
+}
+
 @media (max-width: 768px) {
     .footerRow {
         flex-direction: column;
