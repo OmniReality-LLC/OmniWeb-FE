@@ -126,6 +126,17 @@ width: 100%;
     font-weight: 400;
     line-height: normal;
     margin-bottom: 0;
+
+}
+
+.note{
+margin-top: 30px;
+    color: #3EDCFF;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 30px;
 }
 
 .lineSeperator {

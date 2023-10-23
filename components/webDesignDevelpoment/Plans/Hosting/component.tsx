@@ -1,11 +1,13 @@
 // Hosting Plans
 // The CSS only allows for two.  Didnt have time for making it universal.
+import Spacer from '@/components/shared/PageSpacer/component';
 import styles from './styles.module.css';
 
 interface hostData {
     title: string;
     subTitle: string;
     description: string;
+    note?: string;
     mostPop: boolean;
 }
 
@@ -13,7 +15,7 @@ const advertBanner: hostData[] = [
     {
         title: 'Managed Hosting',
         subTitle: 'Hassle-Free Hosting & Full Support',
-        description: 'Choose hassle-free hosting backed by 99.99% uptime, top-tier security, and automatic updates. Benefit from our 24/7 dedicated support and receive monthly allocated hours for tailored design & dev adjustments. We manage the complexities, allowing you to prioritize your core business.',
+        description: 'Choose hassle-free hosting backed by 99.99% uptime, top-tier security, and automatic updates.\n\nBenefit from our 24/7 dedicated support and receive monthly allocated hours for tailored design & dev adjustments.\n\nWe manage the complexities, allowing you to prioritize your core business.',
         mostPop: true
     }
 
@@ -21,7 +23,8 @@ const advertBanner: hostData[] = [
     {
         title: 'Self-Hosting',
         subTitle: 'Ownership, Control & Licensure',
-        description: 'Maintain full control, ownership, and direct access to your data with the added benefit of a licensed codebase. Respond instantly to updates, ensuring timely adjustments tailored to your needs. With self-hosting, you dictate the pace, the rules, and have the option for licensed ownership of the codebase, ensuring clear rights and defined terms.',
+        description: "Embrace complete control and ownership with self-hosting, ensuring direct access to your data and a licensed codebase. Respond to updates on your terms and customize at your pace.",
+        note: "Note: Maintenance and support is not included but can be purchased hourly through our Alumni services at discounted rates.",
         mostPop: false
     }
 
@@ -51,38 +54,38 @@ export default function Hosting() {
             <div className={styles.hostDataContainer}>
 
 
-                {advertBanner.map((data, index) => (
-                    <div key={'host: ' + index} className={styles.hostBorder} style={data.mostPop ?
-                        {
-                            border: mostPopBoxBorder,
-                            boxShadow: boxShadow,
-                            background: "#202325",
-
-                        } : {
-                            border: normBoxBorder,
-                            background: "#1B1D1E"
-                        }}>
-                        <div className={styles.hostBackground}>
-                            <div className={styles.hostData}>
-                                <h1 className={styles.title}> {data.title}</h1>
-                                <h2 className={styles.subTitle}> {data.subTitle}</h2>
-                                <hr className={styles.lineSeperator} />
-                                <p className={styles.description}>{data.description}</p>
+                {advertBanner.map((data, index) => {
+                    const descriptionParagraphs = data.description.split('\n');
+                    const paraCount = descriptionParagraphs.length;
+                    return (
+                        <div key={'host: ' + index} className={styles.hostBorder} style={data.mostPop ?
+                            {
+                                border: mostPopBoxBorder,
+                                boxShadow: boxShadow,
+                                background: "#202325"
+                            } : {
+                                border: normBoxBorder,
+                                background: "#1B1D1E"
+                            }}>
+                            <div className={styles.hostBackground}>
+                                <div className={styles.hostData} style={{ marginBottom: (data.note ? '0px' : '30px') }}>
+                                    <h1 className={styles.title}> {data.title}</h1>
+                                    <h2 className={styles.subTitle}> {data.subTitle}</h2>
+                                    <hr className={styles.lineSeperator} />
+                                    {descriptionParagraphs.map((paragraph, idx) => (
+                                        <>
+                                        <p key={idx} className={styles.description}>{paragraph}</p>
+                                        {paraCount !== (idx + 1) && <Spacer height='5px'/>}
+                                        </>
+                                    ))}
+                                    {data.note && <p className={styles.note}>{data.note}</p>}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-
-
-
-
-
+                    )
+                })}
 
             </div>
-
         </div>
-
-
-
     )
 }
