@@ -10,44 +10,46 @@ type AdditionsData = {
 };
 
 const data: AdditionsData[] = [
-
     {
-        name: "CLARA",
-        price: 'FREE *',
-        description: 'Add a custom chatbot to your site that can answer FAQs, guide visitors through your site, or even handle basic support tickets, 24/7.',
+        name: "C.L.A.R.A. Conversations",
+        price: '$20/M*',
+        description: 'Human-like, automated chat for FAQs, site navigation, and support. Engage and assist visitors 24/7.',
         picture: "icons/AIChatbotIcon.svg",
     },
+
+
     {
         name: "Support",
-        price: '$55/Hr',
-        description: 'Already built a site with us without support? As an Alumni, get discounted maintenance & support services to ensure smooth operations.',
+        price: '$55/M',
+        description: 'Alumni? Benefit from discounted maintenance & support services. Ensure your site runs smoothly.',
         picture: "icons/AlumniSupport.svg",
     },
     {
-        name: "AI Copywriter",
-        price: 'FREE *',
-        description: "Get top-tier content without the writer's fee. Perfect for creating engaging blogs and detailed product descriptions in line with SEO standards.",
-        picture: "icons/AiCopywriterIcon.svg",
+        name: "C.L.A.R.A. Image Manipulation",
+        price: '$20/M*',
+        description: "Revolutionize visuals with AI-driven image manipulations. Replace, create, and enhance for stunning visual content.",
+        picture: "icons/AIImageIcon.svg",
     },
     {
         name: "SEO Refresh",
         price: '$175/M',
-        description: "Monthly in-depth SEO review followed by strategic tweaks to meta tags, content, backlink strategy, and more, based on performance analytics.",
+        description: "Optimize your site's SEO monthly. Strategic adjustments to meta tags, content, and backlinks based on performance data.",
         picture: "icons/SEORefreshIcon.svg",
     },
     {
-        name: "AI PhotoMaster",
-        price: 'FREE *',
-        description: "Optimize visuals with our AI Image Editor, easily enhancing photos and applying themes to products—ideal for dynamic eCommerce and blogs.",
-        picture: "icons/AIImageIcon.svg",
+        name: "C.L.A.R.A. AI Copywriter",
+        price: '$20/M*',
+        description: "Transform your content with AI-driven writing. Perfect for engaging blogs, detailed product descriptions, and SEO-optimized text.",
+        picture: "icons/AiCopywriterIcon.svg",
     },
     {
         name: "Omni Mail Guard",
         price: '$35/M',
-        description: "HIPAA-compliant contact form with end-to-end encryption and customizable templates for secure and seamless business-customer interactions.",
+        description: "Guarantee secure business-customer interactions with our HIPAA-compliant contact form, featuring end-to-end encryption and customizable templates.",
         picture: "icons/MailGaurdIcon.svg",
     }
 ];
+
 
 export default function OmniDesk() {
 
@@ -57,23 +59,23 @@ export default function OmniDesk() {
                 <h1 className={`${styles.title}`}>Alumni Additions</h1>
                 <div className={styles.blockBackground}>
                     <div className={styles.additions}>
-                        {data.map((myData) =>
-                            <Additions {...myData} key={myData.name}/>
+                        {data.map((myData, index) =>
+                            <Additions {...myData} order={index + 1} key={myData.name} />
                         )}
                     </div>
                     <div className={styles.astriWarning}>
 
-                    <h1 className={styles.warning}>*Only available under Tier 2. FREE monthly usage limits</h1>
-                </div>
+                        <h1 className={styles.warning}>*All AI tools are complimentary for our maintenance and support customers, subject to their monthly usage allowance.</h1>
+                    </div>
                 </div>
             </div>
         </div>
     );
 }
 
-function Additions(props: AdditionsData) {
+function Additions(props: AdditionsData & { order: number }) {
     return (
-        <div className={styles.additionsMain}>
+        <div className={`${styles.additionsMain} ${styles[`order${props.order}`]}`}>
             <div className={styles.additionsContent}>
                 <div className={styles.additionsIconContainer}>
                     <div className={styles.additionsInnerIconContainer}>

@@ -262,19 +262,28 @@ text-align: center;
     }
 }
 
+/* Default order for desktop, assuming you're using the `dataDesktop` array's order by default */
+.order1 { order: 1; }
+.order2 { order: 2; }
+.order3 { order: 3; }
+.order4 { order: 4; }
+.order5 { order: 5; }
+.order6 { order: 6; }
+
 @media (max-width: 1100px) {
+    /* Adjust order for mobile based on dataMobile array */
+    .order1 { order: 1; }
+    .order2 { order: 4; } /* Assuming 3rd position on mobile */
+    .order3 { order: 2; } /* Assuming 2nd position on mobile */
+    .order4 { order: 5; }
+    .order5 { order: 3; }
+    .order6 { order: 6; }
 
     .additions {
-
         grid-template-columns: 1fr;
-        grid-auto-rows: 1fr; /* Makes all rows equal height */
+        grid-auto-rows: 1fr;
         width: 90%;
         margin-top: 5%;
         margin-bottom: 5%;
-
     }
-
-
-
-
 }
