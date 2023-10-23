@@ -22,7 +22,7 @@ const advertBanner: hostData[] = [
         title: 'Self-Hosting',
         subTitle: 'Ownership, Flexibility & Licensure',
         description: "Self-Hosting offers the flexibility and autonomy of controlling your environment. While you naturally own your code, this option grants you direct access to your data and the codebase. Modify and customize at your own rhythm.",
-        note: "Note: Maintenance and support aren't included but can be availed hourly via our Alumni services at special rates.",
+        note: "Note: Maintenance and support is not included but can be purchased hourly via our Alumni services at discounted rates.",
         mostPop: false
     }
 ]
