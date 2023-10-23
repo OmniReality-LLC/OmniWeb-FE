@@ -15,20 +15,18 @@ const advertBanner: hostData[] = [
     {
         title: 'Managed Hosting',
         subTitle: 'Hassle-Free Hosting & Full Support',
-        description: 'Choose hassle-free hosting backed by 99.99% uptime, top-tier security, and automatic updates.\n\nBenefit from our 24/7 dedicated support and receive monthly allocated hours for tailored design & dev adjustments.\n\nWe manage the complexities, allowing you to prioritize your core business.',
+        description: 'With Managed Hosting, not only do you retain ownership of your code, but you also benefit from a robust 99.99% uptime, top-tier security, and automatic updates.\n\n Our 24/7 dedicated support complements monthly allocated hours for tailored design & dev adjustments.\n\n Let us handle the intricacies, freeing you to focus on your core business.',
         mostPop: true
-    }
-
-    ,
+    },
     {
         title: 'Self-Hosting',
-        subTitle: 'Ownership, Control & Licensure',
-        description: "Embrace complete control and ownership with self-hosting, ensuring direct access to your data and a licensed codebase. Respond to updates on your terms and customize at your pace.",
-        note: "Note: Maintenance and support is not included but can be purchased hourly through our Alumni services at discounted rates.",
+        subTitle: 'Ownership, Flexibility & Licensure',
+        description: "Self-Hosting offers the flexibility and autonomy of controlling your environment. While you naturally own your code, this option grants you direct access to your data and the codebase. Modify and customize at your own rhythm.",
+        note: "Note: Maintenance and support aren't included but can be availed hourly via our Alumni services at special rates.",
         mostPop: false
     }
-
 ]
+
 
 export default function Hosting() {
 

@@ -51,11 +51,6 @@ const data: QA[] = [
 ];
 
 
-
-
-
-
-
 const dataCount: number = data.length;
 export default function QASection() {
     return (
