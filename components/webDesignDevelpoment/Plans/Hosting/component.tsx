@@ -12,10 +12,12 @@ interface hostData {
 const advertBanner: hostData[] = [
     {
         title: 'Managed Hosting',
-        subTitle: 'Yearly Commitment, Hassle-Free',
-        description: 'Benefit from our pre-purchased annual server rates on both AWS and Azure. With managed hosting, you receive consistent backups, security monitoring, and premium support. Maintenance and other technical needs are all catered for by us.',
+        subTitle: 'Hassle-Free Hosting & Full Support',
+        description: 'Choose hassle-free hosting backed by 99.99% uptime, top-tier security, and automatic updates. Benefit from our 24/7 dedicated support and receive monthly allocated hours for tailored design & dev adjustments. We manage the complexities, allowing you to prioritize your core business.',
         mostPop: true
-    },
+    }
+
+    ,
     {
         title: 'Self-Hosting',
         subTitle: 'Ownership, Control & Licensure',
