@@ -13,24 +13,24 @@ const data: QA[] = [
         answer: "Yes, at OmniReality, we specialize in creating custom websites and admin panels tailored to your unique business needs. Whether you're looking for a distinct user interface, specialized functionalities, or a custom admin dashboard, we've got you covered."
     },
     {
+        question: 'Do you provide design services?',
+        answer: 'Absolutely! OmniReality offers a variety of design services, ranging from branding and graphic design to user interface and experience design. Our goal is to materialize your vision.'
+    },
+    {
         question: 'What hosting options do you provide?',
-        answer: "We offer two primary hosting options: Self-Hosting and Managed Hosting. With Self-Hosting, you maintain full control and ownership of your data and enjoy a licensed codebase. Our Managed Hosting service provides a hassle-free experience with consistent backups, security monitoring, and premium support. All the technical aspects, including maintenance, are managed by us."
+        answer: "We offer two primary hosting options: Self-Hosting and Managed Hosting. Under both options, you retain full ownership of the codebase. With Self-Hosting, you maintain direct control and access to your data. Our Managed Hosting service provides a hassle-free experience with consistent backups, security monitoring, and premium support, while we manage all the technical aspects."
+    },
+    {
+        question: 'How does your Managed Hosting stand out?',
+        answer: 'Our Managed Hosting is the epitome of digital empowerment. Dive into the next-gen with free access to C.L.A.R.A.—our AI-driven powerhouse designed to elevate user experiences. We prioritize your security with vigilant monitoring and preemptive measures. Stay ahead with automatic updates to platform components. Plus, our monthly dedicated hours for content adjustments ensure your platform stays relevant and vibrant. All this underpinned by our renowned 24/7 support, because we believe in fueling your growth every step of the way.'
+    },
+    {
+        question: 'What does the Self-Hosting option entail?',
+        answer: "Our Self-Hosting option empowers you with full control over your hosting environment, ensuring direct access to your data. While you always retain ownership of the codebase regardless of the hosting choice, under the Self-Hosting option, you manage your own updates and maintenance. It's the ideal choice for those who want hands-on control and flexibility in their digital ecosystem."
     },
     {
         question: 'Will my website be mobile-responsive?',
         answer: 'Absolutely! OmniReality adopts a mobile-first design approach, ensuring an optimal user experience regardless of the device used.'
-    },
-    {
-        question: 'How does your Managed Hosting stand out?',
-        answer: 'Our Managed Hosting allows you to benefit from our pre-purchased annual server rates on both AWS and Azure. We handle backups, security monitoring, and provide premium support, letting you focus on your business.'
-    },
-    {
-        question: 'What does the Self-Hosting option entail?',
-        answer: 'Our Self-Hosting option lets you maintain control, ownership, and direct access to your data. Plus, it comes with the added benefit of a licensed codebase. You have the liberty to respond instantly to updates, dictate the rules, and opt for licensed ownership of the codebase for clear rights and defined terms.'
-    },
-    {
-        question: 'Do you provide design services?',
-        answer: 'Absolutely! OmniReality offers a variety of design services, ranging from branding and graphic design to user interface and experience design. Our goal is to materialize your vision.'
     },
     {
         question: 'How are the maintenance plans structured?',
@@ -49,6 +49,10 @@ const data: QA[] = [
         answer: 'Yes, we can seamlessly integrate a variety of third-party services and APIs into your website to ensure it meets your desired functionalities and features.'
     },
 ];
+
+
+
+
 
 
 

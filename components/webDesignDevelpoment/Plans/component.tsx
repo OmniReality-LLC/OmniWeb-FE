@@ -24,7 +24,6 @@ const advertBanner = [
     { icon: '/icons/AnalyticsIcon.svg', phrase: 'Website Analytics' },
     { icon: '/icons/CustomDesignIcon.svg', phrase: 'Custom Design' },
 ]
-
 const webPlans: webPlansInterface[] = [
     {
         title: "Starter",
@@ -33,6 +32,7 @@ const webPlans: webPlansInterface[] = [
         mostPopular: false,
         priceHeaderText: 'Starting Price',
         includedPoints: [
+            { mainText: 'Code Ownership:', specialText: 'You own the code we develop' },
             { mainText: 'Bespoke page designs:', specialText: 'Up to 5' },
             { mainText: 'Device optimization:', specialText: 'Mobile and desktop' },
             { mainText: 'Contact form:', specialText: 'Secure and encrypted' },
