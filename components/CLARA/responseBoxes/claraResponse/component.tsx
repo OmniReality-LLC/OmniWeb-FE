@@ -8,12 +8,14 @@ interface UserResponseProps {
 
 export default function ClaraResponse({ message }: UserResponseProps) {
 
-
-
   return (
+    <>
     <div className={styles.claraResponse}>
       <img className={styles.iconImg} src='/icons/ChatbotIcon.png'/>
       <p className={styles.submitMessage}>{message}</p>
     </div>
+    <div className={styles.lineSeperator}> </div>
+
+    </>
   );
 }

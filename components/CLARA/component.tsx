@@ -44,7 +44,6 @@ export default function CLARA() {
     }
   };
 
-
   const lottieProps = useLottie({
     animationData: ClaraLottie,
   });
@@ -74,7 +73,6 @@ export default function CLARA() {
       scrollToBottom();
     }
   }, [messages, isOpen]);
-
   useEffect(() => {
     addMessage({ type: 'clara', content: 'Hey there! I’m Clara, I’m your friendly AI chatbot who knows everything about this website. Go ahead, ask me anything!' });
   }, []);
@@ -84,7 +82,6 @@ export default function CLARA() {
       const element = midContainerRef.current;
       element.scrollTop = element.scrollHeight;
     }
-
   }
 
   async function testing(inputQuestion: string) {
@@ -94,7 +91,6 @@ export default function CLARA() {
     const apiUrl = `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
 
     try {
-
       if (!disableUserChat) {
         setDisableUserChat(true); //disabling user chat so they cant send double messages
         const response = await fetch(apiUrl)
@@ -111,17 +107,12 @@ export default function CLARA() {
         //Create a system message comp for this later
         addMessage({ type: 'clara', content: 'Im sorry, I cannot help right now as something appears to be wrong with my control modules' });
       }
-
     } catch (error) {
       console.log("An error occurred:", error);
       addMessage({ type: 'clara', content: 'Im sorry, I cannot help right now as something appears to be wrong with my control modules' });
     }
-
     setDisableUserChat(false);
-
   }
-
-
 
   return (
     <div className={`${styles.clara} ${isOpen ? styles.open : styles.closed}`}>
@@ -138,10 +129,14 @@ export default function CLARA() {
               <UserResponse message={message.content} />
             ) : (
               <ClaraResponse message={message.content} />
+
             )}
+
+
+
+
           </div>
         ))}
-
       </div>
 
       <div className={styles.bottomContainer}>

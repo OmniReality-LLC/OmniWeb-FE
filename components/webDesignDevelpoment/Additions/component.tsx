@@ -45,7 +45,7 @@ const data: AdditionsData[] = [
     {
         name: "Omni Mail Guard",
         price: '$35/M',
-        description: "Guarantee secure business-customer interactions with our HIPAA-compliant contact form, featuring end-to-end encryption and customizable templates.",
+        description: "Guarantee secure business-customer interactions with our HIPAA-compliant contact form, featuring end-to-end encryption and a custom template.",
         picture: "icons/MailGaurdIcon.svg",
     }
 ];

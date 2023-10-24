@@ -4,7 +4,8 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
+    padding:15px;
+
   }
 
   .submitMessage {
@@ -29,3 +30,15 @@
   .iconImg{
     align-self: self-start;
   }
+
+  .lineSeperator {
+    opacity: 1;
+    position: relative;
+    border: none;
+    height: 2px;
+    width: auto;
+    margin-top: 0;
+    display: block;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 1.36%, #FFF 49.76%, rgba(255, 255, 255, 0.00) 98.15%);
+    box-shadow: 0 7.5px 15px rgba(255, 255, 255, .25); /* This line changes the shadow color to white */
+}
