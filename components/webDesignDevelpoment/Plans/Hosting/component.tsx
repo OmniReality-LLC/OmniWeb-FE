@@ -20,8 +20,8 @@ const advertBanner: hostData[] = [
     },
     {
         title: 'Self-Hosting',
-        subTitle: 'Ownership, Flexibility & Licensure',
-        description: "Self-Hosting offers the flexibility and autonomy of controlling your environment. While you naturally own your code, this option grants you direct access to your data and the codebase. Modify and customize at your own rhythm.",
+        subTitle: 'Ownership, Flexibility & Control',
+        description: "Self-Hosting offers the flexibility and autonomy of controlling your environment. While you naturally own your code, this option grants you direct access to your data and the codebase. Modify and customize at your own pace.",
         note: "Note: Maintenance and support is not included but can be purchased hourly via our Alumni services at discounted rates.",
         mostPop: false
     }
@@ -37,20 +37,14 @@ export default function Hosting() {
     return (
 
         <div className={styles.hostMain}>
-
             <div className={styles.titleContainer}>
-
                 <div className={styles.titleContent}>
-
-
 
                     <h1 className={styles.hostingTitle}>Hosting</h1>
                 </div>
             </div>
 
-
             <div className={styles.hostDataContainer}>
-
 
                 {advertBanner.map((data, index) => {
                     const descriptionParagraphs = data.description.split('\n');
