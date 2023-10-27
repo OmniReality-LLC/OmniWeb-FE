@@ -20,7 +20,7 @@ const data: AdditionsData[] = [
 
     {
         name: "Support",
-        price: '$55/M',
+        price: '$55/Hr',
         description: 'Alumni? Benefit from discounted maintenance & support services. Ensure your site runs smoothly.',
         picture: "icons/AlumniSupport.svg",
     },
