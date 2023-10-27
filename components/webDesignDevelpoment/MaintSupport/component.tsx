@@ -39,7 +39,7 @@ const benefitsData = {
     tiers: [
         {
             name: "Tier 1",
-            price: "$199",
+            price: "$249",
             mostPop: false,
             benefits: [
                 { name: "Backups", included: true, content: 'Weekly' },
@@ -161,6 +161,8 @@ export default function WebsiteService() {
                 <div className={styles.blockBackground}>
 
                     <h1 className={styles.comparePlansText} >Compare Monthly Plans</h1>
+                    <h4 className={styles.yearlyPlanText} >*Yearly commitment required</h4>
+
                     {isMobile && <Button text={'Get In Touch'} linkTo={''} marginT='20px' className={styles.buttonMobile} textSize='24px' bgColor='transparent' decoratorBgColor='#191A1B' />}
                     {isMobile && <DiamondArrowButton listOfNames={namesList} updateRenderList={updateRenderList} />}
 
@@ -236,6 +238,7 @@ export default function WebsiteService() {
                                 )}
                             </div>
                         </div>
+
                     </div>
                     {!isMobile &&
                         <Button
@@ -245,6 +248,10 @@ export default function WebsiteService() {
                             marginB='50px'
                             bgColor='transparent'
                         />}
+
+
+
+
                 </div>
             </div>
         </div>

@@ -9,6 +9,15 @@ type QA = {
 
 const data: QA[] = [
     {
+        question: 'What is your payment policy?',
+        answer: 'Our payment policy is designed to be straightforward and secure for both parties. We require a 50% upfront payment before any work begins. This initial deposit secures your project in our schedule and covers the initial stages of planning, design, and development. The remaining balance will be due upon project completion but before the final delivery and launch of your website or service.'
+    },
+    {
+        question: 'What forms of payment do you accept?',
+        answer: 'We accept various forms of payment for your convenience. These include Credit Cards (Visa, MasterCard, American Express), Debit Cards, Apple Pay, and Google Pay.'
+    },
+
+    {
         question: 'Do you offer custom website and admin panel solutions?',
         answer: "Yes, at OmniReality, we specialize in creating custom websites and admin panels tailored to your unique business needs. Whether you're looking for a distinct user interface, specialized functionalities, or a custom admin dashboard, we've got you covered."
     },
