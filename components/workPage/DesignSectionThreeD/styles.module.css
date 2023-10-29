@@ -1,0 +1,357 @@
+.servicesMain {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    background: #191A1B;
+
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+
+
+}
+
+.contentMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    max-height: 80%;
+
+}
+
+.title {
+
+    color: #141516;
+    font: bold clamp(48px, 5vw, 96px) arial, sans-serif;
+    background-color: #070707;
+    color: transparent;
+    text-shadow: 1px 3px 3px rgba(54, 51, 51, 0.30);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    align-self: flex-start;
+    margin-left: 10%;
+
+
+}
+
+
+
+.cardBackground {
+    display: flex;
+    width: 87.5%;
+    border-radius: 25px;
+    background-color: #141516;
+    box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.50) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    flex-grow: 1;
+    flex-direction: column;
+
+}
+
+.cardItemsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100% !important;
+
+    margin-right: 0px;
+
+
+
+
+
+
+}
+
+.firstContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    align-self: center;
+    justify-content: center;
+    padding-right: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    order: 1;
+}
+
+
+.secondContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
+    height: auto;
+
+
+}
+.firstContainerFlipped {
+
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
+    height: auto;
+
+
+}
+
+
+.secondContainerFlipped {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    align-self: center;
+    justify-content: center;
+    padding-right: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
+
+}
+.displayImg {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.centerSmallCardContainer {
+
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.smallCardContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+
+}
+
+.carouselItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.dotsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    /* Pushes down the entire container */
+}
+
+.neonBlueDot {
+    display: block;
+    width: 20px;
+    /* reduced size */
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #ADD8E6;
+    /* Lighter Blue */
+    border-radius: 50%;
+    margin-right: 5px;
+    /* Adds space between dots */
+    margin-bottom: -50px;
+}
+
+.activeNeonBlueDot {
+    display: block;
+    width: 18px;
+    /* made it more subtly smaller */
+    height: 18px;
+    background-color: transparent;
+    border: 2px solid #00FFFF;
+    /* Neon Blue */
+    border-radius: 50%;
+    margin-right: 5px;
+    /* Adds space between dots */
+    margin-bottom: -50px;
+}
+
+.subTitle {
+    background: var(--BlueGradientBtn, linear-gradient(90deg, #3C7FE3 0%, #3EDCFF 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: clamp(23px, 2.5vw, 40px);
+    margin-bottom: 50px;
+}
+
+.iconContainer {
+
+    display: flex;
+    height: 100%;
+    width: auto;
+}
+
+.svgIcon {
+
+    flex-shrink: 0;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.smallCardContent {
+
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-self: flex-end;
+    border-radius: 25px;
+    background-color: #1B1D1E;
+    box-shadow: 0px -4px 4px 0px rgba(58, 58, 58, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 50px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.subSubTitle {
+    color: #D4D4D4;
+    font-size: clamp(24px, 1vw, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.description {
+    color: #D4D4D4;
+    font-size: clamp(15px, 1vw, 20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 75%;
+}
+
+@media (max-width: 960px) {
+
+    .cardItemsContainer {
+        flex-direction: column;
+        height: fit-content;
+
+    }
+
+    .firstContainer {
+
+        flex-direction: column;
+        width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 5%;
+        order: 1;
+        height: auto;
+        padding-top: 0;
+
+
+
+
+
+    }
+
+
+    .firstContainerFlipped {
+
+        height: 50%;
+        width: 100%;
+        padding-right: 5%;
+        order: 1;
+        padding-top: 0;
+
+
+
+
+
+    }
+
+    .title {
+
+        width: 100%;
+        text-align: center;
+
+        margin-left: 0;
+
+    }
+
+    .secondContainer {
+        height: 50%;
+        width: 100%;
+        padding-right: 5%;
+
+
+
+
+
+    }
+
+    .secondContainerFlipped {
+
+
+        flex-direction: column;
+        width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+
+
+        height: auto;
+        padding-top: 0;
+    }
+
+
+    .smallCardContent {
+        padding: 25px;
+
+    }
+
+    .description {
+
+        width: 100%;
+    }
+
+
+    .subTitle {
+
+        margin-bottom: 25px;
+    }
+
+    .displayImg {
+        height: fit-content;
+        max-height: 600px;
+    }
+
+
+
+
+
+
+
+}

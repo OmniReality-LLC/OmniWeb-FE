@@ -33,7 +33,7 @@ const webPlans: webPlansInterface[] = [
         priceHeaderText: 'Starting Price',
         includedPoints: [
             { mainText: 'Code Ownership:', specialText: 'You own the code we develop' },
-            { mainText: 'Bespoke page designs:', specialText: 'Up to 5' },
+            { mainText: 'Custom page designs:', specialText: 'Up to 5' },
             { mainText: 'Device optimization:', specialText: 'Mobile and desktop' },
             { mainText: 'Contact form:', specialText: 'Secure and encrypted' },
             { mainText: 'Enhance user engagement with', specialText: 'Interactive elements' },
@@ -51,7 +51,7 @@ const webPlans: webPlansInterface[] = [
         priceHeaderText: 'Starting Price',
         includedPoints: [
             { mainText: 'Includes everything from', specialText: 'Starter plan' },
-            { mainText: 'Bespoke page designs:', specialText: 'Up to 10' },
+            { mainText: 'Custom page designs:', specialText: 'Up to 10' },
             { mainText: 'Platform:', specialText: 'Full E-commerce integration' },
             { mainText: 'Visuals:', specialText: 'Incorporate 3D Models' },
             { mainText: 'User experience:', specialText: 'Augmented Reality features' },
@@ -68,7 +68,7 @@ const webPlans: webPlansInterface[] = [
         priceHeaderText: 'Please Inquire',
         includedPoints: [
             { mainText: 'Includes everything from', specialText: 'Pro plan' },
-            { mainText: 'Bespoke page designs:', specialText: '10+' },
+            { mainText: 'Custom page designs:', specialText: '10+' },
             { mainText: 'Integration:', specialText: 'CRM, ERP, and more' },
             { mainText: 'Additional features and integrations:', specialText: 'Unlimited' },
             { mainText: 'Maintenance & support:', specialText: 'Customized to your needs' },
