@@ -15,7 +15,7 @@ const xrServices = [
         ],
         glb: 'https://cdn.omnireality.us/jukebox.glb',
         alt: 'Picture of a 3D Quadrophonicsound Jukebox',
-        minOrbit: 'auto auto 1000.5m',
+        minOrbit: 'auto auto 2.5m',
         flipped: false
     },
     {
