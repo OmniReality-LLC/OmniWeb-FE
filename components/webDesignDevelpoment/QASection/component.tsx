@@ -71,7 +71,7 @@ export default function QASection() {
                         <div className={styles.leftContainer}>
                             <div className={styles.QAItemsContainer}>
                                 {data.map((myData, index) =>
-                                    <QuestionAnswer index={index} qa={myData} />
+                                    <QuestionAnswer index={index} qa={myData} key={myData.question + index} />
                                 )}
                             </div>
                         </div>

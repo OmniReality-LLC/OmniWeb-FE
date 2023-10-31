@@ -28,7 +28,7 @@ const webPlans: webPlansInterface[] = [
     {
         title: "Starter",
         subTitle: "Blogs, Portfolios, and More",
-        price: "$7,500",
+        price: "$1,500",
         mostPopular: false,
         priceHeaderText: 'Starting Price',
         includedPoints: [
@@ -46,7 +46,7 @@ const webPlans: webPlansInterface[] = [
     {
         title: "Pro",
         subTitle: "E-commerce Capable",
-        price: "$12,500",
+        price: "$7,500",
         mostPopular: true,
         priceHeaderText: 'Starting Price',
         includedPoints: [
