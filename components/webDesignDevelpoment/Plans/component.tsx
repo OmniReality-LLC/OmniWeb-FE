@@ -28,16 +28,15 @@ const webPlans: webPlansInterface[] = [
     {
         title: "Starter",
         subTitle: "Blogs, Portfolios, and More",
-        price: "$1,500",
+        price: "$4,500",
         mostPopular: false,
-        priceHeaderText: 'Starting Price',
+        priceHeaderText: 'Starting At',
         includedPoints: [
-            { mainText: 'Code Ownership:', specialText: 'You own the code we develop' },
-            { mainText: 'Custom page designs:', specialText: 'Up to 5' },
+            { mainText: 'Ownership:', specialText: 'Own all of your content, including the codebase' },
+            { mainText: 'Custom page designs:', specialText: '3 - 5' },
             { mainText: 'Device optimization:', specialText: 'Mobile and desktop' },
-            { mainText: 'Contact form:', specialText: 'Secure and encrypted' },
             { mainText: 'Enhance user engagement with', specialText: 'Interactive elements' },
-            { mainText: 'Social media:', specialText: 'Integrated icons and live posts' },
+            { mainText: 'Social media pages:', specialText: 'Optimized for brand consistency' },
             { mainText: 'SEO:', specialText: 'Foundational setup' },
             { mainText: 'Browsing experience:', specialText: 'SSL certified (HTTPS)' },
             { mainText: 'Maintenance & support:', specialText: '1-month off when purchased' }
@@ -48,27 +47,27 @@ const webPlans: webPlansInterface[] = [
         subTitle: "E-commerce Capable",
         price: "$7,500",
         mostPopular: true,
-        priceHeaderText: 'Starting Price',
+        priceHeaderText: 'Starting At',
         includedPoints: [
             { mainText: 'Includes everything from', specialText: 'Starter plan' },
-            { mainText: 'Custom page designs:', specialText: 'Up to 10' },
+            { mainText: 'Custom page designs:', specialText: '6 - 10' },
             { mainText: 'Platform:', specialText: 'Full E-commerce integration' },
-            { mainText: 'Visuals:', specialText: 'Incorporate 3D Models' },
-            { mainText: 'User experience:', specialText: 'Augmented Reality features' },
-            { mainText: 'Social media pages:', specialText: 'Optimized for brand consistency' },
-            { mainText: 'Website:', specialText: 'Speed optimized for faster loads' },
+            { mainText: '3D Models:', specialText: 'High quality 3D models for your ecommerce store' },
+            { mainText: 'AR Experience:', specialText: 'Augmented Reality features for immersive visualization' },
+            { mainText: 'Website Speed:', specialText: 'Optimized for faster loads' },
             { mainText: 'Maintenance & support:', specialText: '2 months off when purchased' }
         ]
+
     },
     {
         title: "Enterprise",
-        subTitle: "SaaS Capable",
+        subTitle: "MVP & SaaS Capable",
         price: "Custom Quote",
         mostPopular: false,
-        priceHeaderText: 'Please Inquire',
+        priceHeaderText: 'Contact',
         includedPoints: [
             { mainText: 'Includes everything from', specialText: 'Pro plan' },
-            { mainText: 'Custom page designs:', specialText: '10+' },
+            { mainText: 'Custom page designs:', specialText: 'Unlimited' },
             { mainText: 'Integration:', specialText: 'CRM, ERP, and more' },
             { mainText: 'Additional features and integrations:', specialText: 'Unlimited' },
             { mainText: 'Maintenance & support:', specialText: 'Customized to your needs' },
@@ -100,7 +99,7 @@ export default function WebsiteService() {
                         ))}
                     </div>
 
-                    <Hosting/>
+                    <Hosting />
                     <Button text={'Contact'} linkTo={'/contact'} className={styles.myButton} marginB='2.5%' />
                 </div>
             </div>
