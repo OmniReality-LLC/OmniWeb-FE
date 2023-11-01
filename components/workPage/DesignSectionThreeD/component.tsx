@@ -15,7 +15,7 @@ const xrServices = [
         ],
         glb: 'https://cdn.omnireality.us/jukebox.glb',
         alt: 'Picture of a 3D Quadrophonicsound Jukebox',
-        minOrbit: 'auto auto 2.5m',
+        minOrbit: 'auto auto auto',
         flipped: false
     },
     {
@@ -28,7 +28,7 @@ const xrServices = [
         ],
         glb: 'https://cdn.omnireality.us/MechaSanta_IdleAnim.glb',
         alt: 'Picture of a 3D MechaSanta for the video game Not The North Pole',
-        minOrbit: 'auto auto 2.5m',
+        minOrbit: 'auto auto auto',
         flipped: true
     },
     {
@@ -41,7 +41,7 @@ const xrServices = [
         ],
         glb: 'https://cdn.omnireality.us/WiFiReciever_Model.glb',
         alt: 'Picture of a 3D WiFi Reciever',
-        minOrbit: 'auto auto 2.5m',
+        minOrbit: 'auto auto auto',
         flipped: false
     }
 
