@@ -41,7 +41,7 @@ const xrServices = [
         ],
         glb: 'https://cdn.omnireality.us/WiFiReciever_Model.glb',
         alt: 'Picture of a 3D WiFi Reciever',
-        minOrbit: 'auto auto 100.5m',
+        minOrbit: 'auto auto 2.5m',
         flipped: false
     }
 
