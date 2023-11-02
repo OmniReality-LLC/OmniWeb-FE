@@ -39,7 +39,6 @@
     "form-data": "^4.0.0",
     "hls.js": "^1.4.12",
     "lottie-react": "^2.4.0",
-    "mailgun.js": "^9.2.1",
     "masonry-layout": "^4.2.2",
     "next": "^13.5.3",
     "next-cloudinary": "^4.20.0",

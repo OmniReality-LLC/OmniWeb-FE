@@ -3,12 +3,13 @@ import styles from './page.module.css';
 import InputContainer from '@/components/contactPage/ContactInputs/component';
 import BackgroundVideoFullScreen from '@/components/shared/BgVideoFullScreen/component';
 import TitleAndSubTitleColumn from '@/components/shared/TitleAndSubtitleColumn/component';
+import BGDownloadVideo from '@/components/shared/BgVideoFullScreen/NoneStream/component';
 
 export default function Contact() {
   return (
     <main className={styles.main}>
-      <BackgroundVideoFullScreen
-                src={'https://customer-y3xf1gql15dhgu26.cloudflarestream.com/f851728d5ca64075becf16b0fe37b2c9/manifest/video.m3u8'}
+      <BGDownloadVideo
+                src={'https://cdn.omnireality.us/ContactBackground.webm'}
                 placeholderSrc={'/loadingImages/Contact.webp'}
             />
       <div className={`${styles.mainContent}`}>
