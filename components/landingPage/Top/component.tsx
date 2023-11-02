@@ -6,7 +6,7 @@ import BGDownloadVideo from '@/components/shared/BgVideoFullScreen/NoneStream/co
 export default function LandingTopSection() {
     return (
         <div className={`${styles.topMain} align-items-center  `}>
-            <BackgroundVideoFullScreen src={'https://cdn.omnireality.us/BackgroundLanding.mp4'}
+            <BGDownloadVideo src={'https://cdn.omnireality.us/BackgroundLanding.mp4'}
             placeholderSrc={'/loadingImages/Main.webp'} />
             <div className={` ${styles.myContainer} container`}>
                 <div className={styles.contentHolder}>
