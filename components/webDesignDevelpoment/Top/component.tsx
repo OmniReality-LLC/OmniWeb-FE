@@ -2,14 +2,14 @@ import TextScrambler from '@/components/shared/TextScramble/component';
 import SlideGlowLinkBtn from '../../shared/Buttons/component'
 import styles from './styles.module.css';
 import BackgroundVideoFullScreen from '@/components/shared/BgVideoFullScreen/component';
-import BGDownloadVideo from '@/components/shared/BgVideoFullScreen/NoneStream/component';
-
 
 export default function WebsiteTopSection() {
+
+    //https://cdn.omnireality.us/WebServiceMain.mp4
     return (
         <div className={`${styles.topMain} align-items-center  `}>
-            <BGDownloadVideo
-                src={'https://cdn.omnireality.us/WebServiceMain.mp4'}
+            <BackgroundVideoFullScreen
+                src={' https://customer-y3xf1gql15dhgu26.cloudflarestream.com/29d1e401871a5f41b5ab5d0e0c710e40/manifest/video.m3u8'}
                 placeholderSrc={'/loadingImages/WebServices.webp'}
             />
             <div className={` ${styles.myContainer} container`}>
@@ -18,8 +18,6 @@ export default function WebsiteTopSection() {
                     <h3 className={styles.subTitle}>
                         Creating A <TextScrambler word={'Digital'} className={`${styles.gradientText} ${styles.interMono}`} /> Identity For Your Business By Combining Modern Technology & Designs
                     </h3>
-
-
                     <p className={styles.paragraph}>
                         <span className={styles.gradientWords}>Custom </span>
                         <span className={`${styles.gradientWords} ${styles.absolutePosition} ${styles.fadeInOut}`}>Design </span>

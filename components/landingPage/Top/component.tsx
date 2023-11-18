@@ -1,12 +1,15 @@
 import BackgroundVideoFullScreen from '@/components/shared/BgVideoFullScreen/component';
 import SlideGlowLinkBtn from '../../shared/Buttons/component'
 import styles from './styles.module.css';
-import BGDownloadVideo from '@/components/shared/BgVideoFullScreen/NoneStream/component';
 
 export default function LandingTopSection() {
+
+   //https://cdn.omnireality.us/BackgroundLanding.mp4
+
+
     return (
         <div className={`${styles.topMain} align-items-center  `}>
-            <BGDownloadVideo src={'https://cdn.omnireality.us/BackgroundLanding.mp4'}
+            <BackgroundVideoFullScreen src={' https://customer-y3xf1gql15dhgu26.cloudflarestream.com/c82b1cc185f1557b368fb2c1fec977b2/manifest/video.m3u8'}
             placeholderSrc={'/loadingImages/Main.webp'} />
             <div className={` ${styles.myContainer} container`}>
                 <div className={styles.contentHolder}>

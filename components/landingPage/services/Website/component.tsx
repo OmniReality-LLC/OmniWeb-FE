@@ -2,6 +2,7 @@ import styles from './styles.module.css';
 import ServiceCard from '../../../shared/ServiceCard/component'
 import CloudImgHelper from '../../../shared/ServiceImageCloud/component';
 
+
 const webServices = [
     {
         subTitle: "Build your digital identity, increase traffic and boost revenue.",
@@ -27,7 +28,7 @@ export default function WebsiteService() {
     return (
         <div className={styles.servicesMain} id='services'>
             <div className={styles.contentMain}>
-            <h1 className={`${styles.title}`} data-text="Website Services">Website Services</h1>
+            <h1 className={`${styles.title} `} data-text="Website Services">Website Services<span className={styles.titleSpan}>Website Services</span></h1>
                 <div className={styles.cardBackground}>
                     <div className={`${styles.cardItemsContainer} `}>
                         <div className={styles.firstContainer}>

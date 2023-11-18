@@ -89,10 +89,12 @@ export default function CLARA() {
     const customerID = "YourCustomerID";  // Replace with the actual customer ID
     const question = inputQuestion;
     const apiUrl = `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
-
     try {
       if (!disableUserChat) {
         setDisableUserChat(true); //disabling user chat so they cant send double messages
+
+
+
         const response = await fetch(apiUrl)
 
         if (response.ok) {
