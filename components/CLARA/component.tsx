@@ -159,7 +159,7 @@ export default function CLARA() {
           console.log("Received data:", data);
 
           //chnage clara response element message to the data.asnwer
-          updateClaraMessage(data.asnwer, false, updateIndex);
+          updateClaraMessage(data.answer, false, updateIndex);
         } else {
           console.log("Failed to fetch data");
         }
