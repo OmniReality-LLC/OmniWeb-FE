@@ -13,6 +13,7 @@ return(
     <div className={styles.userResponse}>
       <img className={styles.iconImg} src='/icons/UserIcon.png'/>
       <p className={styles.submitMessage}>{message}</p>
+
     </div>
         <div className={styles.lineSeperator}> </div>
 

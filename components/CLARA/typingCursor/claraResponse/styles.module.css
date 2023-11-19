@@ -1,0 +1,16 @@
+.blinkingCursor {
+  animation: blink-animation 1s steps(5, start) infinite;
+  color: #F8F8F8; /* Off-white color */
+  font-weight: bold; /* Makes the cursor wider */
+  font-size: 12px; /* Adjust size as needed */
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.typingIndicator {
+  display: inline; /* Ensure it's inline */
+}

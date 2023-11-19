@@ -6,33 +6,75 @@ import { useLottie, useLottieInteractivity } from 'lottie-react';
 import ClaraResponse from './responseBoxes/claraResponse/component'
 import UserResponse from './responseBoxes/userResponse/component';
 
-type MessageType = 'user' | 'clara';
-interface Message {
-  type: MessageType;
+type ChatMessage = ClaraMessage | UserMessage;
+
+interface ClaraMessage {
+  type: 'clara';
   content: string;
+  isTyping: boolean;
 }
 
+interface UserMessage {
+  type: 'user';
+  content: string;
+}
 export default function CLARA() {
   const [isOpen, setIsOpen] = useState(false);
   const [claraSpeed, setClaraSpeed] = useState(1);
-  const [messages, setMessages] = useState<Message[]>([]);
   const [disableUserChat, setDisableUserChat] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const midContainerRef = useRef<HTMLDivElement>(null);
+
+
+  const [messageList, setMessageList] = useState<ChatMessage[]>([{
+    type: 'clara',
+    content: 'Hey there! I’m Clara, your friendly AI chatbot. Ask me anything!',
+    isTyping: false
+  }]);
+
+  const [lastClaraResponseIndex, setLastClaraResponseIndex] = useState<number>(0);
+
   //CLaRA lottie speeds
   const idle = 1;
   const thinking = 2.5;
 
-  function addMessage(message: Message) {
-    setMessages(prevMessages => [...prevMessages, message]);
+
+  async function addClaraMessage(content = '', isTyping = false) {
+
+    setMessageList((prev: ChatMessage[]) => {
+      const updatedList = [...prev, { type: 'clara' as const, content, isTyping }]; // 'as const' ensures the type is 'clara', not just string
+     // console.log(updatedList.length);
+      setLastClaraResponseIndex(updatedList.length + 2);
+
+      return updatedList;
+    });
   }
+
+  async function addUserMessage(content: string) {
+    setMessageList((prev: ChatMessage[]) => {
+      const updatedList = [...prev, { type: 'user' as const, content }]; // 'as const' ensures the type is 'user', not just string
+      return updatedList;
+    });
+  }
+
+
+
+  function updateClaraMessage(content: string, isTyping: boolean, updateIndex: number) {
+    setMessageList(prev => prev.map((msg, idx) =>
+      idx === updateIndex && msg.type === 'clara' ? { ...msg, content, isTyping } : msg
+
+    ));
+
+  }
+
 
   const handleSubmit = () => {
     const inputValue = inputRef.current?.value;
     if (inputValue) {
-      addMessage({ type: 'user', content: inputValue });
-      inputRef.current!.value = ''; // Clear the input
 
+
+      addUserMessage(inputValue);
+      inputRef.current!.value = ""; // Clear the input
       setClaraSpeed(thinking);
       testing(inputValue);
     }
@@ -40,6 +82,8 @@ export default function CLARA() {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !disableUserChat) {
+      e.preventDefault();
+
       handleSubmit();
     }
   };
@@ -67,54 +111,72 @@ export default function CLARA() {
   }, [lottieProps]);
 
   useEffect(() => {
-    scrollToBottom();
+    scrollToBottom(false);
 
-    if (isOpen) {
-      scrollToBottom();
-    }
-  }, [messages, isOpen]);
+
+  }, [messageList]);
+
   useEffect(() => {
-    addMessage({ type: 'clara', content: 'Hey there! I’m Clara, I’m your friendly AI chatbot who knows everything about this website. Go ahead, ask me anything!' });
-  }, []);
+    scrollToBottom(true);
 
-  async function scrollToBottom() {
+
+  }, [isOpen]);
+
+  async function scrollToBottom(opening: boolean) {
     if (midContainerRef.current) {
       const element = midContainerRef.current;
-      element.scrollTop = element.scrollHeight;
+      element.style.scrollBehavior = opening ? 'auto' : 'smooth';
+      if (!opening) {
+        setTimeout(() => {
+          element.scrollTop = element.scrollHeight;
+        }, 50);
+      } else {
+        element.scrollTop = element.scrollHeight;
+      }
     }
   }
+
+
 
   async function testing(inputQuestion: string) {
     console.log(process.env.NEXT_PUBLIC_CLARA_API_ACCESS);
     const customerID = "YourCustomerID";  // Replace with the actual customer ID
     const question = inputQuestion;
     const apiUrl = `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
+    console.log(lastClaraResponseIndex);
+    const updateIndex : number = (lastClaraResponseIndex === 0 ? 3 : lastClaraResponseIndex) - 1;
+    addClaraMessage(" ", true);
+
+    const defaultErrorMessage: string = "Im sorry, I'm currently under maintenance and cannot process requests right now.";
+
     try {
       if (!disableUserChat) {
-        setDisableUserChat(true); //disabling user chat so they cant send double messages
-
-
-
+        setDisableUserChat(true);
         const response = await fetch(apiUrl)
 
         if (response.ok) {
           const data = await response.json();
           console.log("Received data:", data);
-          addMessage({ type: 'clara', content: data.answer });
-          setClaraSpeed(idle);
+
+          //chnage clara response element message to the data.asnwer
+          updateClaraMessage(data.asnwer, false, updateIndex);
         } else {
           console.log("Failed to fetch data");
         }
       } else {
-        //Create a system message comp for this later
-        addMessage({ type: 'clara', content: 'Im sorry, I cannot help right now as something appears to be wrong with my control modules' });
+
+        updateClaraMessage(defaultErrorMessage, false, updateIndex );
       }
     } catch (error) {
       console.log("An error occurred:", error);
-      addMessage({ type: 'clara', content: 'Im sorry, I cannot help right now as something appears to be wrong with my control modules' });
+      updateClaraMessage(defaultErrorMessage, false, updateIndex );
     }
+    setClaraSpeed(idle);
     setDisableUserChat(false);
   }
+
+
+
 
   return (
     <div className={`${styles.clara} ${isOpen ? styles.open : styles.closed}`}>
@@ -125,20 +187,18 @@ export default function CLARA() {
         </div>
       </div>
       <div className={styles.midContainer} ref={midContainerRef}>
-        {messages.map((message, index) => (
-          <div key={index}>
-            {message.type === 'user' ? (
-              <UserResponse message={message.content} />
-            ) : (
-              <ClaraResponse message={message.content} />
+        <div>
+          {messageList.map((message, index) =>
 
-            )}
-
-
+            message.type === 'clara'
+              ? <ClaraResponse key={index} message={message.content} isTyping={message.isTyping} />
+              : message.type === 'user'
+                ? <UserResponse key={index} message={message.content} />
+                : null
 
 
-          </div>
-        ))}
+          )}
+        </div>
       </div>
 
       <div className={styles.bottomContainer}>
