@@ -141,13 +141,26 @@ export default function CLARA() {
       return matches.map(s => {
         // Remove the surrounding quotes
         const text = s.replace(/"/g, '');
-        // Replace specific newline patterns with the appropriate formatting
-        if (text === "\\n\\n") return "\n\n";
-        if (text === ":\\n\\n") return ":\n\n";
-        if (text === ".\\n\\n") return ".\n\n";
-        if (text === " \\n\\n") return " \n\n";
-        if (text === ":\\n") return ":\n";
-        return text === "\\n" ? "\n" : text;
+
+        // Using a switch statement for newline patterns
+        switch (text) {
+          case "\\n\\n":
+            return "\n\n";
+          case ":\\n\\n":
+            return ":\n\n";
+          case ".\\n\\n":
+            return ".\n\n";
+          case " \\n\\n":
+            return " \n\n";
+          case ":\\n":
+            return ":\n";
+          case ":\\n-":
+            return "\n-";
+          case "\\n":
+            return "\n";
+          default:
+            return text; // Return the text as is if no pattern matches
+        }
       }).join('');
     };
 
