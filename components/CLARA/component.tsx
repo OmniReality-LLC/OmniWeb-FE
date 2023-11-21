@@ -1,11 +1,11 @@
 'use client'
-import React, { useState, useEffect, useRef, KeyboardEvent } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './styles.module.css';
 import ClaraLottie from '../../public/lottie/ClaraLottie.json';
 import { useLottie, useLottieInteractivity } from 'lottie-react';
 import ClaraResponse from './responseBoxes/claraResponse/component'
 import UserResponse from './responseBoxes/userResponse/component';
-import { Console } from 'console';
+
 
 type ChatMessage = ClaraMessage | UserMessage;
 
@@ -185,7 +185,7 @@ export default function CLARA() {
     console.log(lastClaraResponseIndex);
     const updateIndex: number = (lastClaraResponseIndex === 0 ? 3 : lastClaraResponseIndex) - 1;
     const apiUrl = isStreaming
-      ? `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/stream-data/${question}`
+      ? `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/stream-test/${question}`
       : `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/non-stream-endpoint/${question}`;
 
     const defaultErrorMessage: string = "I'm sorry, I'm currently under maintenance and cannot process requests right now.";
