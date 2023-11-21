@@ -1,11 +1,9 @@
 // TypingIndicator.js
 import React from 'react';
-import styles from './styles.module.css'; // Import or define your CSS here
+import styles from './styles.module.css'; // Import your CSS here
 
 const TypingIndicator = () => (
-  <div className={styles.typingIndicator}>
-    <span className={styles.blinkingCursor}>|</span>
-  </div>
+  <span className={`${styles.typingIndicator} ${styles.blinkingCursor}`}>|</span>
 );
 
 export default TypingIndicator;

@@ -5,6 +5,7 @@ import ClaraLottie from '../../public/lottie/ClaraLottie.json';
 import { useLottie, useLottieInteractivity } from 'lottie-react';
 import ClaraResponse from './responseBoxes/claraResponse/component'
 import UserResponse from './responseBoxes/userResponse/component';
+import { Console } from 'console';
 
 type ChatMessage = ClaraMessage | UserMessage;
 
@@ -24,6 +25,7 @@ export default function CLARA() {
   const [disableUserChat, setDisableUserChat] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const midContainerRef = useRef<HTMLDivElement>(null);
+  const streamTestURL: string = 'https://localhost:7085/api/Chatbot/RequestHelpResponse/OmniDev/What%20is%20the%20name%20of%20the%20company?';
 
 
   const [messageList, setMessageList] = useState<ChatMessage[]>([{
@@ -39,33 +41,7 @@ export default function CLARA() {
   const thinking = 2.5;
 
 
-  async function addClaraMessage(content = '', isTyping = false) {
 
-    setMessageList((prev: ChatMessage[]) => {
-      const updatedList = [...prev, { type: 'clara' as const, content, isTyping }]; // 'as const' ensures the type is 'clara', not just string
-     // console.log(updatedList.length);
-      setLastClaraResponseIndex(updatedList.length + 2);
-
-      return updatedList;
-    });
-  }
-
-  async function addUserMessage(content: string) {
-    setMessageList((prev: ChatMessage[]) => {
-      const updatedList = [...prev, { type: 'user' as const, content }]; // 'as const' ensures the type is 'user', not just string
-      return updatedList;
-    });
-  }
-
-
-
-  function updateClaraMessage(content: string, isTyping: boolean, updateIndex: number) {
-    setMessageList(prev => prev.map((msg, idx) =>
-      idx === updateIndex && msg.type === 'clara' ? { ...msg, content, isTyping } : msg
-
-    ));
-
-  }
 
 
   const handleSubmit = () => {
@@ -76,7 +52,9 @@ export default function CLARA() {
       addUserMessage(inputValue);
       inputRef.current!.value = ""; // Clear the input
       setClaraSpeed(thinking);
-      testing(inputValue);
+      //testing(inputValue);
+      fetchData(inputValue, true);
+
     }
   };
 
@@ -136,44 +114,135 @@ export default function CLARA() {
     }
   }
 
+  async function addClaraMessage(content = '', isTyping = false) {
+
+    setMessageList((prev: ChatMessage[]) => {
+      const updatedList = [...prev, { type: 'clara' as const, content, isTyping }]; // 'as const' ensures the type is 'clara', not just string
+      // console.log(updatedList.length);
+      setLastClaraResponseIndex(updatedList.length + 2);
+
+      return updatedList;
+    });
+  }
+
+  async function addUserMessage(content: string) {
+    setMessageList((prev: ChatMessage[]) => {
+      const updatedList = [...prev, { type: 'user' as const, content }]; // 'as const' ensures the type is 'user', not just string
+      return updatedList;
+    });
+  }
+
+  function updateClaraMessage(newChunk: string | null, isTyping: boolean, updateIndex: number): void {
+    // Function to extract content inside quotes and concatenate
+    const extractAndConcatenateContent = (chunk: string): string => {
+      const matches = chunk.match(/"[^"]+"/g);
+      if (!matches) return '';
+
+      return matches.map(s => {
+        // Remove the surrounding quotes
+        const text = s.replace(/"/g, '');
+        // Replace specific newline patterns with the appropriate formatting
+        if (text === "\\n\\n") return "\n\n";
+        if (text === ":\\n\\n") return ":\n\n";
+        if (text === ".\\n\\n") return ".\n\n";
+        if (text === " \\n\\n") return " \n\n";
+        if (text === ":\\n") return ":\n";
+        return text === "\\n" ? "\n" : text;
+      }).join('');
+    };
+
+    // If newChunk is null, turn off typing and do not update content
+    if (newChunk === null) {
+      setMessageList(prev => prev.map((msg, idx) =>
+        idx === updateIndex && msg.type === 'clara' ? { ...msg, isTyping: false } : msg
+      ));
+      return;
+    }
+
+    // Extract and concatenate content from the chunk
+    let extractedContent = newChunk ? extractAndConcatenateContent(newChunk) : '';
+
+    // Rest of the function to update the message list
+    setMessageList(prev => prev.map((msg, idx) => {
+      if (idx === updateIndex && msg.type === 'clara') {
+        // Append extracted content directly to the existing content
+        const updatedContent = msg.content + extractedContent;
+
+        return { ...msg, content: updatedContent, isTyping };
+      }
+      return msg;
+    }));
+  }
 
 
-  async function testing(inputQuestion: string) {
-    console.log(process.env.NEXT_PUBLIC_CLARA_API_ACCESS);
-    const customerID = "YourCustomerID";  // Replace with the actual customer ID
-    const question = inputQuestion;
-    const apiUrl = `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/RequestHelpResponse/${customerID}/${question}`;
+
+
+
+
+
+  async function fetchData(question: string, isStreaming: boolean): Promise<void> {
+    setDisableUserChat(true);
     console.log(lastClaraResponseIndex);
-    const updateIndex : number = (lastClaraResponseIndex === 0 ? 3 : lastClaraResponseIndex) - 1;
+    const updateIndex: number = (lastClaraResponseIndex === 0 ? 3 : lastClaraResponseIndex) - 1;
+    const apiUrl = isStreaming
+      ? `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/stream-data/${question}`
+      : `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/non-stream-endpoint/${question}`;
+
+    const defaultErrorMessage: string = "I'm sorry, I'm currently under maintenance and cannot process requests right now.";
     addClaraMessage(" ", true);
 
-    const defaultErrorMessage: string = "Im sorry, I'm currently under maintenance and cannot process requests right now.";
-
     try {
-      if (!disableUserChat) {
-        setDisableUserChat(true);
-        const response = await fetch(apiUrl)
+      if (disableUserChat) {
+        updateClaraMessage(defaultErrorMessage, false, updateIndex);
+        return; // Early return if user chat is disabled
+      }
 
-        if (response.ok) {
+      const response = await fetch(apiUrl);
+
+      if (response.ok) {
+        if (isStreaming) {
+          const reader = response.body?.getReader();
+          while (true) {
+            const { done, value } = await reader?.read() || {};
+            if (done) {
+              updateClaraMessage(null, false, updateIndex); // Turn off typing
+              break;
+            }
+            if (value) {
+              const chunk = new TextDecoder().decode(value);
+              console.log("Received chunk:", chunk);
+
+              // Process and update each chunk
+              updateClaraMessage(chunk, true, updateIndex);
+
+              // Check for the end of the stream signal
+              if (chunk.includes("End of Stream") || chunk.includes("Condition to Break")) {
+                updateClaraMessage(null, false, updateIndex); // Turn off typing
+                break;
+              }
+            }
+          }
+        } else {
+          // Handle non-streaming data
           const data = await response.json();
           console.log("Received data:", data);
-
-          //chnage clara response element message to the data.asnwer
           updateClaraMessage(data.answer, false, updateIndex);
-        } else {
-          console.log("Failed to fetch data");
         }
       } else {
-
-        updateClaraMessage(defaultErrorMessage, false, updateIndex );
+        console.log("Failed to fetch data");
+        updateClaraMessage(defaultErrorMessage, false, updateIndex);
       }
     } catch (error) {
       console.log("An error occurred:", error);
-      updateClaraMessage(defaultErrorMessage, false, updateIndex );
+      updateClaraMessage(defaultErrorMessage, false, updateIndex);
+    } finally {
+      setClaraSpeed(idle);
+      setDisableUserChat(false);
+      // Ensure typing is off when done
+      updateClaraMessage(null, false, updateIndex);
     }
-    setClaraSpeed(idle);
-    setDisableUserChat(false);
   }
+
 
 
 

@@ -16,7 +16,7 @@ export default function ClaraResponse({ message, isTyping }: ClaraResponseProps)
     // Update the message display based on the typing status
     if (isTyping) {
       // Append the TypingIndicator to the message
-      setDisplayMessage(message + " "); // Add a space for separation
+      setDisplayMessage(message + ""); // Add a space for separation
       setShouldType(isTyping);
 
     } else {
