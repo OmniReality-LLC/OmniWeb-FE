@@ -19,13 +19,14 @@ interface UserMessage {
   type: 'user';
   content: string;
 }
+
 export default function CLARA() {
   const [isOpen, setIsOpen] = useState(false);
   const [claraSpeed, setClaraSpeed] = useState(1);
   const [disableUserChat, setDisableUserChat] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const midContainerRef = useRef<HTMLDivElement>(null);
-  const streamTestURL: string = 'https://localhost:7085/api/Chatbot/RequestHelpResponse/OmniDev/What%20is%20the%20name%20of%20the%20company?';
+  const streamTestURL: string = 'http://localhost:5085/api/Chatbot/stream-test';
 
 
   const [messageList, setMessageList] = useState<ChatMessage[]>([{
@@ -133,38 +134,19 @@ export default function CLARA() {
   }
 
   function updateClaraMessage(newChunk: string | null, isTyping: boolean, updateIndex: number): void {
-    // Function to extract content inside quotes and concatenate
-    const extractAndConcatenateContent = (chunk: string): string => {
-      const matches = chunk.match(/"[^"]+"/g);
-      if (!matches) return '';
 
-      return matches.map(s => {
-        // Remove the surrounding quotes
-        const text = s.replace(/"/g, '');
+    const matches = newChunk?.match(/"([^"]+)"/gs);
+    let sentence : string = "";
+    if(matches != null){
+      for(const match of matches){
+        const word = match.slice(1, -1);
+        sentence += word;
+      }
+      sentence = sentence.replace(/\\n/g, '\n');
+    }
 
-        // Using a switch statement for newline patterns
-        switch (text) {
-          case "\\n\\n":
-            return "\n\n";
-          case ":\\n\\n":
-            return ":\n\n";
-          case ".\\n\\n":
-            return ".\n\n";
-          case " \\n\\n":
-            return " \n\n";
-          case ":\\n":
-            return ":\n";
-          case ":\\n-":
-            return "\n-";
-          case "\\n":
-            return "\n";
-          default:
-            return text; // Return the text as is if no pattern matches
-        }
-      }).join('');
-    };
 
-    // If newChunk is null, turn off typing and do not update content
+
     if (newChunk === null) {
       setMessageList(prev => prev.map((msg, idx) =>
         idx === updateIndex && msg.type === 'clara' ? { ...msg, isTyping: false } : msg
@@ -172,15 +154,11 @@ export default function CLARA() {
       return;
     }
 
-    // Extract and concatenate content from the chunk
-    let extractedContent = newChunk ? extractAndConcatenateContent(newChunk) : '';
-
     // Rest of the function to update the message list
     setMessageList(prev => prev.map((msg, idx) => {
       if (idx === updateIndex && msg.type === 'clara') {
         // Append extracted content directly to the existing content
-        const updatedContent = msg.content + extractedContent;
-
+        const updatedContent = msg.content + sentence;
         return { ...msg, content: updatedContent, isTyping };
       }
       return msg;
@@ -191,7 +169,8 @@ export default function CLARA() {
 
 
 
-
+  //`https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/stream-test/${question}`
+  //`${streamTestURL}/${question}`
 
   async function fetchData(question: string, isStreaming: boolean): Promise<void> {
     setDisableUserChat(true);
@@ -223,7 +202,6 @@ export default function CLARA() {
             }
             if (value) {
               const chunk = new TextDecoder().decode(value);
-              console.log("Received chunk:", chunk);
 
               // Process and update each chunk
               updateClaraMessage(chunk, true, updateIndex);
@@ -238,15 +216,12 @@ export default function CLARA() {
         } else {
           // Handle non-streaming data
           const data = await response.json();
-          console.log("Received data:", data);
           updateClaraMessage(data.answer, false, updateIndex);
         }
       } else {
-        console.log("Failed to fetch data");
         updateClaraMessage(defaultErrorMessage, false, updateIndex);
       }
     } catch (error) {
-      console.log("An error occurred:", error);
       updateClaraMessage(defaultErrorMessage, false, updateIndex);
     } finally {
       setClaraSpeed(idle);
