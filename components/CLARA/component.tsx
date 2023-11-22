@@ -135,7 +135,18 @@ export default function CLARA() {
 
   function updateClaraMessage(newChunk: string | null, isTyping: boolean, updateIndex: number): void {
 
-    const matches = newChunk?.match(/"([^"]+)"/gs);
+    //Stop the function call and update the isTyping.
+    if (newChunk === null) {
+      setMessageList(prev => prev.map((msg, idx) =>
+        idx === updateIndex && msg.type === 'clara' ? { ...msg, isTyping: false } : msg
+      ));
+      return;
+    }
+
+    //Processes the new chunk for streaming to the screen
+
+    //Grabs all the elemens in between quotes, even empty quotes
+    const matches = newChunk?.match(/"([^"]*)"/gs);
     let sentence : string = "";
     if(matches != null){
       for(const match of matches){
@@ -144,16 +155,6 @@ export default function CLARA() {
       }
       sentence = sentence.replace(/\\n/g, '\n');
     }
-
-
-
-    if (newChunk === null) {
-      setMessageList(prev => prev.map((msg, idx) =>
-        idx === updateIndex && msg.type === 'clara' ? { ...msg, isTyping: false } : msg
-      ));
-      return;
-    }
-
     // Rest of the function to update the message list
     setMessageList(prev => prev.map((msg, idx) => {
       if (idx === updateIndex && msg.type === 'clara') {
@@ -163,6 +164,11 @@ export default function CLARA() {
       }
       return msg;
     }));
+  }
+
+  function convertLinks(updateIndex: number){
+
+
   }
 
 
@@ -177,7 +183,7 @@ export default function CLARA() {
     console.log(lastClaraResponseIndex);
     const updateIndex: number = (lastClaraResponseIndex === 0 ? 3 : lastClaraResponseIndex) - 1;
     const apiUrl = isStreaming
-      ? `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/stream-test/${question}`
+      ? `${streamTestURL}/${question}`
       : `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/non-stream-endpoint/${question}`;
 
     const defaultErrorMessage: string = "I'm sorry, I'm currently under maintenance and cannot process requests right now.";
@@ -228,6 +234,7 @@ export default function CLARA() {
       setDisableUserChat(false);
       // Ensure typing is off when done
       updateClaraMessage(null, false, updateIndex);
+
     }
   }
 
