@@ -183,7 +183,7 @@ export default function CLARA() {
     console.log(lastClaraResponseIndex);
     const updateIndex: number = (lastClaraResponseIndex === 0 ? 3 : lastClaraResponseIndex) - 1;
     const apiUrl = isStreaming
-      ? `${streamTestURL}/${question}`
+      ? `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/stream-test/${question}`
       : `https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/non-stream-endpoint/${question}`;
 
     const defaultErrorMessage: string = "I'm sorry, I'm currently under maintenance and cannot process requests right now.";
