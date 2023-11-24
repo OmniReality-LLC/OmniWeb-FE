@@ -23,29 +23,29 @@ export default function SlideLink ({ text, inactiveColor, textSize, activeColor,
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className={styles.container}>
-                <h5 
-                    className={styles.stringText} 
-                    style={{ 
-                        fontSize: textSize, 
+                <h5
+                    className={styles.stringText}
+                    style={{
+                        fontSize: textSize,
                         color: isHovered ? activeColor : inactiveColor,
                         textShadow: isHovered ? `0 0 5px ${activeColor}` : 'none',
                     }}
                 >
                     {text}
                 </h5>
-                <div 
-                    className={styles.underLine} 
+                <div
+                    className={styles.underLine}
                     style={{
                         borderColor: isHovered ? activeColor: inactiveColor,
                         boxShadow: isHovered ? `0 0 5px ${activeColor}` : 'none',
                         pointerEvents: 'none' // Ignore pointer events
                     }}
                 ></div>
-                <span 
-                    className={styles.decorativeElement} 
+                <span
+                    className={styles.decorativeElement}
                     style={{ borderColor: activeColor }}
                 ></span>
             </div>
         </Link>
-    ) 
+    )
 };

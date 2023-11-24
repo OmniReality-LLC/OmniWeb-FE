@@ -19,7 +19,7 @@ export default function CircleButton(props: CircleButtonInterface) {
         className={`${styles.circleTestArrow} ${props.leftArrow ? styles.left : styles.right}`}
         >
             <g filter="url(#filter0_di_1272_3041)">
-                <path d="M13.25 12.75L26.2145 25.7145C28.1671 27.6671 28.1671 30.8329 26.2145 32.7855L13.25 45.75" stroke="#3EDCFF" stroke-width="5" stroke-linecap="round" />
+                <path d="M13.25 12.75L26.2145 25.7145C28.1671 27.6671 28.1671 30.8329 26.2145 32.7855L13.25 45.75" stroke="#3EDCFF" strokeWidth="5" strokeLinecap="round" />
             </g>
             <defs>
                 <filter id="filter0_di_1272_3041" x="0.75" y="0.25" width="39.429" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -50,7 +50,7 @@ export default function CircleButton(props: CircleButtonInterface) {
             fill="none"
             className={`${styles.circleTestArrow} ${props.leftArrow ? styles.left : styles.right}`}
             >
-            <path d="M13.25 12.75L26.2145 25.7145C28.1671 27.6671 28.1671 30.8329 26.2145 32.7855L13.25 45.75" stroke="#D4D4D4" stroke-width="5" stroke-linecap="round" />
+            <path d="M13.25 12.75L26.2145 25.7145C28.1671 27.6671 28.1671 30.8329 26.2145 32.7855L13.25 45.75" stroke="#D4D4D4" strokeWidth="5" strokeLinecap="round" />
         </svg>;
 
     const [hovered, setHovered] = useState(false);

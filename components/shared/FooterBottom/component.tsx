@@ -18,7 +18,7 @@ export default function Footer() {
             ],
             getInTouchItems: [
                 { text: "Contact Us", href: '/contact' },
-                { text: "Schedule A Call", href: 'https://calendly.com/omnireality/free-consultation' },
+                { text: "Schedule Call", href: 'https://calendly.com/omnireality/free-consultation' },
                 { text: "hello@omnireality.us", href: 'mailto:hello@omnireality.us' },
                 "Owned And Operated In The U.S"
             ]

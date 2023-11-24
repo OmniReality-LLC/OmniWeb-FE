@@ -100,7 +100,7 @@ export default function OmniDesk() {
                             {/* Render subviews based on data */}
                             <div className={styles.omniDeskSubviewsContainer}>
                                 {data.map((myData, index) =>
-                                    <div className={styles.subViewBorder} style={indexToDisplay == index ? { border: '2px solid #3EDCFF', background: '#202325' } : {}}>
+                                    <div key={index + myData.name} className={styles.subViewBorder} style={indexToDisplay == index ? { border: '2px solid #3EDCFF', background: '#202325' } : {}}>
                                         <OmniDeskSubview title={myData.name} image={myData.pagePicture} onClick={() => setIndexToDisplay(index)} key={myData.name} />
                                     </div>
                                 )}

@@ -16,14 +16,26 @@ export default function NavBar() {
     const lottieRef = useRef<any>(null);
     const hamburgerRef = useRef<any>(null);
     const [navbarOpen, setNavbarOpen] = useState(false);
-    const navLinks =
-        [
-            { path: '/#home', name: 'Home', activeColor: '#3EDCFF' },
-            { path: '/#services', name: 'Service', activeColor: '#3EDCFF' },
-            { path: '/work', name: 'Our Work', activeColor: '#3EDCFF' },
-            { path: '/about', name: 'About', activeColor: '#3EDCFF' },
-            { path: '/contact', name: 'Contact', activeColor: '#3EDCFF' },
-        ];
+
+
+    const [navLinks, setNavLinks] = useState([
+        { path: '/#home', name: 'Home', activeColor: '#3EDCFF', active: false },
+        { path: '/websolutions', name: 'Pricing', activeColor: '#3EDCFF', active: false },
+        { path: '/work', name: 'Portfolio', activeColor: '#3EDCFF', active: false },
+        { path: '/about', name: 'About', activeColor: '#3EDCFF', active: false },
+        { path: '/contact', name: 'Contact', activeColor: '#3EDCFF', active: false },
+    ]);
+
+    const activateLink = (path: string) => {
+        setNavLinks(currentNavLinks => {
+            return currentNavLinks.map(link => ({
+                ...link,
+                active: link.path === path
+            }));
+        });
+    };
+
+
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -57,7 +69,7 @@ export default function NavBar() {
 
     return (
         <>
-            {navbarOpen && <div className={styles.overlay} onClick={handleHamburgerClick}/>}
+            {navbarOpen && <div className={styles.overlay} onClick={handleHamburgerClick} />}
             <Navbar collapseOnSelect expand="md" expanded={navbarOpen} className={styles.navbar}>
                 <div className={styles.widthForNavBar}>
                     <Link href='/' className={styles.noUnderline}>
@@ -82,14 +94,14 @@ export default function NavBar() {
                         </Navbar.Brand>
                     </Link>
 
-                        <Lottie
-                            lottieRef={hamburgerRef}
-                            animationData={HamburgerLottie}
-                            autoplay={false}
-                            loop={false}
-                            className={styles.hamburgerMenu}
-                            onClick={handleHamburgerClick}
-                        />
+                    <Lottie
+                        lottieRef={hamburgerRef}
+                        animationData={HamburgerLottie}
+                        autoplay={false}
+                        loop={false}
+                        className={styles.hamburgerMenu}
+                        onClick={handleHamburgerClick}
+                    />
 
                     <Navbar.Collapse id="navbarResponsive">
                         <Nav className="ms-auto">
@@ -100,10 +112,13 @@ export default function NavBar() {
                                     linkTo={link.path}
                                     textSize='clamp(15px, 1.5vw, 20px)'
                                     inactiveColor={'#7E7E7E'}
-                                    activeColor={link.activeColor} />
+                                    activeColor={link.activeColor}
+                                    active={link.active}
+                                    onClick={() => activateLink(link.path)} />
+
                             ))}
                             <SlideGlowLinkBtn
-                                text={'Request A Quote'}
+                                text={'Request Quote'}
                                 textColor='#D4D4D4'
                                 linkTo={'/contact'}
                                 bgColor={'transparent'}
@@ -111,8 +126,7 @@ export default function NavBar() {
                                 marginL='25px'
                                 marginR='0px'
                                 className={styles.glowButton}
-                                />
-
+                            />
                         </Nav>
                     </Navbar.Collapse>
                 </div>

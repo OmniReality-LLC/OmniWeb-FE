@@ -10,8 +10,10 @@ interface StringProps {
     inactiveColor: string;
     activeColor: string;
     linkTo: string;
+    active: boolean
+    onClick: ()=>void;
 }
-export default function SlideLink ({ text, inactiveColor, textSize, activeColor, linkTo }: StringProps) {
+export default function SlideLink ({ text, inactiveColor, textSize, activeColor, linkTo, active, onClick }: StringProps) {
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -21,31 +23,32 @@ export default function SlideLink ({ text, inactiveColor, textSize, activeColor,
             className={styles.link}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={onClick}
         >
-            <div className={styles.container}>
-                <h5 
-                    className={styles.stringText} 
-                    style={{ 
-                        fontSize: textSize, 
-                        color: isHovered ? activeColor : inactiveColor,
-                        textShadow: isHovered ? `0 0 5px ${activeColor}` : 'none',
+            <div className={styles.container} >
+                <h5
+                    className={styles.stringText}
+                    style={{
+                        fontSize: textSize,
+                        color: isHovered || active ? activeColor : inactiveColor,
+                        textShadow: isHovered || active ? `0 0 5px ${activeColor}` : 'none',
                     }}
                 >
                     {text}
                 </h5>
-                <div 
-                    className={styles.underLine} 
+                <div
+                    className={styles.underLine}
                     style={{
-                        borderColor: isHovered ? activeColor: inactiveColor,
-                        boxShadow: isHovered ? `0 0 5px ${activeColor}` : 'none',
+                        borderColor: isHovered || active ? activeColor: inactiveColor,
+                        boxShadow: isHovered || active ? `0 0 5px ${activeColor}` : 'none',
                         pointerEvents: 'none' // Ignore pointer events
                     }}
                 ></div>
-                <span 
-                    className={styles.decorativeElement} 
-                    style={{ borderColor: activeColor }}
+                <span
+                    className={styles.decorativeElement}
+                    style={{ borderColor: activeColor, right: active ? '15%' : '' }}
                 ></span>
             </div>
         </Link>
-    ) 
+    )
 };

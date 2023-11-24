@@ -113,7 +113,7 @@ function QuestionAnswer(props: QAInterface) {
 
     const arrowSvg = (
         <svg xmlns="http://www.w3.org/2000/svg" width="clamp(15px, 2vw, 25px)" height="auto" viewBox="0 0 26 40" fill="none">
-            <path d="M5 36L18.8787 22.1213C20.0503 20.9497 20.0503 19.0503 18.8787 17.8787L5 4" stroke="white" stroke-width="3" stroke-linecap="round" />
+            <path d="M5 36L18.8787 22.1213C20.0503 20.9497 20.0503 19.0503 18.8787 17.8787L5 4" stroke="white" strokeWidth="3" strokeLinecap="round" />
         </svg>
     );
 
