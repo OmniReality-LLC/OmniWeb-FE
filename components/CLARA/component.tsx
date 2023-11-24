@@ -172,12 +172,8 @@ export default function CLARA() {
   }
 
 
-
-
-
   //`https://${process.env.NEXT_PUBLIC_CLARA_API_ACCESS}/api/Chatbot/stream-test/${question}`
   //`${streamTestURL}/${question}`
-
   async function fetchData(question: string, isStreaming: boolean): Promise<void> {
     setDisableUserChat(true);
     console.log(lastClaraResponseIndex);
