@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -9,6 +9,7 @@ import MyNavLink from '../SLinks/component'
 import Lottie from "lottie-react";
 import LogoLottie from '../../../public/lottie/OmniLogoAnim.json'
 import HamburgerLottie from '../../../public/lottie/MobileHamburgerMenuOpen.json'
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
 
@@ -16,7 +17,26 @@ export default function NavBar() {
     const lottieRef = useRef<any>(null);
     const hamburgerRef = useRef<any>(null);
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const pathname = usePathname();
+    const dictionaryBandaidFix: Record<string, number> = {
+        '/': 0,
+        '/websolutions': 1,
+        '/work': 2,
+        '/about': 3,
+        '/contact': 4
+    };
+    const [activeIndex, setActiveIndex] = useState<number>(0);
 
+    useEffect(() => {
+        console.log(`Route changed to: ${pathname}`);
+
+        // Make sure the pathname exists in the dictionary before calling the function
+        if (dictionaryBandaidFix.hasOwnProperty(pathname) && activeIndex != dictionaryBandaidFix[pathname]) {
+            console.log('user did not click the navbar, setting active index')
+            activateLinkBandaidFix(dictionaryBandaidFix[pathname]);
+        }
+
+    }, [pathname]);
 
     const [navLinks, setNavLinks] = useState([
         { path: '/#home', name: 'Home', activeColor: '#3EDCFF', active: false },
@@ -26,16 +46,18 @@ export default function NavBar() {
         { path: '/contact', name: 'Contact', activeColor: '#3EDCFF', active: false },
     ]);
 
-    const activateLink = (path: string) => {
+
+
+    const activateLinkBandaidFix = (myIndex: number) => {
+        setActiveIndex(myIndex);
         setNavLinks(currentNavLinks => {
-            return currentNavLinks.map(link => ({
+            return currentNavLinks.map((link, index) => ({
                 ...link,
-                active: link.path === path
+                active: index === myIndex
             }));
         });
+
     };
-
-
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -66,6 +88,8 @@ export default function NavBar() {
 
         }
     };
+
+
 
     return (
         <>
@@ -114,8 +138,7 @@ export default function NavBar() {
                                     inactiveColor={'#7E7E7E'}
                                     activeColor={link.activeColor}
                                     active={link.active}
-                                    onClick={() => activateLink(link.path)} />
-
+                                    onClick={() => activateLinkBandaidFix(index)} />
                             ))}
                             <SlideGlowLinkBtn
                                 text={'Request Quote'}
@@ -126,6 +149,7 @@ export default function NavBar() {
                                 marginL='25px'
                                 marginR='0px'
                                 className={styles.glowButton}
+
                             />
                         </Nav>
                     </Navbar.Collapse>

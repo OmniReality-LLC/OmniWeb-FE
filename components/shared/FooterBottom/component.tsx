@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './styles.module.css';
 import Image from 'next/image';
 
@@ -11,8 +12,8 @@ export default function Footer() {
             enableOpacity: false,
             navigationLinks: [
                 { href: '/', text: 'Home' },
-                { href: '/#services', text: 'Services' },
-                { href: '/work', text: 'Our Work' },
+                { href: '/websolutions', text: 'Pricing' },
+                { href: '/work', text: 'Portfolio' },
                 { href: '/about', text: 'About' },
 
             ],
@@ -32,14 +33,14 @@ return (
             <div className={`${styles.navContainer} ${styles.itemMargin}`}>
                 <h1 className={styles.navTitle} style={{ color: 'white' }}>Navigation</h1>
                 {data.navigationLinks.map(link => (
-                    <a
+                    <Link
                         key={link.href}
                         href={link.href}
                         className={styles.navItem}
                         style={{ color: data.textColor }}
                     >
                         {link.text}
-                    </a>
+                    </Link>
                 ))}
             </div>
             <div className={`${styles.copyrightContainer} ${styles.itemMargin}`}>
