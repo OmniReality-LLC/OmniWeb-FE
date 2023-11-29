@@ -243,7 +243,7 @@ export default function WebsiteService() {
                     {!isMobile &&
                         <Button
                             className={styles.myButton}
-                            text={'Contact Us'}
+                            text={'Contact'}
                             linkTo={'/contact'}
                             marginB='50px'
                             bgColor='transparent'
