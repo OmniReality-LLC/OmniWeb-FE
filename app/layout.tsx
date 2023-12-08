@@ -11,9 +11,10 @@ import Footer from '@/components/shared/FooterBottom/component';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "OmniReality LLC",
-  description: 'Web | DaaS | XR',
+  title: "OmniReality LLC: Expert Website Design, Augmented Reality, AI Add-ons",
+  description: "At OmniReality LLC, we transform dreams into digital realities. Specializing in bespoke website design, immersive augmented reality experiences, and innovative AI add-ons. Connect with us for cutting-edge digital solutions."
 }
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 

@@ -1,7 +1,6 @@
 
 import styles from './page.module.css';
 import Hero from '../../components/aboutPage/Top/component'
-import PageConnector from '../../components/shared/PageConnector/component'
 import Footer from '@/components/shared/Footer/component';
 import ParticleBackground from '@/components/shared/Particles/component';
 import ComingSoon from '@/components/shared/ComingSoon/component'
