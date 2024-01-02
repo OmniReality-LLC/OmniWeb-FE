@@ -122,23 +122,21 @@ export default function WebsiteService() {
     const numArray: number[] = generateNumberArray(benefitsTierCount);
     const namesList: string[] = benefitsData.tiers.map(tier => tier.name);
 
-    // useEffect runs in the browser, after render. So window will be defined.
+
     useEffect(() => {
         const checkScreenSize = () => {
             setIsMobile(window.innerWidth <= MOBILE_SCREEN_WIDTH);
         };
 
-        // Initially check and set if it is mobile
         checkScreenSize();
 
-        // Add event listener for resize
         window.addEventListener('resize', checkScreenSize);
 
-        // Cleanup event listener on component unmount
+
         return () => {
             window.removeEventListener('resize', checkScreenSize);
         };
-    }, []); // Empty dependency array means this useEffect runs once when component mounts.
+    }, []);
 
     const [renderList, setRenderList] = useState<number[]>(numArray);
 
